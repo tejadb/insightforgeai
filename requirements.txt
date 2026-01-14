@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+langchain
+langchain-openai
+unstructured
+unstructured[local-inference]
+python-dotenv
+supabase
+pgvector
+openai
+arq
+redis
+httpx
+numpy
+
+

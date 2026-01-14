@@ -1,0 +1,1570 @@
+<document filename="Corporate Finance  Assignment ss.pdf">
+  <page number="1">
+    <element type="UncategorizedText" element_id="6e2aa6b4fa59977b689960368243134b">
+      lOMoAR cPSD| 19662931
+    </element>
+    <element type="Image" element_id="ed676ea822745d2ef8fda0daf37aec07">
+      sige RP seen OO (GLA UNIVERSITY
+    </element>
+    <element type="NarrativeText" element_id="bd35ea856d0bbb9b3001a7063779111d">
+      Institute of Business Management, Mathura
+    </element>
+    <element type="Title" element_id="d13194e38029724b3a3fc410339128df">
+      Corporate Finance (MBAC0041) Assignment
+    </element>
+    <element type="UncategorizedText" element_id="e3fbb495eaa2c553fdeda4374b948ca2">
+      On
+    </element>
+    <element type="Title" element_id="521ae49d55f0b33557c0cab4feb4ce03">
+      “Determining the cost equity of (Bata) traded on NSE under the CAPM”
+    </element>
+    <element type="Title" element_id="d99838da01ffe41d117cb03f0c62d115">
+      Course: MBA, 2nd Trim, Session: 2023-24
+    </element>
+    <element type="UncategorizedText" element_id="12f0b9a175a629ae1ecd88befe08452a">
+      Submitted by:
+    </element>
+    <element type="UncategorizedText" element_id="2a182d831ac8a8db276a63ae5d6d8a8c">
+      Submitted to:
+    </element>
+    <element type="UncategorizedText" element_id="3439b7788a8999ba62037aa182a0450a">
+      Siddhant Sharma
+    </element>
+    <element type="UncategorizedText" element_id="cce516e1860225c74af5db295c9b1a98">
+      Dr. Rajesh Kumar
+    </element>
+    <element type="UncategorizedText" element_id="3e1f218ce04738363b20a10e58fcce08">
+      University Roll. No.:
+    </element>
+    <element type="UncategorizedText" element_id="e7eb364817c7868fd7fe16735ff996cb">
+      2384100440
+    </element>
+  </page>
+  <page number="2">
+    <element type="UncategorizedText" element_id="84d057453e5586f5e9cd84b9e9a34491">
+      lOMoAR cPSD| 19662931
+    </element>
+    <element type="Title" element_id="e55b02fe4105dc98f40c9e9d74ffcbc7">
+      CHAPTER INDEX
+    </element>
+    <element type="Table" element_id="904adaf196412fe45e4113fc6c548d10">
+      <table_html>&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;CHAPTER NO.&lt;/th&gt;&lt;th&gt;TITLE&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;1,&lt;/td&gt;&lt;td&gt;Introduction of Company&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2.&lt;/td&gt;&lt;td&gt;Vision Mission and Values&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3.&lt;/td&gt;&lt;td&gt;Products or Brand&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4.&lt;/td&gt;&lt;td&gt;Interpretations&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</table_html>
+    </element>
+  </page>
+  <page number="3">
+    <element type="UncategorizedText" element_id="90bc92dfe08acbd704f656f3552ede5c">
+      lOMoAR cPSD| 19662931
+    </element>
+    <element type="NarrativeText" element_id="904de472a33fdf08e1863431ed224d9c">
+      CHAPTER-1 Introduction of Company
+    </element>
+  </page>
+  <page number="4">
+    <element type="UncategorizedText" element_id="03c5c3c96401266e299a776946325c37">
+      lOMoAR cPSD| 19662931
+    </element>
+    <element type="Title" element_id="de36abcca0537a1749a309109ef749c9">
+      Introduction
+    </element>
+    <element type="UncategorizedText" element_id="bc1270cdee81b915a0c70c6b5b183d07">
+      Bata India Limited is a prominent and iconic footwear company that has been an
+    </element>
+    <element type="NarrativeText" element_id="25963210d5ef6542bcaa276df904cbce">
+      integral part of the Indian market for several decades. Established in 1931, Bata has evolved into one of the leading footwear retailers in the country, offering a diverse range of shoes for men, women, and children. With a rich history, a commitment to quality, and a strong presence across India, Bata has become a household name synonymous with trust and durability.The journey of Bata in India began with the opening of its first store in the city of Kolkata. Since then, the brand has expanded its footprint to cover the entire nation, with a vast network of retail outlets, franchise stores, and online platforms. Bata's success can be attributed to its dedication to delivering high-quality footwear that combines comfort, style, and durability. One of the key factors that set Bata apart is its focus on innovation. The company consistently introduces new designs and technologies to meet the evolving needs of its diverse customer base. Bata's product range spans from formal shoes to casual wear, sports shoes to sandals, catering to various occasions and preferences. The brand has successfully adapted to changing fashion trends while ensuring that its products maintain the highest standards of craftsmanship.
+    </element>
+    <element type="NarrativeText" element_id="cc8cc0409f4c3dd92b8c1b11091f54eb">
+      Bata has also been a pioneer in retail strategies, employing a mix of company-owned stores and franchise models to reach customers in urban and rural areas alike. This approach has allowed Bata to establish a widespread presence, making its products accessible to people from all walks of life. Additionally, the brand's online presence has grown significantly, providing customers with the convenience of shopping from the comfort of their homes.
+    </element>
+    <element type="NarrativeText" element_id="78b658367cf6db00871ef0cb2e2ef139">
+      The company's commitment to social responsibility is another aspect that sets it apart. Bata has undertaken various initiatives aimed at contributing to the welfare of society. This includes environmental sustainability efforts, ethical business practices, and community development projects. Bata's corporate social responsibility programs reflect its dedication to being a responsible and conscientious corporate citizen. Over the years, Bata has witnessed several milestones and achievements. The brand has consistently adapted to market dynamics, incorporating feedback from customers to enhance its product offerings. Bata has also collaborated with renowned designers and celebrities to create exclusive collections, further establishing its presence in the fashion industry.In terms of manufacturing, Bata has state-of-the-art facilities that adhere to international quality standards. The company's emphasis on quality control ensures that every pair of shoes that bears the Bata logo meets stringent criteria, providing customers with a sense of trust and reliability.Despite facing challenges in a
+    </element>
+  </page>
+  <page number="5">
+    <element type="UncategorizedText" element_id="bf25136db8fea6f2684db70ce32e8327">
+      lOMoAR cPSD| 19662931
+    </element>
+    <element type="NarrativeText" element_id="3a4bb93728be1d730917023591a904ce">
+      competitive market, Bata India has continued to thrive, maintaining its status as a market leader. The brand's ability to balance tradition with innovation, affordability with quality, and style with comfort has been crucial to its enduring success.
+    </element>
+    <element type="NarrativeText" element_id="817552345e72d17580e5eba3524dfaa0">
+      In conclusion, Bata India Limited stands as a testament to the resilience and adaptability of a brand that has stood the test of time. With a legacy spanning over nine decades, Bata continues to be a trusted name in the Indian footwear industry, offering a wide array of stylish and durable shoes that cater to the diverse tastes and preferences of its vast customer base. As the company looks toward the future, its commitment to excellence, innovation, and social responsibility is expected to keep Bata at the forefront of the Indian footwear market.
+    </element>
+  </page>
+  <page number="6">
+    <element type="UncategorizedText" element_id="ecc00c451a26e254a27ef8f32e4c7f72">
+      lOMoAR cPSD| 19662931
+    </element>
+    <element type="UncategorizedText" element_id="50f4e6d6b465d6da9139eda71db3fdc5">
+      CHAPTER-2
+    </element>
+    <element type="UncategorizedText" element_id="a97cdf27df08dc5b3da24b0bf07ec7ac">
+      Vision Mission and
+    </element>
+    <element type="Title" element_id="42887527190b33aa1805074a3bfc3b5c">
+      Values
+    </element>
+    <element type="Image" element_id="94f7665241c63d6a5d5b7d5808f1c43d">
+      Our Values We follow the values of our Parent Company, Bata Shoe Organization, which are: SERVE WITH PASSION We are passionate about delighting our customers. Serving their individual needs defines everything we do. It is this passion for what we do that sets us apart from our competitors. We are proud and energized by being part of a family company with deeply held values. We have all invested something of ourselves in the company and act as if the company was our own. We like to win but not at all costs. We take responsibility for how we impact the many and diverse communities in which we operate. BE BOLD We are pioneers. We value individuals with the courage to change, and to be prepared to fail sometimes. We have a healthy dissatisfaction for the status quo. We encourage creativity. We recognize curiosity and original thought. Innovation is the foundation stone of our company. We embrace the future but take time to learn from the past. We do what we say we will do and do not rest on our laurels. We celebrate success and value everyone's unique contribution towards achieving the goal. COUNT ON ME We lead by example and follow when called. We value those who take accountability for their successes and failures. We take responsibility for our own performance and the performance of those around us. We encourage and support others to do their best. We place great importance on developing ourselves and those around us and we believe that feedback is the breakfast of champions. We share openly with others and we act with integrity in all that we do. EXCEED CUSTOMER EXPECTATIONS Whether it is products, processes, or people, we are uncompromising when it comes to quality. We strive to create products that are easy to buy, exciting to wear, and exceptional value. We strive to be the most responsible and efficient in all that we do it order to deliver the best value to our customers. We operate where design, comfort and value meet. Delighting the diverse needs and preferences of our customers is our lifelong mission.
+    </element>
+  </page>
+  <page number="7">
+    <element type="UncategorizedText" element_id="c5a6dd54b921743028fcf9a23d118394">
+      lOMoAR cPSD| 19662931
+    </element>
+    <element type="Title" element_id="e526c35c31a5e72fc99cb31593767584">
+      CHAPTER-3 PRODUCT OR BRAND
+    </element>
+  </page>
+  <page number="8">
+    <element type="UncategorizedText" element_id="e7cce9f945e87a6fc027ce6d4d09e661">
+      lOMoAR cPSD| 19662931
+    </element>
+    <element type="Title" element_id="be32642161ae26f2613ef797ef4aff98">
+      CHAPTER-4th
+    </element>
+    <element type="Title" element_id="01606268d018131653697e74fa1ee63d">
+      INTERPRETATION
+    </element>
+  </page>
+  <page number="9">
+    <element type="UncategorizedText" element_id="7aadc437c5f835fbc9f64ea14b7d97e8">
+      lOMoAR cPSD| 19662931
+    </element>
+    <element type="Title" element_id="0f542b515f3e2c5aa98ea9f4fb37f6c0">
+      Introduction:
+    </element>
+    <element type="NarrativeText" element_id="b054604ff57675fabc94d13dd30208ac">
+      Capital Asset Pricing Model (CAPM), its assumptions, formula, and applications .
+    </element>
+    <element type="Title" element_id="bb751dd3e9826ea83aa9e09b623e1693">
+      CAPM (Capital Asset Pricing Model):
+    </element>
+    <element type="Title" element_id="c6d99908dcb625495bc2dd29755a9f1e">
+      Assumptions:
+    </element>
+    <element type="NarrativeText" element_id="03273e4af7b30f084bc230a067168463">
+      1. Perfect Capital Markets: Assumes no taxes, transaction costs, or restrictions on the flow of information, allowing for frictionless trading.
+    </element>
+    <element type="NarrativeText" element_id="245470318586d1cdc00c31f83a168a86">
+      2. Homogeneous Expectations: Assumes all investors have the same expectations regarding future returns, standard deviations, and correlations.
+    </element>
+    <element type="NarrativeText" element_id="c99beba105220d232cf3e4ec00456887">
+      3. Risk-Free Rate: Assumes the existence of a risk-free rate at which investors can lend or borrow money without any risk.
+    </element>
+    <element type="NarrativeText" element_id="55b3a9768106a51f754723de76edd173">
+      4. Single Holding Period: Assumes investors hold securities for a single period without intermediate consumption.
+    </element>
+    <element type="NarrativeText" element_id="733005b1b6989c51dc67ceea636876b4">
+      5. Investors are Price Takers: Assumes investors' buying or selling activities do not influence security prices.
+    </element>
+    <element type="Title" element_id="20260edb6f5afbcd8910b665c3a57a55">
+      Formula:
+    </element>
+    <element type="Title" element_id="c503a4c1575ca6d23c0264bc23ba52ca">
+      The CAPM formula is given by:
+    </element>
+    <element type="Title" element_id="c49b91214fec42f2ebe620173d9c33b6">
+      [ Ri = Rf + \beta_i (R_m - R_f) \]
+    </element>
+    <element type="Title" element_id="112b749fa1924888439c31620de54ae4">
+      Where:
+    </element>
+    <element type="NarrativeText" element_id="f54d805faec320c8d086355d82c387bd">
+      - \( R_i \) is the expected return on the investment. - \( R_f \) is the risk-free rate. - \( \beta_i \) is the beta of the investment, representing its systematic risk. - \( R_m \) is the expected return of the market. - \( (R_m - R_f) \) is the market risk premium.
+    </element>
+    <element type="Title" element_id="95bd0af7a59da078c2d558c09b6c63c8">
+      Applications:
+    </element>
+    <element type="NarrativeText" element_id="f0de0982da98205eb4b66248b68b295c">
+      1. Expected Return Estimation: Used to estimate the expected return on an investment based on its systematic risk relative to the market.
+    </element>
+    <element type="NarrativeText" element_id="3120fc6b2615a6ade888deb063b96261">
+      2. Cost of Capital: Determines the cost of equity for companies, aiding in project evaluation and investment decision- making.
+    </element>
+    <element type="NarrativeText" element_id="df5615638d248eb899fdcae22bf6394e">
+      3. Valuation: Employed in the valuation of companies by discounting future cash flows using the cost of equity derived from CAPM.
+    </element>
+    <element type="NarrativeText" element_id="ba64f000a816369916791ac7dfeb8a76">
+      4. Portfolio Management: Helps assess the expected return and risk of a portfolio based on individual asset characteristics.
+    </element>
+    <element type="NarrativeText" element_id="8baa55e5b6e439c87257094477f018c4">
+      5. Risk Management: Assists in understanding and managing systematic risk associated with an investment, aiding in risk-return trade-off decisions.
+    </element>
+  </page>
+  <page number="10">
+    <element type="UncategorizedText" element_id="d702e98acba6d88a11b1cde07d086036">
+      lOMoAR cPSD| 19662931
+    </element>
+    <element type="Table" element_id="7fba66dc9828254fb05e5d26d47397fd">
+      <table_html>&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Date&lt;/th&gt;&lt;th&gt;Bata&lt;/th&gt;&lt;th&gt;Daily return consumer durables daily return&lt;/th&gt;&lt;th&gt;NIFTY50&lt;/th&gt;&lt;th&gt;Nifty 50&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;01-Apr-22&lt;/td&gt;&lt;td&gt;1,998.80&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;17670.45&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;04-Apr-22&lt;/td&gt;&lt;td&gt;2,022.25&lt;/td&gt;&lt;td&gt;1.1732&lt;/td&gt;&lt;td&gt;18053.4&lt;/td&gt;&lt;td&gt;2.1672&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;05-Apr-22&lt;/td&gt;&lt;td&gt;2,017.80&lt;/td&gt;&lt;td&gt;-0.2201&lt;/td&gt;&lt;td&gt;17957.4&lt;/td&gt;&lt;td&gt;-0.5318&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;06-Apr-22&lt;/td&gt;&lt;td&gt;2,017.50&lt;/td&gt;&lt;td&gt;-0.0149&lt;/td&gt;&lt;td&gt;17807.65&lt;/td&gt;&lt;td&gt;-0.8339&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;07-Apr-22&lt;/td&gt;&lt;td&gt;1,963.60&lt;/td&gt;&lt;td&gt;-2.6716&lt;/td&gt;&lt;td&gt;17639.55&lt;/td&gt;&lt;td&gt;-0.9440&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;08-Apr-22&lt;/td&gt;&lt;td&gt;1,967.50&lt;/td&gt;&lt;td&gt;0.1986&lt;/td&gt;&lt;td&gt;17784.35&lt;/td&gt;&lt;td&gt;0.8209&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;11-Apr-22&lt;/td&gt;&lt;td&gt;2,019.75&lt;/td&gt;&lt;td&gt;2.6557&lt;/td&gt;&lt;td&gt;17674.95&lt;/td&gt;&lt;td&gt;-0.6151&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;12-Apr-22&lt;/td&gt;&lt;td&gt;1,980.15&lt;/td&gt;&lt;td&gt;-1.9606&lt;/td&gt;&lt;td&gt;17530.3&lt;/td&gt;&lt;td&gt;-0.8184&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;13-Apr-22&lt;/td&gt;&lt;td&gt;1,960.55&lt;/td&gt;&lt;td&gt;-0.9898&lt;/td&gt;&lt;td&gt;17475.65&lt;/td&gt;&lt;td&gt;-0.3117&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;18-Apr-22&lt;/td&gt;&lt;td&gt;1,969.90&lt;/td&gt;&lt;td&gt;0.4769&lt;/td&gt;&lt;td&gt;17173.65&lt;/td&gt;&lt;td&gt;-1.7281&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;19-Apr-22&lt;/td&gt;&lt;td&gt;1,925.60&lt;/td&gt;&lt;td&gt;-2.2488&lt;/td&gt;&lt;td&gt;16958.65&lt;/td&gt;&lt;td&gt;-1.2519&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;20-Apr-22&lt;/td&gt;&lt;td&gt;1,923.90&lt;/td&gt;&lt;td&gt;-0.0883&lt;/td&gt;&lt;td&gt;17136.55&lt;/td&gt;&lt;td&gt;1.0490&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;21-Apr-22&lt;/td&gt;&lt;td&gt;1,948.40&lt;/td&gt;&lt;td&gt;1.2735&lt;/td&gt;&lt;td&gt;17392.6&lt;/td&gt;&lt;td&gt;1.4942&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;26-Apr-22&lt;/td&gt;&lt;td&gt;1,975.45&lt;/td&gt;&lt;td&gt;3.4159&lt;/td&gt;&lt;td&gt;17200.8&lt;/td&gt;&lt;td&gt;1.4560&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;27-Apr-22&lt;/td&gt;&lt;td&gt;1,919.05&lt;/td&gt;&lt;td&gt;-2.8550&lt;/td&gt;&lt;td&gt;17038.4&lt;/td&gt;&lt;td&gt;-0.9441&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;28-Apr-22&lt;/td&gt;&lt;td&gt;1,936.70&lt;/td&gt;&lt;td&gt;0.9197&lt;/td&gt;&lt;td&gt;17245.05&lt;/td&gt;&lt;td&gt;1.2128&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;29-Apr-22&lt;/td&gt;&lt;td&gt;1,948.65&lt;/td&gt;&lt;td&gt;0.6170&lt;/td&gt;&lt;td&gt;17102.55&lt;/td&gt;&lt;td&gt;-0.8263&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;02-May-22&lt;/td&gt;&lt;td&gt;1,967.80&lt;/td&gt;&lt;td&gt;0.9827&lt;/td&gt;&lt;td&gt;17069.1&lt;/td&gt;&lt;td&gt;-0.1956&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;04-May-22&lt;/td&gt;&lt;td&gt;1,905.10&lt;/td&gt;&lt;td&gt;-3.1863&lt;/td&gt;&lt;td&gt;16677.6&lt;/td&gt;&lt;td&gt;-2.2936&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;05-May-22&lt;/td&gt;&lt;td&gt;1,881.65&lt;/td&gt;&lt;td&gt;-1.2309&lt;/td&gt;&lt;td&gt;16682.65&lt;/td&gt;&lt;td&gt;0.0303&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;06-May-22&lt;/td&gt;&lt;td&gt;1,856.80&lt;/td&gt;&lt;td&gt;-1.3206&lt;/td&gt;&lt;td&gt;16411.25&lt;/td&gt;&lt;td&gt;-1.6268&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;09-May-22&lt;/td&gt;&lt;td&gt;1,810.25&lt;/td&gt;&lt;td&gt;-2.5070&lt;/td&gt;&lt;td&gt;16301.85&lt;/td&gt;&lt;td&gt;-0.6666&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;10-May-22&lt;/td&gt;&lt;td&gt;1,759.65&lt;/td&gt;&lt;td&gt;-2.7952&lt;/td&gt;&lt;td&gt;16240.05&lt;/td&gt;&lt;td&gt;-0.3791&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;11-May-22&lt;/td&gt;&lt;td&gt;1,725.40&lt;/td&gt;&lt;td&gt;-1.9464&lt;/td&gt;&lt;td&gt;16167.1&lt;/td&gt;&lt;td&gt;-0.4492&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;12-May-22&lt;/td&gt;&lt;td&gt;1,684.15&lt;/td&gt;&lt;td&gt;-2.3907&lt;/td&gt;&lt;td&gt;15808&lt;/td&gt;&lt;td&gt;-2.2212&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;13-May-22&lt;/td&gt;&lt;td&gt;1,679.30&lt;/td&gt;&lt;td&gt;-0.2880&lt;/td&gt;&lt;td&gt;15782.15&lt;/td&gt;&lt;td&gt;-0.1635&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;16-May-22&lt;/td&gt;&lt;td&gt;1,690.90&lt;/td&gt;&lt;td&gt;0.6908&lt;/td&gt;&lt;td&gt;15842.3&lt;/td&gt;&lt;td&gt;0.3811&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;17-May-22&lt;/td&gt;&lt;td&gt;1,763.10&lt;/td&gt;&lt;td&gt;4.2699&lt;/td&gt;&lt;td&gt;16259.3&lt;/td&gt;&lt;td&gt;2.6322&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;18-May-22&lt;/td&gt;&lt;td&gt;1,754.45&lt;/td&gt;&lt;td&gt;-0.4906&lt;/td&gt;&lt;td&gt;16240.3&lt;/td&gt;&lt;td&gt;-0.1169&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;19-May-22&lt;/td&gt;&lt;td&gt;1,735.80&lt;/td&gt;&lt;td&gt;-1.0630&lt;/td&gt;&lt;td&gt;15809.4&lt;/td&gt;&lt;td&gt;-2.6533&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;20-May-22&lt;/td&gt;&lt;td&gt;1,752.95&lt;/td&gt;&lt;td&gt;0.9880&lt;/td&gt;&lt;td&gt;16266.15&lt;/td&gt;&lt;td&gt;2.8891&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;23-May-22&lt;/td&gt;&lt;td&gt;1,765.00&lt;/td&gt;&lt;td&gt;0.6874&lt;/td&gt;&lt;td&gt;16214.7&lt;/td&gt;&lt;td&gt;-0.3163&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</table_html>
+    </element>
+    <element type="UncategorizedText" element_id="f61a72e0e0f3ad0714714269cd774ceb">
+      24-May-22
+    </element>
+    <element type="UncategorizedText" element_id="e821d1b587dd45066dc3851ae33ec09f">
+      1,783.20
+    </element>
+    <element type="UncategorizedText" element_id="feb9f3b4bb8e6e7e52f6b39a29a0e3a5">
+      1.0312
+    </element>
+    <element type="UncategorizedText" element_id="7c132153ae838e90353d2d3c7d681373">
+      16125.15
+    </element>
+    <element type="UncategorizedText" element_id="73760d775e62a6dd35af0f9cb5dc74b7">
+      -0.5523
+    </element>
+    <element type="UncategorizedText" element_id="72d5968412db17575e8854b71813bf07">
+      25-May-22
+    </element>
+    <element type="UncategorizedText" element_id="6710e21cd59ce9997c992b65f756b44c">
+      1,745.75
+    </element>
+    <element type="UncategorizedText" element_id="6f9b99b1352b06313ce261e8076fdadf">
+      -2.1002
+    </element>
+    <element type="UncategorizedText" element_id="186245ed2a83096820a1278f82e23b5c">
+      16025.8
+    </element>
+    <element type="UncategorizedText" element_id="b13e736a652d876a8f66da225497c715">
+      -0.6161
+    </element>
+    <element type="UncategorizedText" element_id="277b32d122153f0c61ae0b0a9e144d6a">
+      26-May-22
+    </element>
+    <element type="UncategorizedText" element_id="6ba62e5d28cc786c9439c064dca80e8d">
+      1,770.75
+    </element>
+    <element type="UncategorizedText" element_id="691e26c2bc9670cfb12b29ba257a1cc3">
+      1.4320
+    </element>
+    <element type="UncategorizedText" element_id="6a1707527c47251f8f749882f48c7404">
+      16170.15
+    </element>
+    <element type="UncategorizedText" element_id="8f7213381cd600407e39e1fd72050915">
+      0.9007
+    </element>
+    <element type="UncategorizedText" element_id="3922fc3805cc1e3a2f4e3992b7086e39">
+      27-May-22
+    </element>
+    <element type="UncategorizedText" element_id="fe9926d77838f8485a5ab24d3a35c6ab">
+      1,802.50
+    </element>
+    <element type="UncategorizedText" element_id="ea83d9167a040968f19f490a32eb2f5a">
+      1.7930
+    </element>
+    <element type="UncategorizedText" element_id="6398b86f659d1590ef00102cce58dfad">
+      16352.45
+    </element>
+    <element type="UncategorizedText" element_id="9e55fe0ecda18cbf5e892f0e773a8a5c">
+      1.1274
+    </element>
+    <element type="UncategorizedText" element_id="0a144e59880e941e212aedd47f759127">
+      30-May-22
+    </element>
+    <element type="UncategorizedText" element_id="512c5a9008df35c57534074c8df2288a">
+      1,884.25
+    </element>
+    <element type="UncategorizedText" element_id="492bcc3978db706dd93f46d51af8506e">
+      4.5354
+    </element>
+    <element type="UncategorizedText" element_id="cdc67e8cc1ca5afae540ae3b65041ed4">
+      16661.4
+    </element>
+    <element type="UncategorizedText" element_id="f23350edceaefa6ada11ef7c6bb17d2d">
+      1.8893
+    </element>
+    <element type="UncategorizedText" element_id="8c319900d4f49eb3f8d97ca0b9d94a33">
+      31-May-22
+    </element>
+    <element type="UncategorizedText" element_id="3d794eda50765eac1f1a1722200c52dd">
+      1,877.30
+    </element>
+    <element type="UncategorizedText" element_id="456ef61b210d89339cb6799ff725d8c9">
+      -0.3688
+    </element>
+    <element type="UncategorizedText" element_id="732f5a547f6564bb21ef40d70d48b5d9">
+      16584.55
+    </element>
+    <element type="UncategorizedText" element_id="4803d71c85656eb2aab27127e8f78dc1">
+      -0.4612
+    </element>
+    <element type="UncategorizedText" element_id="5f5d32ae9fe30bd5a61dd05714bfca13">
+      01-Jun-22
+    </element>
+    <element type="UncategorizedText" element_id="657f0b03de3b79f97919745b27c68b8f">
+      1,852.30
+    </element>
+    <element type="UncategorizedText" element_id="772a57409f4956e851faa183bab2d070">
+      -1.3317
+    </element>
+    <element type="UncategorizedText" element_id="b0247e28f5e0bfbb2a90ff1ca762f1f7">
+      16522.75
+    </element>
+    <element type="UncategorizedText" element_id="770106f8f7f627b0a110f1f26ded3ec4">
+      -0.3726
+    </element>
+    <element type="UncategorizedText" element_id="dcd92a07681c0abb7d6e655bd6c73ec2">
+      02-Jun-22
+    </element>
+    <element type="UncategorizedText" element_id="66338db2e833d4cbf98a38855f42d562">
+      1,843.85
+    </element>
+    <element type="UncategorizedText" element_id="fd7e7afc0e21bfadb6dc6fecec7e10df">
+      -0.4562
+    </element>
+    <element type="UncategorizedText" element_id="8f9ed5a0f513f1a504a8de1a7d7b8159">
+      16628
+    </element>
+    <element type="UncategorizedText" element_id="46e777c167271c209e83265b62243b69">
+      0.6370
+    </element>
+    <element type="UncategorizedText" element_id="9bc85a19a35e04da91a4a74593321063">
+      03-Jun-22
+    </element>
+    <element type="UncategorizedText" element_id="6e88e2dee35abb757bc4d333333caefb">
+      1,839.90
+    </element>
+    <element type="UncategorizedText" element_id="8226a739aad337313f9d9713dcf1b260">
+      -0.2142
+    </element>
+    <element type="UncategorizedText" element_id="2c8f76ca5f3c79d122a37573ad9606e9">
+      16584.3
+    </element>
+    <element type="UncategorizedText" element_id="8a3c786b889014df9cd0e45323168d3b">
+      -0.2628
+    </element>
+    <element type="UncategorizedText" element_id="e9982be66e5d261cabc37d6a66b1f2e3">
+      06-Jun-22
+    </element>
+    <element type="UncategorizedText" element_id="8e6e9e5096c167dae1c1f998f3600592">
+      1,828.80
+    </element>
+    <element type="UncategorizedText" element_id="4f552c4d6ee588975d381ab55db4e0af">
+      -0.6033
+    </element>
+    <element type="UncategorizedText" element_id="af1d1deef4faf9b1ef773a53bae14988">
+      16569.55
+    </element>
+    <element type="UncategorizedText" element_id="6029ca1f5d06a6616512179a8e66bdd6">
+      -0.0889
+    </element>
+    <element type="UncategorizedText" element_id="12f4faf97752fe360c2c4242a69be665">
+      07-Jun-22
+    </element>
+    <element type="UncategorizedText" element_id="3964c2b04726f9799502d365d58942d3">
+      1,785.25
+    </element>
+    <element type="UncategorizedText" element_id="6366ae2e8ece3cf5e89395aa7118dcfa">
+      -2.3813
+    </element>
+    <element type="UncategorizedText" element_id="afa9298fae4f2437f553d7493c970a09">
+      16416.35
+    </element>
+    <element type="UncategorizedText" element_id="8e646aaa83b8c922b138ca69f242edd4">
+      -0.9246
+    </element>
+    <element type="UncategorizedText" element_id="8c494b0fef9b7f0075907fe2021b585c">
+      08-Jun-22
+    </element>
+    <element type="UncategorizedText" element_id="c5a47cd64963d7da14571d5707e145ed">
+      1,736.65
+    </element>
+    <element type="UncategorizedText" element_id="c6b9595b35de06e25cf839014168d0c7">
+      -2.7223
+    </element>
+    <element type="UncategorizedText" element_id="c321fb80fdc9c4a87f6cee618a49650e">
+      16356.25
+    </element>
+    <element type="UncategorizedText" element_id="f6eea435a3bbf7624148461c40973fb4">
+      -0.3661
+    </element>
+    <element type="UncategorizedText" element_id="2fc4d50ab2acf57bb38d89fe04fcd37e">
+      09-Jun-22
+    </element>
+    <element type="UncategorizedText" element_id="9787da291b80d133ed17f620107dffc3">
+      1,744.90
+    </element>
+    <element type="UncategorizedText" element_id="43800aa39639ccc89cf09757dcfa7222">
+      0.4751
+    </element>
+    <element type="UncategorizedText" element_id="dafc11ad1fa348a875815f83286d0d0a">
+      16478.1
+    </element>
+    <element type="UncategorizedText" element_id="5e4bb5b7dcee61fa03612d91381825a0">
+      0.7450
+    </element>
+    <element type="UncategorizedText" element_id="1cd9b28389067fd08e163c30e4701c85">
+      10-Jun-22
+    </element>
+    <element type="UncategorizedText" element_id="3b0fc6d3806fc611dd819b5d39edf500">
+      1,736.95
+    </element>
+    <element type="UncategorizedText" element_id="620220b750908c3f16ee753e4767b4f5">
+      -0.4556
+    </element>
+    <element type="UncategorizedText" element_id="5f86c2c001fbf9ec51d3debf37700dfb">
+      16201.8
+    </element>
+    <element type="UncategorizedText" element_id="9510ba90498a014e8f9821b5c13751d5">
+      -1.6768
+    </element>
+    <element type="UncategorizedText" element_id="ef67b158cfbf3dcb56b77fdc12442c18">
+      13-Jun-22
+    </element>
+    <element type="UncategorizedText" element_id="543d3dae9203a189366550e12e628b98">
+      1,701.95
+    </element>
+    <element type="UncategorizedText" element_id="04065a66f76a05dc9b2e467a5fbc99f9">
+      -2.0150
+    </element>
+    <element type="UncategorizedText" element_id="af83f32989204424b0be82eacaf68e9c">
+      15774.4
+    </element>
+    <element type="UncategorizedText" element_id="02fdf8b3ce5f3d373e6cf8e90cafd732">
+      -2.6380
+    </element>
+    <element type="UncategorizedText" element_id="32b37a5e0ce1b951af92a8f5d22ed285">
+      14-Jun-22
+    </element>
+    <element type="UncategorizedText" element_id="1b2f540b00e903fd2abbf1503e020c79">
+      1,720.15
+    </element>
+    <element type="UncategorizedText" element_id="bc60a88971a2efde9a9baa7a47e9324d">
+      1.0694
+    </element>
+    <element type="UncategorizedText" element_id="91336a761053f02a362d662acdca5132">
+      15732.1
+    </element>
+    <element type="UncategorizedText" element_id="d4e0e93acc131507f0a709d5709ca560">
+      -0.2682
+    </element>
+    <element type="UncategorizedText" element_id="7c72f5cb6adbc157ec815f6283c691ed">
+      -2.1002 1.4320 1.7930
+    </element>
+    <element type="UncategorizedText" element_id="61e98bddd4cfb5baae7ca10f1f8267f2">
+      16025.8 16170.15 16352.45 16661.4 16584.55 16522.75
+    </element>
+    <element type="UncategorizedText" element_id="d8d1f944770638407b39b2e85468178e">
+      -0.3688 -1.3317 -0.4562 -0.2142 -0.6033 -2,3813 -2.7223
+    </element>
+    <element type="UncategorizedText" element_id="d343ba9658ba0aa25e844ee23e986bf3">
+      16584.3 16569.55 16416.35 16356.25 16478.1
+    </element>
+    <element type="UncategorizedText" element_id="6702a92e2f8a48b321779f35ef7918c8">
+      -0.4556 -2,0150 1.0694
+    </element>
+    <element type="UncategorizedText" element_id="7107fb7e7063dae9e9944b4f15526349">
+      15774.4 15732:1
+    </element>
+  </page>
+  <page number="11">
+    <element type="UncategorizedText" element_id="52b1fb49298202ed480bb833357c7916">
+      lOMoAR cPSD| 19662931
+    </element>
+    <element type="Table" element_id="b8c3de804f92c9ee36a05d751ce0e7c5">
+      <table_html>&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;15-Jun-22&lt;/td&gt;&lt;td&gt;1,722.30&lt;/td&gt;&lt;td&gt;0.1250&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;16-Jun-22&lt;/td&gt;&lt;td&gt;1,677.80&lt;/td&gt;&lt;td&gt;-2.5838&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;17-Jun-22&lt;/td&gt;&lt;td&gt;1,636.60&lt;/td&gt;&lt;td&gt;-2.4556&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;20-Jun-22&lt;/td&gt;&lt;td&gt;1,628.90&lt;/td&gt;&lt;td&gt;-0.4705&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;21-Jun-22&lt;/td&gt;&lt;td&gt;1,658.35&lt;/td&gt;&lt;td&gt;1.8080&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;22-Jun-22&lt;/td&gt;&lt;td&gt;1,643.30&lt;/td&gt;&lt;td&gt;-0.9075&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;23-Jun-22&lt;/td&gt;&lt;td&gt;1,689.15&lt;/td&gt;&lt;td&gt;2.7901&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;24-Jun-22&lt;/td&gt;&lt;td&gt;1,739.45&lt;/td&gt;&lt;td&gt;2.9778&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;27-Jun-22&lt;/td&gt;&lt;td&gt;1,749.05&lt;/td&gt;&lt;td&gt;0.5519&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;28-Jun-22&lt;/td&gt;&lt;td&gt;1,712.45&lt;/td&gt;&lt;td&gt;-2.0926&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;29-Jun-22&lt;/td&gt;&lt;td&gt;1,679.65&lt;/td&gt;&lt;td&gt;-1.9154&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;30-Jun-22&lt;/td&gt;&lt;td&gt;1,668.70&lt;/td&gt;&lt;td&gt;-0.6519&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;01-Jul-22&lt;/td&gt;&lt;td&gt;1,701.60&lt;/td&gt;&lt;td&gt;1.9716&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;04-Jul-22&lt;/td&gt;&lt;td&gt;1,724.90&lt;/td&gt;&lt;td&gt;1.3693&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;05-Jul-22&lt;/td&gt;&lt;td&gt;1,725.05&lt;/td&gt;&lt;td&gt;0.0087&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;06-Jul-22&lt;/td&gt;&lt;td&gt;1,783.80&lt;/td&gt;&lt;td&gt;3.4057&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;07-Jul-22&lt;/td&gt;&lt;td&gt;1,784.50&lt;/td&gt;&lt;td&gt;0.0392&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;08-Jul-22&lt;/td&gt;&lt;td&gt;1,791.85&lt;/td&gt;&lt;td&gt;0.4119&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;11-Jul-22&lt;/td&gt;&lt;td&gt;1,836.35&lt;/td&gt;&lt;td&gt;2.4835&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;12-Jul-22&lt;/td&gt;&lt;td&gt;1,801.85&lt;/td&gt;&lt;td&gt;-1.8787&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;13-Jul-22&lt;/td&gt;&lt;td&gt;1,784.30&lt;/td&gt;&lt;td&gt;-0.9740&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;14-Jul-22&lt;/td&gt;&lt;td&gt;1,785.05&lt;/td&gt;&lt;td&gt;0.0420&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;15-Jul-22&lt;/td&gt;&lt;td&gt;1,812.50&lt;/td&gt;&lt;td&gt;1.5378&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;18-Jul-22&lt;/td&gt;&lt;td&gt;1,810.60&lt;/td&gt;&lt;td&gt;-0.1048&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;19-Jul-22&lt;/td&gt;&lt;td&gt;1,824.10&lt;/td&gt;&lt;td&gt;0.7456&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;20-Jul-22&lt;/td&gt;&lt;td&gt;1,818.75&lt;/td&gt;&lt;td&gt;-0.2933&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;21-Jul-22&lt;/td&gt;&lt;td&gt;1,827.15&lt;/td&gt;&lt;td&gt;0.4619&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;22-Jul-22&lt;/td&gt;&lt;td&gt;1,825.90&lt;/td&gt;&lt;td&gt;-0.0684&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;25-Jul-22&lt;/td&gt;&lt;td&gt;1,835.80&lt;/td&gt;&lt;td&gt;0.5422&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;26-Jul-22&lt;/td&gt;&lt;td&gt;1,808.30&lt;/td&gt;&lt;td&gt;-1.4980&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;27-Jul-22&lt;/td&gt;&lt;td&gt;1,828.90&lt;/td&gt;&lt;td&gt;1.1392&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;28-Jul-22&lt;/td&gt;&lt;td&gt;1,881.45&lt;/td&gt;&lt;td&gt;2.8733&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;29-Jul-22&lt;/td&gt;&lt;td&gt;1,961.65&lt;/td&gt;&lt;td&gt;4.2627&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;01-Aug-22&lt;/td&gt;&lt;td&gt;1,980.85&lt;/td&gt;&lt;td&gt;0.9788&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;02-Aug-22&lt;/td&gt;&lt;td&gt;1,999.55&lt;/td&gt;&lt;td&gt;0.9440&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;03-Aug-22&lt;/td&gt;&lt;td&gt;1,977.55&lt;/td&gt;&lt;td&gt;-1.1002&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;04-Aug-22&lt;/td&gt;&lt;td&gt;1,913.85&lt;/td&gt;&lt;td&gt;-3.2212&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;05-Aug-22&lt;/td&gt;&lt;td&gt;1,901.50&lt;/td&gt;&lt;td&gt;-0.6453&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;08-Aug-22&lt;/td&gt;&lt;td&gt;1,902.20&lt;/td&gt;&lt;td&gt;0.0368&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;10-Aug-22&lt;/td&gt;&lt;td&gt;1,881.20&lt;/td&gt;&lt;td&gt;-1.1040&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</table_html>
+    </element>
+    <element type="Table" element_id="d6cb9540984d905b51cbeab86deb088f">
+      <table_html>&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;0.1250&lt;/td&gt;&lt;td&gt;15692.15&lt;/td&gt;&lt;td&gt;-0.2539&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-2.5838&lt;/td&gt;&lt;td&gt;15360.6&lt;/td&gt;&lt;td&gt;-2.1128&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-2.4556&lt;/td&gt;&lt;td&gt;15293.5&lt;/td&gt;&lt;td&gt;-0.4368&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.4705&lt;/td&gt;&lt;td&gt;15350.15&lt;/td&gt;&lt;td&gt;0.3704&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1.8080&lt;/td&gt;&lt;td&gt;15638.8&lt;/td&gt;&lt;td&gt;1.8804&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.9075&lt;/td&gt;&lt;td&gt;15413.3&lt;/td&gt;&lt;td&gt;-1.4419&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2.7901&lt;/td&gt;&lt;td&gt;15556.65&lt;/td&gt;&lt;td&gt;0.9300&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2.9778&lt;/td&gt;&lt;td&gt;15699.25&lt;/td&gt;&lt;td&gt;0.9166&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.5519&lt;/td&gt;&lt;td&gt;15832.05&lt;/td&gt;&lt;td&gt;0.8459&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-2.0926&lt;/td&gt;&lt;td&gt;15850.2&lt;/td&gt;&lt;td&gt;0.1146&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-1.9154&lt;/td&gt;&lt;td&gt;15799.1&lt;/td&gt;&lt;td&gt;-0.3224&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.6519&lt;/td&gt;&lt;td&gt;15780.25&lt;/td&gt;&lt;td&gt;-0.1193&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1.9716&lt;/td&gt;&lt;td&gt;15752.05&lt;/td&gt;&lt;td&gt;-0.1787&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1.3693&lt;/td&gt;&lt;td&gt;15835.35&lt;/td&gt;&lt;td&gt;0.5288&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.0087&lt;/td&gt;&lt;td&gt;15810.85&lt;/td&gt;&lt;td&gt;-0.1547&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3.4057&lt;/td&gt;&lt;td&gt;15989.8&lt;/td&gt;&lt;td&gt;1.1318&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.0392&lt;/td&gt;&lt;td&gt;16132.9&lt;/td&gt;&lt;td&gt;0.8949&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.4119&lt;/td&gt;&lt;td&gt;16220.6&lt;/td&gt;&lt;td&gt;0.5436&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2.4835&lt;/td&gt;&lt;td&gt;16216&lt;/td&gt;&lt;td&gt;-0.0284&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-1.8787&lt;/td&gt;&lt;td&gt;16058.3&lt;/td&gt;&lt;td&gt;-0.9725&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.9740&lt;/td&gt;&lt;td&gt;15966.65&lt;/td&gt;&lt;td&gt;-0.5707&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.0420&lt;/td&gt;&lt;td&gt;15938.65&lt;/td&gt;&lt;td&gt;-0.1754&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1.5378&lt;/td&gt;&lt;td&gt;16049.2&lt;/td&gt;&lt;td&gt;0.6936&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.1048&lt;/td&gt;&lt;td&gt;16278.5&lt;/td&gt;&lt;td&gt;1.4287&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.7456&lt;/td&gt;&lt;td&gt;16340.55&lt;/td&gt;&lt;td&gt;0.3812&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.2933&lt;/td&gt;&lt;td&gt;16520.85&lt;/td&gt;&lt;td&gt;1.1034&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.4619&lt;/td&gt;&lt;td&gt;16605.25&lt;/td&gt;&lt;td&gt;0.5109&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.0684&lt;/td&gt;&lt;td&gt;16719.45&lt;/td&gt;&lt;td&gt;0.6877&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.5422&lt;/td&gt;&lt;td&gt;16631&lt;/td&gt;&lt;td&gt;-0.5290&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-1.4980&lt;/td&gt;&lt;td&gt;16483.85&lt;/td&gt;&lt;td&gt;-0.8848&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1.1392&lt;/td&gt;&lt;td&gt;16641.8&lt;/td&gt;&lt;td&gt;0.9582&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2.8733&lt;/td&gt;&lt;td&gt;16929.6&lt;/td&gt;&lt;td&gt;1.7294&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4.2627&lt;/td&gt;&lt;td&gt;17158.25&lt;/td&gt;&lt;td&gt;1.3506&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.9788 0.9440&lt;/td&gt;&lt;td&gt;17340.05 17345.45&lt;/td&gt;&lt;td&gt;1.0595 0.0311&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-1.1002&lt;/td&gt;&lt;td&gt;17388.15&lt;/td&gt;&lt;td&gt;0.2462&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-3.2212&lt;/td&gt;&lt;td&gt;17382&lt;/td&gt;&lt;td&gt;-0.0354&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.6453&lt;/td&gt;&lt;td&gt;17397.5&lt;/td&gt;&lt;td&gt;0.0892&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.0368&lt;/td&gt;&lt;td&gt;17525.1&lt;/td&gt;&lt;td&gt;0.7334&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-1.1040&lt;/td&gt;&lt;td&gt;17534.75&lt;/td&gt;&lt;td&gt;0.0551&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</table_html>
+    </element>
+    <element type="UncategorizedText" element_id="d789b051bd4baa53e4ecbf20ac9e41d7">
+      0.1250
+    </element>
+    <element type="UncategorizedText" element_id="e4ed4077164782e3b03f0b4e858251d6">
+      -2.5838
+    </element>
+    <element type="UncategorizedText" element_id="7614850c536b159950b59da265d11074">
+      -2.4556
+    </element>
+    <element type="UncategorizedText" element_id="ffee47a338592016f4825c858a4c6e23">
+      -0.4705
+    </element>
+    <element type="UncategorizedText" element_id="fa8c0b0d62a0d96f5182e11e93571f31">
+      1.8080
+    </element>
+    <element type="UncategorizedText" element_id="c0a8150eae2faa24075acbc5ed6d3c8c">
+      -0.9075
+    </element>
+    <element type="UncategorizedText" element_id="dfc3f57c6d9ba4ee71d51fec62b07b68">
+      2.7901
+    </element>
+    <element type="UncategorizedText" element_id="366ed1660a53601067af8d922a7d13cb">
+      2.9778
+    </element>
+    <element type="UncategorizedText" element_id="b26e1153b577a18dd09fbb03a35c8ea3">
+      0.5519
+    </element>
+    <element type="UncategorizedText" element_id="d4598badc7eb8c2f4ac68095ba3d4186">
+      -2.0926
+    </element>
+    <element type="UncategorizedText" element_id="9b1cbd1a3d65489f6748b1dbe1ca7ba7">
+      -1.9154
+    </element>
+    <element type="UncategorizedText" element_id="d100b01f1884a06546a1f596de514fcc">
+      -0.6519
+    </element>
+    <element type="UncategorizedText" element_id="1623bc11819b088592584ce38e7e806d">
+      1.9716
+    </element>
+    <element type="UncategorizedText" element_id="0e4e23c36e8d59f33e3e9fa6c0b8af3d">
+      1.3693
+    </element>
+    <element type="UncategorizedText" element_id="f58053552d1194ecd5eb3869754b8804">
+      0.0087
+    </element>
+    <element type="UncategorizedText" element_id="8d68e0a5459109fb2ee2e932c5843acb">
+      3.4057
+    </element>
+    <element type="UncategorizedText" element_id="3d008ec69a2655f93759e3df402d598e">
+      0.0392
+    </element>
+    <element type="UncategorizedText" element_id="d94006fe99b03108de4f23358172bbc6">
+      0.4119
+    </element>
+    <element type="UncategorizedText" element_id="efd26a13430faf2fa84ec902d071af7b">
+      2.4835
+    </element>
+    <element type="UncategorizedText" element_id="5855b23fcc43945b2d28b68dc3731e95">
+      -1.8787
+    </element>
+    <element type="UncategorizedText" element_id="18560d094060911f59840b06d191883d">
+      -0.9740
+    </element>
+    <element type="UncategorizedText" element_id="123c4e1bf29e758125d411c941c4b4c3">
+      0.0420
+    </element>
+    <element type="UncategorizedText" element_id="a853b233e33c8e49139c38924a18e592">
+      1.5378
+    </element>
+    <element type="UncategorizedText" element_id="10bbf577732dec98537b0928e4e2b166">
+      -0.1048
+    </element>
+    <element type="UncategorizedText" element_id="78bdcc9908f69edcf5a7191e6db63ef1">
+      0.7456
+    </element>
+    <element type="UncategorizedText" element_id="51560881da1ede75a7c49c7e970fc1c8">
+      -0.2933
+    </element>
+    <element type="UncategorizedText" element_id="31501c55459037f3895f6496ebfac6fd">
+      0.4619
+    </element>
+    <element type="UncategorizedText" element_id="5c75ffe234ac3daa43c67d2091bdf8f0">
+      -0.0684
+    </element>
+    <element type="UncategorizedText" element_id="ff0e2f74cc48a6793581a0cc62f38bbc">
+      0.5422
+    </element>
+    <element type="UncategorizedText" element_id="aff682336d4b68934a46a27d1e608358">
+      -1.4980
+    </element>
+    <element type="UncategorizedText" element_id="924d9451b3139519a994a88d29bc0f54">
+      1.1392
+    </element>
+    <element type="UncategorizedText" element_id="fdb832bc8cdde6489595b87cc6f6deb4">
+      2.8733
+    </element>
+    <element type="UncategorizedText" element_id="7170c8adf4e241cfe60ec171aebf424c">
+      4.2627
+    </element>
+    <element type="UncategorizedText" element_id="507c737be33312146e94489416ae9b23">
+      0.9788
+    </element>
+    <element type="UncategorizedText" element_id="60496a38af68d17e99bdb4993f6f9250">
+      0.9440
+    </element>
+    <element type="UncategorizedText" element_id="4ad17f28a670becabf23b4ec3e47a7a0">
+      -1.1002
+    </element>
+    <element type="UncategorizedText" element_id="406588acc41c38d81d7680fa36f7a264">
+      -3.2212
+    </element>
+    <element type="UncategorizedText" element_id="298af9a28703a5638761a69bdc2b81af">
+      -0.6453
+    </element>
+    <element type="UncategorizedText" element_id="83a44143c198701a729576fa781800b3">
+      0.0368
+    </element>
+    <element type="UncategorizedText" element_id="f3fbacc5c5e3c70c29b47f1cf8598e4a">
+      -1.1040
+    </element>
+    <element type="UncategorizedText" element_id="681bacae83ec145d0e27212d2cf16690">
+      11-Aug-22
+    </element>
+    <element type="UncategorizedText" element_id="fb4f9ba690dd396bfbc9920d216e5c7f">
+      1,914.00
+    </element>
+    <element type="UncategorizedText" element_id="cac2bb971639459fbb0f061500240027">
+      1.7436
+    </element>
+    <element type="UncategorizedText" element_id="f7745893128dfbf6078400f417be0c5d">
+      17659
+    </element>
+    <element type="UncategorizedText" element_id="6af81d3026c3dc1419832a0f9d430098">
+      0.7086
+    </element>
+    <element type="UncategorizedText" element_id="1d14d40c62607bd796258819d80c8299">
+      12-Aug-22
+    </element>
+    <element type="UncategorizedText" element_id="bd2c846fce737ca778f3418541571791">
+      1,911.70
+    </element>
+    <element type="UncategorizedText" element_id="99f908de4dba3a843c6e034e80e875d5">
+      -0.1202
+    </element>
+    <element type="UncategorizedText" element_id="67892116ca17aa6251f077de5329bea2">
+      17698.15
+    </element>
+    <element type="UncategorizedText" element_id="cf32b67b4cd19d8d292f48fb70a9123d">
+      0.2217
+    </element>
+    <element type="UncategorizedText" element_id="3f993434de5056baf35d64550db1a41b">
+      16-Aug-22
+    </element>
+    <element type="UncategorizedText" element_id="4a2288e842e4b6d4a769f9b6fda12908">
+      1,971.25
+    </element>
+    <element type="UncategorizedText" element_id="0727345c5b776228e522d60a3d865d8b">
+      3.1150
+    </element>
+    <element type="UncategorizedText" element_id="780acf9189151c64314065665c1078dd">
+      17825.25
+    </element>
+    <element type="UncategorizedText" element_id="929354897235a3194d267f54e215e104">
+      0.7182
+    </element>
+    <element type="UncategorizedText" element_id="887b74ecc838a8c367d3f660d462a81b">
+      17-Aug-22
+    </element>
+    <element type="UncategorizedText" element_id="af86401adcbeb390089f5f7b75882945">
+      1,936.45
+    </element>
+    <element type="UncategorizedText" element_id="f5d1a46b5b3f07f27b84363139b1a8bc">
+      -1.7654
+    </element>
+    <element type="UncategorizedText" element_id="ce35655a05470d72f0b92b80e9a6609e">
+      17944.25
+    </element>
+    <element type="UncategorizedText" element_id="b08735f029c54fc083744ee9fdfb51a7">
+      0.6676
+    </element>
+    <element type="UncategorizedText" element_id="7bd1ae64bb26bbaa9c61bbd92c9a97dd">
+      18-Aug-22
+    </element>
+    <element type="UncategorizedText" element_id="d888d1e6bcb5ef54e14cb7350e13e00d">
+      1,922.05
+    </element>
+    <element type="UncategorizedText" element_id="d4f0bf269391647fa7fce5c326e3e80d">
+      -0.7436
+    </element>
+    <element type="UncategorizedText" element_id="466b414c7fb6f842fca5bc2141eab2bf">
+      17956.5
+    </element>
+    <element type="UncategorizedText" element_id="b8dd2b5e1dddafc497764e317c6fce68">
+      0.0683
+    </element>
+    <element type="UncategorizedText" element_id="0e4bb80754d7c345d751fbc7b7bc56f0">
+      19-Aug-22
+    </element>
+    <element type="UncategorizedText" element_id="5e673fff5cc90c641aba26789043e70f">
+      1,916.85
+    </element>
+    <element type="UncategorizedText" element_id="ed1ef5d5ef4ca6e0ff9d7c95cfaf3c52">
+      -0.2705
+    </element>
+    <element type="UncategorizedText" element_id="50b372ab06ba8e7b756ff36b6890e981">
+      17758.45
+    </element>
+    <element type="UncategorizedText" element_id="29e98875a96635dfb925f8d02d8b2b86">
+      -1.1029
+    </element>
+    <element type="UncategorizedText" element_id="f3519e7c80c9d35d2a62c68120e2d0b2">
+      22-Aug-22
+    </element>
+    <element type="UncategorizedText" element_id="4e4b9973b9d183cfd6c58b2ca5365295">
+      1,856.10
+    </element>
+    <element type="UncategorizedText" element_id="169a63262e21038b2b9d9f804784d8fb">
+      -3.1693
+    </element>
+    <element type="UncategorizedText" element_id="a5ccf105b4aacaa988b4e204d765eaa5">
+      17490.7
+    </element>
+    <element type="UncategorizedText" element_id="aa6a3ac5bdf9c5c54fd174c047c8e7ca">
+      -1.5077
+    </element>
+    <element type="UncategorizedText" element_id="9e90e3d8ce5c6000d10acabb74614a0e">
+      23-Aug-22
+    </element>
+    <element type="UncategorizedText" element_id="ab58a2a41ff6f3e7fd70368c4cd10b75">
+      1,880.40
+    </element>
+    <element type="UncategorizedText" element_id="a145c0c9f993f6d2f572526d8db91f58">
+      1.3092
+    </element>
+    <element type="UncategorizedText" element_id="98e3d69cb98fcda5bc15aaa8aabf69f2">
+      17577.5
+    </element>
+    <element type="UncategorizedText" element_id="059c8b36457938f9e1ebd59d5d64796a">
+      0.4963
+    </element>
+    <element type="UncategorizedText" element_id="0f74918005cbe7253790893cb36ce196">
+      24-Aug-22
+    </element>
+    <element type="UncategorizedText" element_id="1e172646e3991dee0e2fc6a1252cd686">
+      1,859.10
+    </element>
+    <element type="UncategorizedText" element_id="604831bdf79895b222a4bf85d3e41fb5">
+      -1.1327
+    </element>
+    <element type="UncategorizedText" element_id="c21285616098b794b6102d86a377daf8">
+      17604.95
+    </element>
+    <element type="UncategorizedText" element_id="db4c7cea3ed8973f75f6d0860db482ed">
+      0.1562
+    </element>
+    <element type="UncategorizedText" element_id="f3342002cd131ce770b73d6516e09d39">
+      25-Aug-22
+    </element>
+    <element type="UncategorizedText" element_id="5af4dc41fbe59ace0dfa04495c249b3c">
+      1,868.35
+    </element>
+    <element type="UncategorizedText" element_id="726050c68afb5f0129fc60ac43c88a78">
+      0.4976
+    </element>
+    <element type="UncategorizedText" element_id="a70b77db7463348936355bed2389b462">
+      17522.45
+    </element>
+    <element type="UncategorizedText" element_id="8500c83e92658ccaf40b714dce6d9b29">
+      -0.4686
+    </element>
+    <element type="UncategorizedText" element_id="48918009191e171e1c80b583acff8e60">
+      26-Aug-22
+    </element>
+    <element type="UncategorizedText" element_id="0f40c1f8885e16f53744336a5780d5d7">
+      1,870.40
+    </element>
+    <element type="UncategorizedText" element_id="79871d24e4b6df061e4d4336debda306">
+      0.1097
+    </element>
+    <element type="UncategorizedText" element_id="f3c91d2cc01375e8c4ccc0bfbe605902">
+      17558.9
+    </element>
+    <element type="UncategorizedText" element_id="4191b1b0be1a6800862586e5a0ede5ba">
+      0.2080
+    </element>
+    <element type="UncategorizedText" element_id="13108ae981928de98dfe5ba3dcd20dcc">
+      29-Aug-22
+    </element>
+    <element type="UncategorizedText" element_id="737fb76a151f1e6fd4d33beb7c834835">
+      1,882.65
+    </element>
+    <element type="UncategorizedText" element_id="f675500b5fae6a7a4633c537e3964033">
+      0.6549
+    </element>
+    <element type="UncategorizedText" element_id="f3f65db03b50d441b09956cc1d13d31a">
+      17312.9
+    </element>
+    <element type="UncategorizedText" element_id="0c8599f7b457616f4a85eff02db6e677">
+      -1.4010
+    </element>
+    <element type="UncategorizedText" element_id="b94a2ef704bdb8e0e692813e9e7f2d2f">
+      30-Aug-22
+    </element>
+    <element type="UncategorizedText" element_id="6b4abcf2cb107aec086e2a1b3fc63f83">
+      1,941.25
+    </element>
+    <element type="UncategorizedText" element_id="5a1052a211f3346ba3020a12731e9cbf">
+      3.1126
+    </element>
+    <element type="UncategorizedText" element_id="86b763c077fcc0de4a7e87371ad65950">
+      17759.3
+    </element>
+    <element type="UncategorizedText" element_id="0cfde97ec0e08a4289814d740eff3d82">
+      2.5784
+    </element>
+    <element type="UncategorizedText" element_id="3b70af40a171b3f2147ed65d9eab4eff">
+      01-Sep-22
+    </element>
+    <element type="UncategorizedText" element_id="be770d95b0477e189b55e929c1b842cb">
+      1,917.20
+    </element>
+    <element type="UncategorizedText" element_id="f4b8039f577694246a6d429338af4cbb">
+      -1.2389
+    </element>
+    <element type="UncategorizedText" element_id="a3c0dd5f47ab960b561cc9f97008bf5e">
+      17542.8
+    </element>
+    <element type="UncategorizedText" element_id="d11adfd3ad1191008a9f422b57c6a1bb">
+      -1.2191
+    </element>
+    <element type="UncategorizedText" element_id="d4980844dc532f927412a1fd3f7d8d84">
+      02-Sep-22
+    </element>
+    <element type="UncategorizedText" element_id="62c5e04dfeff48dd73e75a5bdf931ea5">
+      1,908.45
+    </element>
+    <element type="UncategorizedText" element_id="1ab3cfbe6d349909f454dd0a64a0fc66">
+      -0.4564
+    </element>
+    <element type="UncategorizedText" element_id="c63ceb09757afcf48edcc2d5c1481350">
+      17539.45
+    </element>
+    <element type="UncategorizedText" element_id="71a29f5f19c4fb037bbd5add6af536fb">
+      -0.0191
+    </element>
+  </page>
+  <page number="12">
+    <element type="UncategorizedText" element_id="264a598654e1844fcfc97f408feb6819">
+      lOMoAR cPSD| 19662931
+    </element>
+    <element type="Table" element_id="22492a1fa62f580b289e0ed6fdea0f5b">
+      <table_html>&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;05-Sep-22&lt;/td&gt;&lt;td&gt;1,885.00&lt;/td&gt;&lt;td&gt;-1.2287&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;06-Sep-22&lt;/td&gt;&lt;td&gt;1,881.75&lt;/td&gt;&lt;td&gt;-0.1724&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;07-Sep-22&lt;/td&gt;&lt;td&gt;1,927.25&lt;/td&gt;&lt;td&gt;2.4180&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;08-Sep-22&lt;/td&gt;&lt;td&gt;1,913.15&lt;/td&gt;&lt;td&gt;-0.7316&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;09-Sep-22&lt;/td&gt;&lt;td&gt;1,899.20&lt;/td&gt;&lt;td&gt;-0.7292&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;12-Sep-22&lt;/td&gt;&lt;td&gt;1,912.30&lt;/td&gt;&lt;td&gt;0.6898&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;13-Sep-22&lt;/td&gt;&lt;td&gt;1,941.80&lt;/td&gt;&lt;td&gt;1.5426&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;14-Sep-22&lt;/td&gt;&lt;td&gt;1,900.40&lt;/td&gt;&lt;td&gt;-2.1320&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;15-Sep-22&lt;/td&gt;&lt;td&gt;1,888.90&lt;/td&gt;&lt;td&gt;-0.6051&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;16-Sep-22&lt;/td&gt;&lt;td&gt;1,840.20&lt;/td&gt;&lt;td&gt;-2.5782&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;19-Sep-22&lt;/td&gt;&lt;td&gt;1,850.00&lt;/td&gt;&lt;td&gt;0.5326&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;20-Sep-22&lt;/td&gt;&lt;td&gt;1,854.25&lt;/td&gt;&lt;td&gt;0.2297&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;21-Sep-22&lt;/td&gt;&lt;td&gt;1,877.35&lt;/td&gt;&lt;td&gt;1.2458&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;22-Sep-22&lt;/td&gt;&lt;td&gt;1,906.10&lt;/td&gt;&lt;td&gt;1.5314&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;23-Sep-22&lt;/td&gt;&lt;td&gt;1,854.35&lt;/td&gt;&lt;td&gt;-2.7150&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;26-Sep-22&lt;/td&gt;&lt;td&gt;1,811.75&lt;/td&gt;&lt;td&gt;-2.2973&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;27-Sep-22&lt;/td&gt;&lt;td&gt;1,796.65&lt;/td&gt;&lt;td&gt;-0.8334&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;28-Sep-22&lt;/td&gt;&lt;td&gt;1,780.45&lt;/td&gt;&lt;td&gt;-0.9017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;29-Sep-22&lt;/td&gt;&lt;td&gt;1,787.10&lt;/td&gt;&lt;td&gt;0.3735&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;30-Sep-22&lt;/td&gt;&lt;td&gt;1,821.50&lt;/td&gt;&lt;td&gt;1.9249&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;03-Oct-22&lt;/td&gt;&lt;td&gt;1,783.25&lt;/td&gt;&lt;td&gt;-2.0999&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;04-Oct-22&lt;/td&gt;&lt;td&gt;1,817.55&lt;/td&gt;&lt;td&gt;1.9235&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;06-Oct-22&lt;/td&gt;&lt;td&gt;1,800.80&lt;/td&gt;&lt;td&gt;-0.9216&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;07-Oct-22&lt;/td&gt;&lt;td&gt;1,784.65&lt;/td&gt;&lt;td&gt;-0.8968&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;10-Oct-22&lt;/td&gt;&lt;td&gt;1,781.15&lt;/td&gt;&lt;td&gt;-0.1961&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;11-Oct-22&lt;/td&gt;&lt;td&gt;1,810.30&lt;/td&gt;&lt;td&gt;1.6366&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;12-Oct-22&lt;/td&gt;&lt;td&gt;1,799.15&lt;/td&gt;&lt;td&gt;-0.6159&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;13-Oct-22&lt;/td&gt;&lt;td&gt;1,822.25&lt;/td&gt;&lt;td&gt;1.2839&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;14-Oct-22&lt;/td&gt;&lt;td&gt;1,785.35&lt;/td&gt;&lt;td&gt;-2.0250&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;17-Oct-22&lt;/td&gt;&lt;td&gt;1,840.10&lt;/td&gt;&lt;td&gt;3.0666&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;18-Oct-22&lt;/td&gt;&lt;td&gt;1,867.50&lt;/td&gt;&lt;td&gt;1.4890&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;19-Oct-22&lt;/td&gt;&lt;td&gt;1,838.55&lt;/td&gt;&lt;td&gt;-1.5502&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;20-Oct-22&lt;/td&gt;&lt;td&gt;1,817.35&lt;/td&gt;&lt;td&gt;-1.1531&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;21-Oct-22&lt;/td&gt;&lt;td&gt;1,812.15&lt;/td&gt;&lt;td&gt;-0.2861&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;24-Oct-22&lt;/td&gt;&lt;td&gt;1,814.55&lt;/td&gt;&lt;td&gt;0.1324&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;25-Oct-22&lt;/td&gt;&lt;td&gt;1,804.20&lt;/td&gt;&lt;td&gt;-0.5704&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;27-Oct-22&lt;/td&gt;&lt;td&gt;1,808.35&lt;/td&gt;&lt;td&gt;0.2300&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;28-Oct-22&lt;/td&gt;&lt;td&gt;1,813.35&lt;/td&gt;&lt;td&gt;0.2765&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;31-Oct-22&lt;/td&gt;&lt;td&gt;1,828.35&lt;/td&gt;&lt;td&gt;0.8272&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</table_html>
+    </element>
+    <element type="Table" element_id="91df7172c1da93c63c2d299a3e831155">
+      <table_html>&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;-1.2287&lt;/td&gt;&lt;td&gt;17665.8&lt;/td&gt;&lt;td&gt;0.7204&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.1724&lt;/td&gt;&lt;td&gt;17655.6&lt;/td&gt;&lt;td&gt;-0.0577&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2.4180&lt;/td&gt;&lt;td&gt;17624.4&lt;/td&gt;&lt;td&gt;-0.1767&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.7316&lt;/td&gt;&lt;td&gt;17798.75&lt;/td&gt;&lt;td&gt;0.9893&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.7292&lt;/td&gt;&lt;td&gt;17833.35&lt;/td&gt;&lt;td&gt;0.1944&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.6898&lt;/td&gt;&lt;td&gt;17936.35&lt;/td&gt;&lt;td&gt;0.5776&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1.5426&lt;/td&gt;&lt;td&gt;18070.05&lt;/td&gt;&lt;td&gt;0.7454&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-2.1320&lt;/td&gt;&lt;td&gt;18003.75&lt;/td&gt;&lt;td&gt;-0.3669&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.6051&lt;/td&gt;&lt;td&gt;17877.4&lt;/td&gt;&lt;td&gt;-0.7018&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-2.5782&lt;/td&gt;&lt;td&gt;17530.85&lt;/td&gt;&lt;td&gt;-1.9385&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.5326&lt;/td&gt;&lt;td&gt;17622.25&lt;/td&gt;&lt;td&gt;0.5214&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.2297&lt;/td&gt;&lt;td&gt;17816.25&lt;/td&gt;&lt;td&gt;1.1009&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1.2458&lt;/td&gt;&lt;td&gt;17718.35&lt;/td&gt;&lt;td&gt;-0.5495&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1.5314&lt;/td&gt;&lt;td&gt;17629.8&lt;/td&gt;&lt;td&gt;-0.4998&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-2.7150&lt;/td&gt;&lt;td&gt;17327.35&lt;/td&gt;&lt;td&gt;-1.7156&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-2.2973&lt;/td&gt;&lt;td&gt;17016.3&lt;/td&gt;&lt;td&gt;-1.7951&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.8334&lt;/td&gt;&lt;td&gt;1707.4&lt;/td&gt;&lt;td&gt;-0.0523&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.9017&lt;/td&gt;&lt;td&gt;16858.6&lt;/td&gt;&lt;td&gt;-0.8749&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.3735&lt;/td&gt;&lt;td&gt;16818.1&lt;/td&gt;&lt;td&gt;-0.2402&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1.9249&lt;/td&gt;&lt;td&gt;17094.35&lt;/td&gt;&lt;td&gt;1.6426&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-2.0999&lt;/td&gt;&lt;td&gt;16887.35&lt;/td&gt;&lt;td&gt;-1.2109&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1.9235&lt;/td&gt;&lt;td&gt;17274.3&lt;/td&gt;&lt;td&gt;2.2914&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.9216&lt;/td&gt;&lt;td&gt;17331.8&lt;/td&gt;&lt;td&gt;0.3329&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.8968&lt;/td&gt;&lt;td&gt;17314.65&lt;/td&gt;&lt;td&gt;-0.0990&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.1961&lt;/td&gt;&lt;td&gt;17241&lt;/td&gt;&lt;td&gt;-0.4254&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1.6366&lt;/td&gt;&lt;td&gt;16983.55&lt;/td&gt;&lt;td&gt;-1.4932&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.6159&lt;/td&gt;&lt;td&gt;17123.6&lt;/td&gt;&lt;td&gt;0.8246&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1.2839&lt;/td&gt;&lt;td&gt;17014.35&lt;/td&gt;&lt;td&gt;-0.6380&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-2.0250&lt;/td&gt;&lt;td&gt;17185.7&lt;/td&gt;&lt;td&gt;1.0071&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3.0666&lt;/td&gt;&lt;td&gt;17311.8&lt;/td&gt;&lt;td&gt;0.7337&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1.4890&lt;/td&gt;&lt;td&gt;17486.95&lt;/td&gt;&lt;td&gt;1.0117&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-1.5502&lt;/td&gt;&lt;td&gt;17512.25&lt;/td&gt;&lt;td&gt;0.1447&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-1.1531&lt;/td&gt;&lt;td&gt;17563.95&lt;/td&gt;&lt;td&gt;0.2952&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.2861&lt;/td&gt;&lt;td&gt;17576.3&lt;/td&gt;&lt;td&gt;0.0703&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.1324&lt;/td&gt;&lt;td&gt;17730.75&lt;/td&gt;&lt;td&gt;0.8787&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.5704&lt;/td&gt;&lt;td&gt;17656.35&lt;/td&gt;&lt;td&gt;-0.4196&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.2300&lt;/td&gt;&lt;td&gt;17736.95&lt;/td&gt;&lt;td&gt;0.4565&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.2765&lt;/td&gt;&lt;td&gt;17786.8&lt;/td&gt;&lt;td&gt;0.2811&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.8272&lt;/td&gt;&lt;td&gt;18012.2&lt;/td&gt;&lt;td&gt;1.2672&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.5141&lt;/td&gt;&lt;td&gt;18145.4&lt;/td&gt;&lt;td&gt;0.7395&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</table_html>
+    </element>
+    <element type="UncategorizedText" element_id="bce545328213dbf3eb57bd85ca93d2bf">
+      -1.2287
+    </element>
+    <element type="UncategorizedText" element_id="349b804a38f19dcf9051c0b44e7ed39e">
+      -0.1724
+    </element>
+    <element type="UncategorizedText" element_id="8ee559e63922cc0c5ea217418e06246e">
+      2.4180
+    </element>
+    <element type="UncategorizedText" element_id="18a5fad187f557a0b95410a969b3d5e8">
+      -0.7316
+    </element>
+    <element type="UncategorizedText" element_id="2371e5a3c9267b9ff6f66335c9a362f6">
+      -0.7292
+    </element>
+    <element type="UncategorizedText" element_id="af35a8dfe9ec05f12f95ba8d9871f8a3">
+      0.6898
+    </element>
+    <element type="UncategorizedText" element_id="478a2ad854ca954c715977ae9773011b">
+      1.5426
+    </element>
+    <element type="UncategorizedText" element_id="c74d12f54c3715b54f6435dc5b0142f5">
+      -2.1320
+    </element>
+    <element type="UncategorizedText" element_id="352a83e28f8d0d387759d34397ac2963">
+      -0.6051
+    </element>
+    <element type="UncategorizedText" element_id="082b2aed8c2fcb8159ff843812674de7">
+      -2.5782
+    </element>
+    <element type="UncategorizedText" element_id="e090ce9a3407a3955ed70b6a617b7bce">
+      0.5326
+    </element>
+    <element type="UncategorizedText" element_id="7b1d282bb02d6d779e8f8002ed472d50">
+      0.2297
+    </element>
+    <element type="UncategorizedText" element_id="3aee253ad91156ce03f917544cd65992">
+      1.2458
+    </element>
+    <element type="UncategorizedText" element_id="25b9292c95952edc96d501cccb48e060">
+      1.5314
+    </element>
+    <element type="UncategorizedText" element_id="649a1fd98abb98070187021fc5dbd2ce">
+      -2.7150
+    </element>
+    <element type="UncategorizedText" element_id="1c08a91c58198fdbde9a3ba2e7f7e8c2">
+      -2.2973
+    </element>
+    <element type="UncategorizedText" element_id="d3e3759f141bdb42214ba9bbb7d3d0a4">
+      -0.8334
+    </element>
+    <element type="UncategorizedText" element_id="fa0d937b31d044ff00ce4a03136ecbee">
+      -0.9017
+    </element>
+    <element type="UncategorizedText" element_id="48aad1057604ba37bed4d36c0fd3897e">
+      0.3735
+    </element>
+    <element type="UncategorizedText" element_id="60b914084bac087f80e3776807d98139">
+      1.9249
+    </element>
+    <element type="UncategorizedText" element_id="00b50179dc702289470b7fbad210f1ec">
+      -2.0999
+    </element>
+    <element type="UncategorizedText" element_id="16ddbbf6a96d269e813e28f5f7b884e3">
+      1.9235
+    </element>
+    <element type="UncategorizedText" element_id="18f67355699322f1ae0336752932a83c">
+      -0.9216
+    </element>
+    <element type="UncategorizedText" element_id="4d9ec1c7625755a3283391a41c08ebeb">
+      -0.8968
+    </element>
+    <element type="UncategorizedText" element_id="285dc8d7be4f7fb9cd501ddc28598ad6">
+      -0.1961
+    </element>
+    <element type="UncategorizedText" element_id="f3c951880f2c1a8d3be7908f420f8dec">
+      1.6366
+    </element>
+    <element type="UncategorizedText" element_id="d8777214bab31e25326530113c55a3c5">
+      -0.6159
+    </element>
+    <element type="UncategorizedText" element_id="c7ed12c7b5baef457acb94ce9cd7e419">
+      1.2839
+    </element>
+    <element type="UncategorizedText" element_id="298de48948ad3611b15b91e83e572559">
+      -2.0250
+    </element>
+    <element type="UncategorizedText" element_id="a1b4e2fc43e9496d2ac2e21fa52089c7">
+      3.0666
+    </element>
+    <element type="UncategorizedText" element_id="6843ab04472c832c3318f3e88c08106f">
+      1.4890
+    </element>
+    <element type="UncategorizedText" element_id="1343294af9712ac891987695d5643157">
+      -1.5502
+    </element>
+    <element type="UncategorizedText" element_id="fd9f6f4e4a414483f0ccf00a4d7116f7">
+      -1.1531
+    </element>
+    <element type="UncategorizedText" element_id="466f9841e0a54b80824ec3a429c326f0">
+      -0.2861
+    </element>
+    <element type="UncategorizedText" element_id="f613e67735d0523bb21bb9fdcefca8d4">
+      0.1324
+    </element>
+    <element type="UncategorizedText" element_id="67dc1eee7f29c7e3a67541f9ef42efb0">
+      -0.5704
+    </element>
+    <element type="UncategorizedText" element_id="fa1b8d33d8740e73e5647d4ca378789a">
+      0.2300
+    </element>
+    <element type="UncategorizedText" element_id="0664242b29582cfc4a28982151b8ac58">
+      0.2765
+    </element>
+    <element type="UncategorizedText" element_id="d5620cafe0db3c192b12cbe066275d78">
+      0.8272
+    </element>
+    <element type="UncategorizedText" element_id="bb9a78f14cfd6ef93fda4abe3d55a9bf">
+      01-Nov-22
+    </element>
+    <element type="UncategorizedText" element_id="536ad81ebdd3e09943e3f1ce055c0afa">
+      1,837.75
+    </element>
+    <element type="UncategorizedText" element_id="d3e517738ed923303ddf675b634b1b0c">
+      02-Nov-22
+    </element>
+    <element type="UncategorizedText" element_id="943c00625c2143a52698c590b881b3c3">
+      1,860.65
+    </element>
+    <element type="UncategorizedText" element_id="bf1fa6ea16b6012e255e1e56f6842097">
+      1.2461
+    </element>
+    <element type="UncategorizedText" element_id="7e086604552ab2dd476c8b8b3dd5345b">
+      18082.85
+    </element>
+    <element type="UncategorizedText" element_id="4592bbaf8e4ddb274ead28fbd168931b">
+      -0.3447
+    </element>
+    <element type="UncategorizedText" element_id="f7e3244c7b342021a72be3aabf3609c8">
+      03-Nov-22
+    </element>
+    <element type="UncategorizedText" element_id="0282c8cbb787764982b1a6e46e51b28c">
+      1,832.10
+    </element>
+    <element type="UncategorizedText" element_id="3ea2ba83dabf20b77d2739fcd0605a26">
+      -1.5344
+    </element>
+    <element type="UncategorizedText" element_id="62f79cf0d972d43d0ce93b37dd88122f">
+      18052.7
+    </element>
+    <element type="UncategorizedText" element_id="4469d6ea56e22408af1eca298df4bf85">
+      -0.1667
+    </element>
+    <element type="UncategorizedText" element_id="d715ba8bb5dffc144aaa519aeaa63321">
+      04-Nov-22
+    </element>
+    <element type="UncategorizedText" element_id="5750f294925ce92c8910f4a9388bb8e0">
+      1,811.60
+    </element>
+    <element type="UncategorizedText" element_id="ab174d8bc7a04a35c5d032cceab151f1">
+      -1.1189
+    </element>
+    <element type="UncategorizedText" element_id="be3f90f6fd487c4b991a52dbcadeba12">
+      18117.15
+    </element>
+    <element type="UncategorizedText" element_id="132f2848e6a03ce040ec9e9e05d64f27">
+      0.3570
+    </element>
+    <element type="UncategorizedText" element_id="0ed50e0ac2bf58737e3bf6864694ea08">
+      07-Nov-22
+    </element>
+    <element type="UncategorizedText" element_id="b8c6329b44510ed6d0cb64c87ec12a0c">
+      1,808.00
+    </element>
+    <element type="UncategorizedText" element_id="e6cd4905d52c1ba5f6accc3e1cd4bb23">
+      -0.1987
+    </element>
+    <element type="UncategorizedText" element_id="ff705ae5e95d1cc404e8e6af8c9e05ea">
+      18202.8
+    </element>
+    <element type="UncategorizedText" element_id="e195e407f565306f7da2e6ce239d2e3b">
+      0.4728
+    </element>
+    <element type="UncategorizedText" element_id="eb2bb111ae3e73e1ad9b6647bb9ec180">
+      09-Nov-22
+    </element>
+    <element type="UncategorizedText" element_id="1d4155d390fe125dbf360fca45f16242">
+      1,811.60
+    </element>
+    <element type="UncategorizedText" element_id="83fecb8588327d957865a17abdfd3c54">
+      0.1991
+    </element>
+    <element type="UncategorizedText" element_id="94c7e91838e166741e462a2b76356d9b">
+      18157
+    </element>
+    <element type="UncategorizedText" element_id="2b56df52ac73def67e493c54bbd666e3">
+      -0.2516
+    </element>
+    <element type="UncategorizedText" element_id="6b6b8f81cca90853f02b4e1877de6ebd">
+      10-Nov-22
+    </element>
+    <element type="UncategorizedText" element_id="ca7a97af71d7a7e9d675db0802b55894">
+      1,780.70
+    </element>
+    <element type="UncategorizedText" element_id="877fbf7fbf4fe7a0d308669f38a31c69">
+      -1.7057
+    </element>
+    <element type="UncategorizedText" element_id="7852a28edf05b794860fbc8435e2fa6f">
+      18028.2
+    </element>
+    <element type="UncategorizedText" element_id="bcf231206d24b02e1b4866ab74beb548">
+      -0.7094
+    </element>
+    <element type="UncategorizedText" element_id="e8eabaeafca19abff9afb5437812b209">
+      11-Nov-22
+    </element>
+    <element type="UncategorizedText" element_id="a32e8fb0e3b6370ee8412bf218f9fcbe">
+      1,749.85
+    </element>
+    <element type="UncategorizedText" element_id="5ce8e62be2db82da3fae68c9857f275e">
+      -1.7325
+    </element>
+    <element type="UncategorizedText" element_id="ab1ec42131a7e5c7c1117ef4c11662f9">
+      18349.7
+    </element>
+    <element type="UncategorizedText" element_id="21dc1e47928c329ea6ec9a757b259353">
+      1.7833
+    </element>
+    <element type="UncategorizedText" element_id="39c7ffc357efeb2bca1b06245fed9f37">
+      14-Nov-22
+    </element>
+    <element type="UncategorizedText" element_id="3c3e665d1bba106928083aeb814cd6c9">
+      1,739.35
+    </element>
+    <element type="UncategorizedText" element_id="f12f926e44cb783934a033043833f6f6">
+      -0.6001
+    </element>
+    <element type="UncategorizedText" element_id="1b57a88a55115d6767ad931a1c5e40d9">
+      18329.15
+    </element>
+    <element type="UncategorizedText" element_id="7dee51c36b0e44d5224b2eb9ee573df0">
+      -0.1120
+    </element>
+    <element type="UncategorizedText" element_id="8c7216e4566267ce2880bc5351d33a78">
+      15-Nov-22
+    </element>
+    <element type="UncategorizedText" element_id="f08924d5927c157f3b47465e5a1d7fc9">
+      1,704.55
+    </element>
+    <element type="UncategorizedText" element_id="4ff413d3b9910a341fc932d06f8b8eac">
+      -2.0007
+    </element>
+    <element type="UncategorizedText" element_id="f056221b5b7eba6a5e16c9836ab6e771">
+      18403.4
+    </element>
+    <element type="UncategorizedText" element_id="ab5f2a2ed17823dc87d05a21fa41cbd0">
+      0.4051
+    </element>
+    <element type="UncategorizedText" element_id="cb097a3d49844056d04b2a92de469965">
+      16-Nov-22
+    </element>
+    <element type="UncategorizedText" element_id="8af66faf09ac6ad2f4fa7328562e0f8c">
+      1,699.35
+    </element>
+    <element type="UncategorizedText" element_id="a1bff2fe514d9e8b5eaec2a5a3e5a466">
+      -0.3051
+    </element>
+    <element type="UncategorizedText" element_id="55c0e4a7282994b5ced9831df9f41e63">
+      18409.65
+    </element>
+    <element type="UncategorizedText" element_id="922afb2144cbf546fecc08b9c547a462">
+      0.0340
+    </element>
+    <element type="UncategorizedText" element_id="b9704949535a7f1a40110452955e1ac3">
+      17-Nov-22
+    </element>
+    <element type="UncategorizedText" element_id="e9607a15b18c44ca8c3ef3247507271a">
+      1,683.25
+    </element>
+    <element type="UncategorizedText" element_id="4ec868b17863835812cd7d780e011755">
+      -0.9474
+    </element>
+    <element type="UncategorizedText" element_id="a2d6f97acaa2567fc7354ae7fa846fba">
+      18343.9
+    </element>
+    <element type="UncategorizedText" element_id="911234c4a76b6d3dd9665081876130c0">
+      -0.3571
+    </element>
+    <element type="UncategorizedText" element_id="3b2e199f846ccb13fd361e80cfc372ac">
+      18-Nov-22
+    </element>
+    <element type="UncategorizedText" element_id="b28bb742487421d3516126a50663ad8c">
+      1,677.60
+    </element>
+    <element type="UncategorizedText" element_id="f60d499748aa2ef643abec882675f681">
+      -0.3357
+    </element>
+    <element type="UncategorizedText" element_id="d6083d52fbac4e64ce497e082c7d50c9">
+      18307.65
+    </element>
+    <element type="UncategorizedText" element_id="02eaf65ae103f1e83189b78291cac07d">
+      -0.1976
+    </element>
+    <element type="UncategorizedText" element_id="6d057abc29e66a2a8a285e5969dfe4e2">
+      21-Nov-22
+    </element>
+    <element type="UncategorizedText" element_id="ccee46a09c0c4945ea270f8315115923">
+      1,675.35
+    </element>
+    <element type="UncategorizedText" element_id="63d988f913f47275d80d4bbf22deec2d">
+      -0.1341
+    </element>
+    <element type="UncategorizedText" element_id="a536e17239535dbdbd63efc97943db63">
+      18159.95
+    </element>
+    <element type="UncategorizedText" element_id="ced1ff9e39217c9ba027fc727c4c1df2">
+      -0.8068
+    </element>
+    <element type="UncategorizedText" element_id="411022b6073afcaca04eddfe0b66aba8">
+      22-Nov-22
+    </element>
+    <element type="UncategorizedText" element_id="32c92497eec1cd28c07f38929ae502e3">
+      1,680.25
+    </element>
+    <element type="UncategorizedText" element_id="55b2706311ccfd8380415d99d061a11e">
+      0.2925
+    </element>
+    <element type="UncategorizedText" element_id="9ff7fd3d9093a671df7632c4a44d2249">
+      18244.2
+    </element>
+    <element type="UncategorizedText" element_id="9ab1d373ac67d83b0e307102e5218ba4">
+      0.4639
+    </element>
+    <element type="UncategorizedText" element_id="a2fb13953acdd01fe7f2bf04fa366090">
+      23-Nov-22
+    </element>
+    <element type="UncategorizedText" element_id="a42aca93562bd1205c17bc24f8a58043">
+      1,696.80
+    </element>
+    <element type="UncategorizedText" element_id="cce6310bbb00e3dcaf737ddac59ef410">
+      0.9850
+    </element>
+    <element type="UncategorizedText" element_id="25a3e88bd50de92003a21f0382bb44bf">
+      18267.25
+    </element>
+    <element type="UncategorizedText" element_id="109b1efb3eb6c8b30fb55fce1b983a97">
+      0.1263
+    </element>
+  </page>
+  <page number="13">
+    <element type="UncategorizedText" element_id="6a1fb583264300769aa6c5c9a3f7f98d">
+      lOMoAR cPSD| 19662931
+    </element>
+    <element type="Table" element_id="a968990cdb0d1aa14d0a80a52d5890d7">
+      <table_html>&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;-0.4332&lt;/td&gt;&lt;td&gt;18484.1&lt;/td&gt;&lt;td&gt;1.1871&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1.2341&lt;/td&gt;&lt;td&gt;18512.75&lt;/td&gt;&lt;td&gt;0.1550&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.0672&lt;/td&gt;&lt;td&gt;18562.75&lt;/td&gt;&lt;td&gt;0.2701&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.5492&lt;/td&gt;&lt;td&gt;18618.05&lt;/td&gt;&lt;td&gt;0.2979&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.9283&lt;/td&gt;&lt;td&gt;18758.35&lt;/td&gt;&lt;td&gt;0.7536&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.0873&lt;/td&gt;&lt;td&gt;18812.5&lt;/td&gt;&lt;td&gt;0.2887&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.9248&lt;/td&gt;&lt;td&gt;18696.1&lt;/td&gt;&lt;td&gt;-0.6187&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.0115&lt;/td&gt;&lt;td&gt;18701.05&lt;/td&gt;&lt;td&gt;0.0265&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-1.1930&lt;/td&gt;&lt;td&gt;18642.75&lt;/td&gt;&lt;td&gt;-0.3117&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-1.4524&lt;/td&gt;&lt;td&gt;18560.5&lt;/td&gt;&lt;td&gt;-0.4412&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.8168&lt;/td&gt;&lt;td&gt;18609.35&lt;/td&gt;&lt;td&gt;0.2632&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.2029&lt;/td&gt;&lt;td&gt;18496.6&lt;/td&gt;&lt;td&gt;-0.6059&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.5211&lt;/td&gt;&lt;td&gt;18497.15&lt;/td&gt;&lt;td&gt;0.0030&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.8651&lt;/td&gt;&lt;td&gt;18608&lt;/td&gt;&lt;td&gt;0.5993&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.0742&lt;/td&gt;&lt;td&gt;18660.3&lt;/td&gt;&lt;td&gt;0.2811&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-2.3458&lt;/td&gt;&lt;td&gt;18414.9&lt;/td&gt;&lt;td&gt;-1.3151&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-1.0599&lt;/td&gt;&lt;td&gt;18269&lt;/td&gt;&lt;td&gt;-0.7923&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1.6974&lt;/td&gt;&lt;td&gt;18420.45&lt;/td&gt;&lt;td&gt;0.8290&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.7998&lt;/td&gt;&lt;td&gt;18385.3&lt;/td&gt;&lt;td&gt;-0.1908&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.0943&lt;/td&gt;&lt;td&gt;18199.1&lt;/td&gt;&lt;td&gt;-1.0128&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.2954&lt;/td&gt;&lt;td&gt;18127.35&lt;/td&gt;&lt;td&gt;-0.3943&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-1.3269&lt;/td&gt;&lt;td&gt;17806.8&lt;/td&gt;&lt;td&gt;-1.7683&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.1200&lt;/td&gt;&lt;td&gt;18014.6&lt;/td&gt;&lt;td&gt;1.1670&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.8935&lt;/td&gt;&lt;td&gt;18132.3&lt;/td&gt;&lt;td&gt;0.6534&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.0886&lt;/td&gt;&lt;td&gt;18122.5&lt;/td&gt;&lt;td&gt;-0.0540&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.4401&lt;/td&gt;&lt;td&gt;18191&lt;/td&gt;&lt;td&gt;0.3780&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1.2525&lt;/td&gt;&lt;td&gt;18105.3&lt;/td&gt;&lt;td&gt;-0.4711&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.2668&lt;/td&gt;&lt;td&gt;18197.45&lt;/td&gt;&lt;td&gt;0.5090&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.4657&lt;/td&gt;&lt;td&gt;18232.55&lt;/td&gt;&lt;td&gt;0.1929&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.4375&lt;/td&gt;&lt;td&gt;18042.95&lt;/td&gt;&lt;td&gt;-1.0399&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.2166&lt;/td&gt;&lt;td&gt;17992.15&lt;/td&gt;&lt;td&gt;-0.2816&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.6269&lt;/td&gt;&lt;td&gt;17859.45&lt;/td&gt;&lt;td&gt;-0.7375&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.6493&lt;/td&gt;&lt;td&gt;18101.2&lt;/td&gt;&lt;td&gt;1.3536&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.6420&lt;/td&gt;&lt;td&gt;17914.15&lt;/td&gt;&lt;td&gt;-1.0334&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.7693&lt;/td&gt;&lt;td&gt;17895.7&lt;/td&gt;&lt;td&gt;-0.1030&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.0489&lt;/td&gt;&lt;td&gt;17858.2&lt;/td&gt;&lt;td&gt;-0.2095&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-3.5256&lt;/td&gt;&lt;td&gt;17956.6&lt;/td&gt;&lt;td&gt;0.5510&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;-0.8297&lt;/td&gt;&lt;td&gt;17894.85&lt;/td&gt;&lt;td&gt;-0.3439&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1.1879&lt;/td&gt;&lt;td&gt;18053.3&lt;/td&gt;&lt;td&gt;0.8855&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0.5649&lt;/td&gt;&lt;td&gt;18165.35&lt;/td&gt;&lt;td&gt;0.6207&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</table_html>
+    </element>
+    <element type="Table" element_id="ecdbcc23d1c81623f1f12b90ae5137d9">
+      <table_html>&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;24-Nov-22&lt;/td&gt;&lt;td&gt;1,689.45&lt;/td&gt;&lt;td&gt;-0.4332&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;25-Nov-22&lt;/td&gt;&lt;td&gt;1,710.30&lt;/td&gt;&lt;td&gt;1.2341&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;28-Nov-22&lt;/td&gt;&lt;td&gt;1,711.45&lt;/td&gt;&lt;td&gt;0.0672&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;29-Nov-22&lt;/td&gt;&lt;td&gt;1,702.05&lt;/td&gt;&lt;td&gt;-0.5492&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;30-Nov-22&lt;/td&gt;&lt;td&gt;1,717.85&lt;/td&gt;&lt;td&gt;0.9283&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;01-Dec-22&lt;/td&gt;&lt;td&gt;1,719.35&lt;/td&gt;&lt;td&gt;0.0873&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;02-Dec-22&lt;/td&gt;&lt;td&gt;1,735.25&lt;/td&gt;&lt;td&gt;0.9248&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;05-Dec-22&lt;/td&gt;&lt;td&gt;1,735.05&lt;/td&gt;&lt;td&gt;-0.0115&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;06-Dec-22&lt;/td&gt;&lt;td&gt;1,714.35&lt;/td&gt;&lt;td&gt;-1.1930&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;07-Dec-22&lt;/td&gt;&lt;td&gt;1,689.45&lt;/td&gt;&lt;td&gt;-1.4524&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;08-Dec-22&lt;/td&gt;&lt;td&gt;1,675.65&lt;/td&gt;&lt;td&gt;-0.8168&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;09-Dec-22&lt;/td&gt;&lt;td&gt;1,679.05&lt;/td&gt;&lt;td&gt;0.2029&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;12-Dec-22&lt;/td&gt;&lt;td&gt;1,670.30&lt;/td&gt;&lt;td&gt;-0.5211&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;13-Dec-22&lt;/td&gt;&lt;td&gt;1,684.75&lt;/td&gt;&lt;td&gt;0.8651&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;14-Dec-22&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;0.0742&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;1,686.00&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;15-Dec-22&lt;/td&gt;&lt;td&gt;1,646.45&lt;/td&gt;&lt;td&gt;-2.3458&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;16-Dec-22&lt;/td&gt;&lt;td&gt;1,629.00&lt;/td&gt;&lt;td&gt;-1.0599&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;19-Dec-22&lt;/td&gt;&lt;td&gt;1,656.65&lt;/td&gt;&lt;td&gt;1.6974&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;20-Dec-22&lt;/td&gt;&lt;td&gt;1,643.40&lt;/td&gt;&lt;td&gt;-0.7998&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;21-Dec-22&lt;/td&gt;&lt;td&gt;1,641.85&lt;/td&gt;&lt;td&gt;-0.0943&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;22-Dec-22&lt;/td&gt;&lt;td&gt;1,646.70&lt;/td&gt;&lt;td&gt;0.2954&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;23-Dec-22&lt;/td&gt;&lt;td&gt;1,624.85&lt;/td&gt;&lt;td&gt;-1.3269&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;26-Dec-22&lt;/td&gt;&lt;td&gt;1,622.90&lt;/td&gt;&lt;td&gt;-0.1200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;27-Dec-22&lt;/td&gt;&lt;td&gt;1,637.40&lt;/td&gt;&lt;td&gt;0.8935&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;28-Dec-22&lt;/td&gt;&lt;td&gt;1,635.95&lt;/td&gt;&lt;td&gt;-0.0886&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;29-Dec-22&lt;/td&gt;&lt;td&gt;1,628.75&lt;/td&gt;&lt;td&gt;-0.4401&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;30-Dec-22&lt;/td&gt;&lt;td&gt;1,649.15&lt;/td&gt;&lt;td&gt;1.2525&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;02-Jan-23&lt;/td&gt;&lt;td&gt;1,653.55&lt;/td&gt;&lt;td&gt;0.2668&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;03-Jan-23&lt;/td&gt;&lt;td&gt;1,645.85&lt;/td&gt;&lt;td&gt;-0.4657&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;04-Jan-23&lt;/td&gt;&lt;td&gt;1,638.65&lt;/td&gt;&lt;td&gt;-0.4375&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;05-Jan-23&lt;/td&gt;&lt;td&gt;1,635.10&lt;/td&gt;&lt;td&gt;-0.2166&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;06-Jan-23&lt;/td&gt;&lt;td&gt;1,624.85&lt;/td&gt;&lt;td&gt;-0.6269&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;09-Jan-23&lt;/td&gt;&lt;td&gt;1,635.40&lt;/td&gt;&lt;td&gt;0.6493&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;10-Jan-23&lt;/td&gt;&lt;td&gt;1,624.90&lt;/td&gt;&lt;td&gt;-0.6420&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;11-Jan-23&lt;/td&gt;&lt;td&gt;1,637.40&lt;/td&gt;&lt;td&gt;0.7693&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;12-Jan-23&lt;/td&gt;&lt;td&gt;1,636.60&lt;/td&gt;&lt;td&gt;-0.0489&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;13-Jan-23&lt;/td&gt;&lt;td&gt;1,578.90&lt;/td&gt;&lt;td&gt;-3.5256&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;16-Jan-23&lt;/td&gt;&lt;td&gt;1,565.80&lt;/td&gt;&lt;td&gt;-0.8297&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;17-Jan-23&lt;/td&gt;&lt;td&gt;1,584.40&lt;/td&gt;&lt;td&gt;1.1879&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;18-Jan-23&lt;/td&gt;&lt;td&gt;1,593.35&lt;/td&gt;&lt;td&gt;0.5649&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</table_html>
+    </element>
+    <element type="UncategorizedText" element_id="2a49a082350541ac730c8dcb5f63feac">
+      -0.4332
+    </element>
+    <element type="UncategorizedText" element_id="185e370705dc94e01b62a1756af01e58">
+      1.2341
+    </element>
+    <element type="UncategorizedText" element_id="e8b5fefd449fc7976a189773dbb85b51">
+      0.0672
+    </element>
+    <element type="UncategorizedText" element_id="ba927a2ee83958dc5c9211be39555296">
+      -0.5492
+    </element>
+    <element type="UncategorizedText" element_id="e56555bb80e7bce68589dcd853fe3971">
+      0.9283
+    </element>
+    <element type="UncategorizedText" element_id="3a7168d1be8384e6fd0f83a7ecc2913f">
+      0.0873
+    </element>
+    <element type="UncategorizedText" element_id="ea35932de97c939f4b2f477ed45db55a">
+      0.9248
+    </element>
+    <element type="UncategorizedText" element_id="7ee625ac0a18f8d7e817781b317b9c39">
+      -0.0115
+    </element>
+    <element type="UncategorizedText" element_id="71cc19b814df98341df24d46978733bd">
+      -1.1930
+    </element>
+    <element type="UncategorizedText" element_id="7e64dab768f0dce5bb603e9dc91a2a26">
+      -1.4524
+    </element>
+    <element type="UncategorizedText" element_id="7bc95286e89125dccc5b1ed92a25b2d7">
+      -0.8168
+    </element>
+    <element type="UncategorizedText" element_id="0266b140e7ad4c0664a6ccb13216e184">
+      0.2029
+    </element>
+    <element type="UncategorizedText" element_id="62b7c4e13e467a4755e4696f99374681">
+      -0.5211
+    </element>
+    <element type="UncategorizedText" element_id="c77423d5d0c7a40b5526539ec53a583e">
+      0.8651
+    </element>
+    <element type="UncategorizedText" element_id="007f30a991eee8a0600e8618b2e0e0c8">
+      0.0742
+    </element>
+    <element type="UncategorizedText" element_id="9dde40714609b031b87ff89181ef0d3b">
+      -2.3458
+    </element>
+    <element type="UncategorizedText" element_id="4c16123a21bd972c1397fc8428535a24">
+      -1.0599
+    </element>
+    <element type="UncategorizedText" element_id="3ef62ce09fc838c11b5682213f74523e">
+      1.6974
+    </element>
+    <element type="UncategorizedText" element_id="3db59975d92904f5dd0f4c8253a16cdc">
+      -0.7998
+    </element>
+    <element type="UncategorizedText" element_id="21c1f5695f849cd34e24b5eaebecd5c9">
+      -0.0943
+    </element>
+    <element type="UncategorizedText" element_id="92ecf3203fb4fcd41e55e6c8678d4d81">
+      0.2954
+    </element>
+    <element type="UncategorizedText" element_id="16621b57e12854bcf5c63ef4b12b6d71">
+      -1.3269
+    </element>
+    <element type="UncategorizedText" element_id="777060daa282ff99420157caff487095">
+      -0.1200
+    </element>
+    <element type="UncategorizedText" element_id="9438c7075d9ddfc429ce0d46d8d309d0">
+      0.8935
+    </element>
+    <element type="UncategorizedText" element_id="96151e4e5121303d4c0e3011326695b4">
+      -0.0886
+    </element>
+    <element type="UncategorizedText" element_id="99102e155f546a12d03f817bb36a97c9">
+      -0.4401
+    </element>
+    <element type="UncategorizedText" element_id="09b94be594ed26e1f4493be5c864e2ae">
+      1.2525
+    </element>
+    <element type="UncategorizedText" element_id="bb284a2a95881bd3205d68217db2b93a">
+      0.2668
+    </element>
+    <element type="UncategorizedText" element_id="5cf583d091b071ac30429ba1f1cc3bdf">
+      -0.4657
+    </element>
+    <element type="UncategorizedText" element_id="78cb20865c5260e7ee36c47dc5ff41e7">
+      -0.4375
+    </element>
+    <element type="UncategorizedText" element_id="aa01c320d0e38be0967ab7f04c89afcd">
+      -0.2166
+    </element>
+    <element type="UncategorizedText" element_id="3fb0446623d467a566afacf6cee07d4d">
+      -0.6269
+    </element>
+    <element type="UncategorizedText" element_id="2c15fdd602ae4705c43562e42cf8aa63">
+      0.6493
+    </element>
+    <element type="UncategorizedText" element_id="67b0b65738a862b7ab7b2db3a14ac6c5">
+      -0.6420
+    </element>
+    <element type="UncategorizedText" element_id="662026d88ae179781310f60e5fd9eede">
+      0.7693
+    </element>
+    <element type="UncategorizedText" element_id="8c42f232b432a4ec48ac9534a1033890">
+      -0.0489
+    </element>
+    <element type="UncategorizedText" element_id="0fa9d040bfeab0d00137ed4ac54e4285">
+      -3.5256
+    </element>
+    <element type="UncategorizedText" element_id="1447ead5a692cec8da7b60484c5be395">
+      -0.8297
+    </element>
+    <element type="UncategorizedText" element_id="a735ca486fda5c00369f578f0267e530">
+      1.1879
+    </element>
+    <element type="UncategorizedText" element_id="ce30ca43b4ad3b9a65029d71d2cd3aeb">
+      0.5649
+    </element>
+    <element type="UncategorizedText" element_id="4d17ce618d11644b4f47529ae2871fe7">
+      19-Jan-23
+    </element>
+    <element type="UncategorizedText" element_id="d8bb65ae000669e10c0103f49c27b57b">
+      1,585.80
+    </element>
+    <element type="UncategorizedText" element_id="b014ef9b2e864a39e3449612804e2fe0">
+      -0.4738
+    </element>
+    <element type="UncategorizedText" element_id="05422f0fe8fcc8f6ec3a785ec3d7d94f">
+      18107.85
+    </element>
+    <element type="UncategorizedText" element_id="3e6a0b1c432e608a3278d963c44a1aed">
+      -0.3165
+    </element>
+    <element type="UncategorizedText" element_id="6a68430b573d3cc9d88112f7b2bac9c0">
+      20-Jan-23
+    </element>
+    <element type="UncategorizedText" element_id="c66378eeec7c711ac3b0c3dd8fd6bdd7">
+      1,565.95
+    </element>
+    <element type="UncategorizedText" element_id="58ba4be7cee1113a8ce0ced13e7d0635">
+      -1.2517
+    </element>
+    <element type="UncategorizedText" element_id="76e574d6d7f6c36da749b02fad74ff05">
+      18027.65
+    </element>
+    <element type="UncategorizedText" element_id="3d6e639ef172fc280f887732851fc766">
+      -0.4429
+    </element>
+    <element type="UncategorizedText" element_id="a32ca4c009afe615ea97b4614677a964">
+      23-Jan-23
+    </element>
+    <element type="UncategorizedText" element_id="448e903ca2e6f3aa08f9cb5da42487b8">
+      1,571.30
+    </element>
+    <element type="UncategorizedText" element_id="804cd51828b951e175cb00c8a5f88686">
+      0.3416
+    </element>
+    <element type="UncategorizedText" element_id="bf98d4392655b76aaf977fcd8416fe7a">
+      18118.55
+    </element>
+    <element type="UncategorizedText" element_id="e1e7f85b68b19293529237cdf3001e23">
+      0.5042
+    </element>
+    <element type="UncategorizedText" element_id="80322d1661f5f2e4ce99aad77abc524b">
+      24-Jan-23
+    </element>
+    <element type="UncategorizedText" element_id="a809c47d3048702d26b0646a370edb8e">
+      1,571.95
+    </element>
+    <element type="UncategorizedText" element_id="80233d7a30170701ec6857fb5fad19fc">
+      0.0414
+    </element>
+    <element type="UncategorizedText" element_id="6f9367603959591bf4bfe5e89c019b64">
+      18118.3
+    </element>
+    <element type="UncategorizedText" element_id="c23d3adb3b2a78a6afb5349d08e380d1">
+      -0.0014
+    </element>
+    <element type="UncategorizedText" element_id="782a3d0f4b11a787c6eafb28dc4fa20b">
+      25-Jan-23
+    </element>
+    <element type="UncategorizedText" element_id="3fb781f9d6143e1c25f4750c9ee7ee1f">
+      1,529.80
+    </element>
+    <element type="UncategorizedText" element_id="21923ceafee7fef20bc7a3b7b3fc69e5">
+      -2.6814
+    </element>
+    <element type="UncategorizedText" element_id="5b153dec7d4e8d1afc7a97d3e3540ec5">
+      17891.95
+    </element>
+    <element type="UncategorizedText" element_id="86eb5f2bb66c24f2f43a6c524bf29cdc">
+      -1.2493
+    </element>
+    <element type="UncategorizedText" element_id="546b30746f063a9822837df5335cbcc0">
+      27-Jan-23
+    </element>
+    <element type="UncategorizedText" element_id="0744a13cadfc9010d22a112e6694f47a">
+      1,496.20
+    </element>
+    <element type="UncategorizedText" element_id="a4bc86fda36c05501eec65f4afc9a794">
+      -2.1964
+    </element>
+    <element type="UncategorizedText" element_id="1993ee2aeb42c5a9b30f3a267ec36cb6">
+      17604.35
+    </element>
+    <element type="UncategorizedText" element_id="5f55c76e7f44f03fc23f006d90051c18">
+      -1.6074
+    </element>
+    <element type="UncategorizedText" element_id="2393dccbdc644118322da6c2063b9597">
+      30-Jan-23
+    </element>
+    <element type="UncategorizedText" element_id="a66475660d3d358ada3083dc27445d3a">
+      1,511.90
+    </element>
+    <element type="UncategorizedText" element_id="91bc6e6274ca456eb5f1c52529911266">
+      1.0493
+    </element>
+    <element type="UncategorizedText" element_id="f6d549f490c1862ae2d4f6d80b1a94b9">
+      17648.95
+    </element>
+    <element type="UncategorizedText" element_id="27b96b9ad3ac70feadf2b8c8de9ec4f1">
+      0.2533
+    </element>
+    <element type="UncategorizedText" element_id="ac1035573792f12e5581833cf856fc0d">
+      31-Jan-23
+    </element>
+    <element type="UncategorizedText" element_id="66ee76bd2a3e1558dcb9db474b2a6370">
+      1,529.35
+    </element>
+    <element type="UncategorizedText" element_id="9e2ff40153b16074a4c2cadb9b0a1ea1">
+      1.1542
+    </element>
+    <element type="UncategorizedText" element_id="efeb7b470622d1c587328157f02bf2af">
+      17662.15
+    </element>
+    <element type="UncategorizedText" element_id="d4e2eec241b17e051960da3bb626901f">
+      0.0748
+    </element>
+    <element type="UncategorizedText" element_id="f7eb463dd960d4809acfe24469fc35d0">
+      01-Feb-23
+    </element>
+    <element type="UncategorizedText" element_id="3f97760510b2209a87d32e34fba4a3bc">
+      1,500.40
+    </element>
+    <element type="UncategorizedText" element_id="fdb48a62de7a4801924375267891b618">
+      -1.8930
+    </element>
+    <element type="UncategorizedText" element_id="3e6fe9ee536f296c7e4a5f6c19022615">
+      17616.3
+    </element>
+    <element type="UncategorizedText" element_id="c0348db7a758e1e41eb0de603b2d2287">
+      -0.2596
+    </element>
+    <element type="UncategorizedText" element_id="ea8e82dc8dcf2f1ea9a948bab6662c00">
+      02-Feb-23
+    </element>
+    <element type="UncategorizedText" element_id="8d9439fa3977e389e7573817dddf3de3">
+      1,531.25
+    </element>
+    <element type="UncategorizedText" element_id="a1f12d94791f04bcc1d02d735929cbac">
+      2.0561
+    </element>
+    <element type="UncategorizedText" element_id="b9e5aa815742a3ca636c14b57df7a7a8">
+      17610.4
+    </element>
+    <element type="UncategorizedText" element_id="2c6db10eedaafaf1971286fd7858da5e">
+      -0.0335
+    </element>
+    <element type="UncategorizedText" element_id="5852db72beecbbe91d89c3bdfb075f40">
+      03-Feb-23
+    </element>
+    <element type="UncategorizedText" element_id="5d0cab8d37cc31d238b3dfdd3ff7f532">
+      1,529.50
+    </element>
+    <element type="UncategorizedText" element_id="5ae1a7c8e17dee6deadb7170dc513118">
+      -0.1143
+    </element>
+    <element type="UncategorizedText" element_id="bf47ae139da2e31d6957d61f2f602f07">
+      17854.05
+    </element>
+    <element type="UncategorizedText" element_id="2850e936d3143522baf800023af79e57">
+      1.3836
+    </element>
+    <element type="UncategorizedText" element_id="329915eac06b6eff174a0e7f2ec4095a">
+      06-Feb-23
+    </element>
+    <element type="UncategorizedText" element_id="f378bbd80afafbd5a82028126da01e82">
+      1,523.45
+    </element>
+    <element type="UncategorizedText" element_id="26376fe3017f798b03526bf71bd3260f">
+      -0.3956
+    </element>
+    <element type="UncategorizedText" element_id="28e0554ae64ce6c8d38a6f1091e06fea">
+      17764.6
+    </element>
+    <element type="UncategorizedText" element_id="de452fe17834dffb6b14e8dbdf0ade5e">
+      -0.5010
+    </element>
+    <element type="UncategorizedText" element_id="51133981ab2889354070a64437498fa4">
+      07-Feb-23
+    </element>
+    <element type="UncategorizedText" element_id="fda451b5e36f7dfd6363445e2775b6f5">
+      1,527.10
+    </element>
+    <element type="UncategorizedText" element_id="f9a066fa8bdde5306292d83fca150852">
+      0.2396
+    </element>
+    <element type="UncategorizedText" element_id="df3e831c0f3e674ee1ab0ef401a6ddd8">
+      17721.5
+    </element>
+    <element type="UncategorizedText" element_id="fe26fa60a51fad492c13eff7c7fc79be">
+      -0.2426
+    </element>
+    <element type="UncategorizedText" element_id="da07aaa8f5385fb09f2409fe7bcb572b">
+      08-Feb-23
+    </element>
+    <element type="UncategorizedText" element_id="99d2ed89af3d052fa4e539a808f3a439">
+      1,516.95
+    </element>
+    <element type="UncategorizedText" element_id="90780b1c0e0f3b47dca179e7a4c3f34f">
+      -0.6647
+    </element>
+    <element type="UncategorizedText" element_id="3a713a6e304be5771c6ebbc9d117d2fa">
+      17871.7
+    </element>
+    <element type="UncategorizedText" element_id="4d43b08238d0ebe0cd6b8fcdafd5d22c">
+      0.8476
+    </element>
+    <element type="UncategorizedText" element_id="0fa650a3f81caf25d16cb34bac02ffd5">
+      09-Feb-23
+    </element>
+    <element type="UncategorizedText" element_id="86c6a409513c4d980b781c44801d785c">
+      1,514.60
+    </element>
+    <element type="UncategorizedText" element_id="c7c3ce2b701aa60c6777e9702bbea6a2">
+      -0.1549
+    </element>
+    <element type="UncategorizedText" element_id="f633d6932b21ccb72c534022477039ab">
+      17893.45
+    </element>
+    <element type="UncategorizedText" element_id="cd94d75d912e9b96d76db00ed48919e2">
+      0.1217
+    </element>
+  </page>
+  <page number="14">
+    <element type="UncategorizedText" element_id="d74e7baa028bf32a3ee18d38b37331e0">
+      lOMoAR cPSD| 19662931
+    </element>
+    <element type="Table" element_id="d57ecf88f5b97922f34ca5e4cd070eb0">
+      <table_html>&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;10-Feb-23&lt;/td&gt;&lt;td&gt;1,520.70&lt;/td&gt;&lt;td&gt;0.4027&lt;/td&gt;&lt;td&gt;17856.5&lt;/td&gt;&lt;td&gt;-0.2065&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;13-Feb-23&lt;/td&gt;&lt;td&gt;1,493.40&lt;/td&gt;&lt;td&gt;-1.7952&lt;/td&gt;&lt;td&gt;17770.9&lt;/td&gt;&lt;td&gt;-0.4794&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;14-Feb-23&lt;/td&gt;&lt;td&gt;1,501.90&lt;/td&gt;&lt;td&gt;0.5692&lt;/td&gt;&lt;td&gt;17929.85&lt;/td&gt;&lt;td&gt;0.8944&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;15-Feb-23&lt;/td&gt;&lt;td&gt;1,475.50&lt;/td&gt;&lt;td&gt;-1.7578&lt;/td&gt;&lt;td&gt;18015.85&lt;/td&gt;&lt;td&gt;0.4796&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;16-Feb-23&lt;/td&gt;&lt;td&gt;1,450.05&lt;/td&gt;&lt;td&gt;-1.7248&lt;/td&gt;&lt;td&gt;18035.85&lt;/td&gt;&lt;td&gt;0.1110&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;17-Feb-23&lt;/td&gt;&lt;td&gt;1,440.05&lt;/td&gt;&lt;td&gt;-0.6896&lt;/td&gt;&lt;td&gt;17944.2&lt;/td&gt;&lt;td&gt;-0.5082&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;20-Feb-23&lt;/td&gt;&lt;td&gt;1,434.05&lt;/td&gt;&lt;td&gt;-0.4167&lt;/td&gt;&lt;td&gt;17844.6&lt;/td&gt;&lt;td&gt;-0.5551&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;21-Feb-23&lt;/td&gt;&lt;td&gt;1,412.80&lt;/td&gt;&lt;td&gt;-1.4818&lt;/td&gt;&lt;td&gt;17826.7&lt;/td&gt;&lt;td&gt;-0.1003&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;22-Feb-23&lt;/td&gt;&lt;td&gt;1,424.90&lt;/td&gt;&lt;td&gt;0.8565&lt;/td&gt;&lt;td&gt;17554.3&lt;/td&gt;&lt;td&gt;-1.5280&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;23-Feb-23&lt;/td&gt;&lt;td&gt;1,415.55&lt;/td&gt;&lt;td&gt;-0.6562&lt;/td&gt;&lt;td&gt;17511.25&lt;/td&gt;&lt;td&gt;-0.2452&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;24-Feb-23&lt;/td&gt;&lt;td&gt;1,420.35&lt;/td&gt;&lt;td&gt;0.3391&lt;/td&gt;&lt;td&gt;17465.8&lt;/td&gt;&lt;td&gt;-0.2595&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;27-Feb-23&lt;/td&gt;&lt;td&gt;1,391.70&lt;/td&gt;&lt;td&gt;-2.0171&lt;/td&gt;&lt;td&gt;17392.7&lt;/td&gt;&lt;td&gt;-0.4185&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;28-Feb-23&lt;/td&gt;&lt;td&gt;1,411.15&lt;/td&gt;&lt;td&gt;1.3976&lt;/td&gt;&lt;td&gt;17303.95&lt;/td&gt;&lt;td&gt;-0.5103&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;01-Mar-23&lt;/td&gt;&lt;td&gt;1,419.15&lt;/td&gt;&lt;td&gt;0.5669&lt;/td&gt;&lt;td&gt;17450.9&lt;/td&gt;&lt;td&gt;0.8492&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;02-Mar-23&lt;/td&gt;&lt;td&gt;1,387.00&lt;/td&gt;&lt;td&gt;-2.2654&lt;/td&gt;&lt;td&gt;17321.9&lt;/td&gt;&lt;td&gt;-0.7392&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;03-Mar-23&lt;/td&gt;&lt;td&gt;1,405.20&lt;/td&gt;&lt;td&gt;1.3122&lt;/td&gt;&lt;td&gt;17594.35&lt;/td&gt;&lt;td&gt;1.5729&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;06-Mar-23&lt;/td&gt;&lt;td&gt;1,420.60&lt;/td&gt;&lt;td&gt;1.0959&lt;/td&gt;&lt;td&gt;17711.45&lt;/td&gt;&lt;td&gt;0.6656&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;08-Mar-23&lt;/td&gt;&lt;td&gt;1,431.05&lt;/td&gt;&lt;td&gt;0.7356&lt;/td&gt;&lt;td&gt;17754.4&lt;/td&gt;&lt;td&gt;0.2425&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;09-Mar-23&lt;/td&gt;&lt;td&gt;1,421.00&lt;/td&gt;&lt;td&gt;-0.7023&lt;/td&gt;&lt;td&gt;17589.6&lt;/td&gt;&lt;td&gt;-0.9282&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;10-Mar-23&lt;/td&gt;&lt;td&gt;1,420.00&lt;/td&gt;&lt;td&gt;-0.0704&lt;/td&gt;&lt;td&gt;17412.9&lt;/td&gt;&lt;td&gt;-1.0046&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;13-Mar-23&lt;/td&gt;&lt;td&gt;1,416.05&lt;/td&gt;&lt;td&gt;-0.2782&lt;/td&gt;&lt;td&gt;17154.3&lt;/td&gt;&lt;td&gt;-1.4851&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;14-Mar-23&lt;/td&gt;&lt;td&gt;1,401.10&lt;/td&gt;&lt;td&gt;-1.0558&lt;/td&gt;&lt;td&gt;17043.3&lt;/td&gt;&lt;td&gt;-0.6471&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;15-Mar-23&lt;/td&gt;&lt;td&gt;1,408.70&lt;/td&gt;&lt;td&gt;0.5424&lt;/td&gt;&lt;td&gt;16972.15&lt;/td&gt;&lt;td&gt;-0.4175&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;16-Mar-23&lt;/td&gt;&lt;td&gt;1,407.90&lt;/td&gt;&lt;td&gt;-0.0568&lt;/td&gt;&lt;td&gt;16985.6&lt;/td&gt;&lt;td&gt;0.0792&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;17-Mar-23&lt;/td&gt;&lt;td&gt;1,418.70&lt;/td&gt;&lt;td&gt;0.7671&lt;/td&gt;&lt;td&gt;17100.05&lt;/td&gt;&lt;td&gt;0.6738&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;20-Mar-23&lt;/td&gt;&lt;td&gt;1,399.85&lt;/td&gt;&lt;td&gt;-1.3287&lt;/td&gt;&lt;td&gt;16988.4&lt;/td&gt;&lt;td&gt;-0.6529&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;21-Mar-23&lt;/td&gt;&lt;td&gt;1,406.25&lt;/td&gt;&lt;td&gt;0.4572&lt;/td&gt;&lt;td&gt;17107.5&lt;/td&gt;&lt;td&gt;0.7011&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;22-Mar-23&lt;/td&gt;&lt;td&gt;1,410.05&lt;/td&gt;&lt;td&gt;0.2702&lt;/td&gt;&lt;td&gt;17151.9&lt;/td&gt;&lt;td&gt;0.2595&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;23-Mar-23&lt;/td&gt;&lt;td&gt;1,416.30&lt;/td&gt;&lt;td&gt;0.4432&lt;/td&gt;&lt;td&gt;17076.9&lt;/td&gt;&lt;td&gt;-0.4373&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;24-Mar-23&lt;/td&gt;&lt;td&gt;1,416.40&lt;/td&gt;&lt;td&gt;0.0071&lt;/td&gt;&lt;td&gt;16945.05&lt;/td&gt;&lt;td&gt;-0.7721&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;27-Mar-23&lt;/td&gt;&lt;td&gt;1,399.30&lt;/td&gt;&lt;td&gt;-1.2073&lt;/td&gt;&lt;td&gt;16985.7&lt;/td&gt;&lt;td&gt;0.2399&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;28-Mar-23&lt;/td&gt;&lt;td&gt;1,394.65&lt;/td&gt;&lt;td&gt;-0.3323&lt;/td&gt;&lt;td&gt;16951.7&lt;/td&gt;&lt;td&gt;-0.2002&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;29-Mar-23&lt;/td&gt;&lt;td&gt;1,406.75&lt;/td&gt;&lt;td&gt;0.8676&lt;/td&gt;&lt;td&gt;17080.7&lt;/td&gt;&lt;td&gt;0.7610&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;31-Mar-23&lt;/td&gt;&lt;td&gt;1,418.35&lt;/td&gt;&lt;td&gt;0.8246&lt;/td&gt;&lt;td&gt;17359.75&lt;/td&gt;&lt;td&gt;1.6337&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</table_html>
+    </element>
+    <element type="Table" element_id="9b7d4f417b2aa2bc4fd0fcc6f80f9249">
+      <table_html>&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Beta=&lt;/th&gt;&lt;th&gt;0.85648138&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Rm&lt;/td&gt;&lt;td&gt;-0.0029&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Rf&lt;/td&gt;&lt;td&gt;0.071585&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</table_html>
+    </element>
+  </page>
+  <page number="15">
+    <element type="UncategorizedText" element_id="938578f9a76b10c10425f67f33c958b6">
+      lOMoAR cPSD| 19662931
+    </element>
+    <element type="Title" element_id="dc37431d5d9d9217643012b2625432a3">
+      Ke = Rf + Beta (Rm-Rf) Ke = 0.782048134%
+    </element>
+    <element type="Title" element_id="a4ea1b9bededa7264e8da300d4285e47">
+      Interpretation
+    </element>
+    <element type="Image" element_id="67003465a3f22bb4bf7b7f65fd6a2c52">
+      “&amp;
+    </element>
+    <element type="Title" element_id="cd1bac034fd92b8127aca89a216bf126">
+      Here the calculated beta of the stock is less than 1 (broader beta or bench mark beta), so the stock is less risky.
+    </element>
+    <element type="Image" element_id="c4c896c64bc4f511918e3ff9f4be9312">
+      “&amp;
+    </element>
+    <element type="Title" element_id="1c3e57559fb5418b3009655e24fad2d7">
+      My analysis indicates that we should not invest in this stock because in T Bills, we receive a higher return of around
+    </element>
+  </page>
+  <page number="16">
+    <element type="UncategorizedText" element_id="70ab144426ca2dc149bbc59c09a1c79b">
+      lOMoAR cPSD| 19662931
+    </element>
+  </page>
+</document>

@@ -1,0 +1,175 @@
+==========================================
+MONITORING COMMANDS (Run Anytime)
+==========================================
+
+# Check CPU count
+python3 -c "import os; print(f'CPU Count: {os.cpu_count()}')"
+nproc  # Alternative: Linux command
+
+# Check jobs in queue (Redis CLI)
+redis-cli ZCARD arq:queue
+
+# Check jobs in process (Redis CLI)
+redis-cli --scan --pattern "arq:in-progress:*" | wc -l
+
+# Check all ARQ keys (detailed)
+echo "=== Queue Status ==="
+echo "Queue length: $(redis-cli ZCARD arq:queue)"
+echo "In-progress: $(redis-cli --scan --pattern 'arq:in-progress:*' | wc -l)"
+echo "Job keys: $(redis-cli --scan --pattern 'arq:job:*' | wc -l)"
+echo "Retry keys: $(redis-cli --scan --pattern 'arq:retry:*' | wc -l)"
+
+# Check via API endpoint (requires API running)
+curl -sS "http://127.0.0.1:8008/worker/health" | jq .
+
+# Watch queue status continuously (every 2 seconds)
+watch -n 2 'echo "Queue: $(redis-cli ZCARD arq:queue) | In-Progress: $(redis-cli --scan --pattern \"arq:in-progress:*\" | wc -l)"'
+
+==========================================
+TERMINAL 1: Cleanup & Setup
+==========================================
+
+pkill -f "uvicorn api:app" || true
+pkill -f "python -m arq worker.WorkerSettings" || true
+
+ps aux | egrep "uvicorn api:app|arq worker.WorkerSettings" | grep -v grep || true
+
+redis-cli ping
+
+sudo service redis-server restart || sudo systemctl restart redis-server
+
+# queue is a ZSET
+redis-cli TYPE arq:queue
+redis-cli ZCARD arq:queue
+
+# delete queue + ARQ metadata keys
+redis-cli DEL arq:queue arq:queue:health-check
+
+redis-cli --scan --pattern "arq:in-progress:*" | xargs -r redis-cli DEL
+redis-cli --scan --pattern "arq:job:*"        | xargs -r redis-cli DEL
+redis-cli --scan --pattern "arq:retry:*"      | xargs -r redis-cli DEL
+redis-cli --scan --pattern "arq:result:*"     | xargs -r redis-cli DEL
+
+# verify clean
+redis-cli ZCARD arq:queue
+redis-cli --scan --pattern "arq:in-progress:*" | wc -l
+redis-cli --scan --pattern "arq:job:*" | head
+
+TERMINAL  2 *****************************
+
+cd "/home/teja/dailybetter/insight forge ai new"
+source venv/bin/activate
+
+python -m arq worker.WorkerSettings
+
+TERMINAL  3 *****************************
+
+cd "/home/teja/dailybetter/insight forge ai new"
+source venv/bin/activate
+
+uvicorn api:app --host 127.0.0.1 --port 8008
+
+==========================================
+TERMINAL 4: Simple Test (Recommended)
+==========================================
+
+cd "/home/teja/dailybetter/insight forge ai new"
+source venv/bin/activate
+
+# Verify API is running
+curl -sS "http://127.0.0.1:8008/health" | jq .
+
+# Run simple test (uploads 3 docs, creates 4 insights, sends 3 chats)
+python test_pipeline.py
+
+# Monitor queue during test (in another terminal or background)
+# watch -n 2 'echo "Queue: $(redis-cli ZCARD arq:queue) | In-Progress: $(redis-cli --scan --pattern \"arq:in-progress:*\" | wc -l)"'
+
+==========================================
+TERMINAL 4 (Alternative): Stress Test
+==========================================
+
+# NOTE: Stress test is currently commented out in test_pipeline.py
+# Uncomment run_stress_test() if you want to run it
+
+set -euo pipefail
+
+BASE_URL="http://127.0.0.1:8008"
+USER_ID="bb241381-7891-40c9-ac93-a28997505205"
+ASSIGN_DIR="/home/teja/dailybetter/insight forge ai new/tests/Assignments"
+
+mapfile -t PDFS < <(find "$ASSIGN_DIR" -maxdepth 1 -type f -name "*.pdf" | head -n 15)
+echo "Picked PDFs: ${#PDFS[@]}"
+
+mapfile -t DOC_IDS < <(
+  printf '%s\0' "${PDFS[@]}" |
+  xargs -0 -n 1 -P 15 bash -lc '
+    p="$1"
+    curl -sS -X POST "'"$BASE_URL"'/documents" \
+      -F "user_id='"$USER_ID"'" \
+      -F "file=@${p}"
+  ' _ |
+  jq -r '.doc_id'
+)
+
+echo "Uploaded docs: ${#DOC_IDS[@]}"
+
+while true; do
+  echo "--- $(date) --- queue=$(redis-cli ZCARD arq:queue) in_progress=$(redis-cli --scan --pattern "arq:in-progress:*" | wc -l)"
+  done_count=0
+
+  for id in "${DOC_IDS[@]}"; do
+    j="$(curl -sS "$BASE_URL/documents/$id")"
+    st="$(echo "$j" | jq -r '.status')"
+    echo "doc $id: $st"
+    if [[ "$st" == "completed" || "$st" == "error" ]]; then
+      done_count=$((done_count+1))
+    fi
+  done
+
+  echo "DONE: $done_count / ${#DOC_IDS[@]}"
+  [[ "$done_count" == "${#DOC_IDS[@]}" ]] && break
+  sleep 3
+done
+
+==========================================
+TERMINAL 5: Insights & Chats (if using bash script)
+==========================================
+
+DOCS_FOR_INSIGHTS=("${DOC_IDS[@]:0:10}")
+
+mapfile -t INSIGHT_IDS < <(
+  printf '%s\0' "${DOCS_FOR_INSIGHTS[@]}" |
+  xargs -0 -n 1 -P 10 bash -lc '
+    doc_id="$1"
+    curl -sS -X POST "'"$BASE_URL"'/insights" \
+      -H "Content-Type: application/json" \
+      -d "$(jq -n \
+        --arg user_id "'"$USER_ID"'" \
+        --arg action_type "summary" \
+        --arg doc1 "$doc_id" \
+        --arg title "parallel summary" \
+        "{user_id:\$user_id, action_type:\$action_type, document_ids:[\$doc1], instructions:\"\", title:\$title}")"
+  ' _ |
+  jq -r '.insight_id'
+)
+
+echo "Created insights: ${#INSIGHT_IDS[@]}"
+
+while true; do
+  echo "--- $(date) --- queue=$(redis-cli ZCARD arq:queue) in_progress=$(redis-cli --scan --pattern "arq:in-progress:*" | wc -l)"
+  done_count=0
+
+  for id in "${INSIGHT_IDS[@]}"; do
+    j="$(curl -sS "$BASE_URL/insights/$id")"
+    st="$(echo "$j" | jq -r '.status')"
+    echo "insight $id: $st"
+    if [[ "$st" == "completed" || "$st" == "error" ]]; then
+      done_count=$((done_count+1))
+    fi
+  done
+
+  echo "DONE: $done_count / ${#INSIGHT_IDS[@]}"
+  [[ "$done_count" == "${#INSIGHT_IDS[@]}" ]] && break
+  sleep 2
+done

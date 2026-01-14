@@ -1,0 +1,82 @@
+# Render Blueprint Configuration
+# This file defines all services needed for InsightForge AI
+# Deploy via: render.yaml blueprint or manually create services
+
+services:
+  # API Service (FastAPI)
+  - type: web
+    name: insightforge-api
+    env: python
+    plan: starter  # Can upgrade to standard/pro for production
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: insightforge-redis
+          property: connectionString
+      - key: IF_MAX_JOBS
+        value: "5"
+      - key: IF_JOB_TIMEOUT_SECONDS
+        value: "1800"
+      - key: IF_JOB_MAX_TRIES
+        value: "2"
+      - key: IF_PARSE_THREAD_POOL_SIZE
+        value: "8"  # Adjust based on Render instance CPU count
+      - key: EMBEDDING_BATCH_SIZE
+        value: "1000"
+      - key: OPENAI_EMBEDDING_MODEL
+        value: text-embedding-3-small
+      - key: EMBEDDING_DIMENSIONS
+        value: "1536"
+
+  # Background Worker (ARQ)
+  - type: worker
+    name: insightforge-worker
+    env: python
+    plan: starter  # Can upgrade to standard/pro for production
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m arq worker.WorkerSettings
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: insightforge-redis
+          property: connectionString
+      - key: IF_MAX_JOBS
+        value: "5"
+      - key: IF_JOB_TIMEOUT_SECONDS
+        value: "1800"
+      - key: IF_JOB_MAX_TRIES
+        value: "2"
+      - key: IF_PARSE_THREAD_POOL_SIZE
+        value: "8"
+      - key: EMBEDDING_BATCH_SIZE
+        value: "1000"
+      - key: OPENAI_EMBEDDING_MODEL
+        value: text-embedding-3-small
+      - key: EMBEDDING_DIMENSIONS
+        value: "1536"
+
+  # Redis Service
+  - type: redis
+    name: insightforge-redis
+    plan: starter  # Free tier available, upgrade for production
+    maxmemoryPolicy: allkeys-lru

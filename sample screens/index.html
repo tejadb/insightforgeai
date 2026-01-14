@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightForge AI - Workspace</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Using Inter font for clean look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Top Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-icon">✨</span>
+            <span class="logo-text">InsightForge AI</span>
+        </div>
+        <div class="nav-actions">
+            <button class="icon-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+            <div class="profile-avatar">T</div>
+        </div>
+    </nav>
+
+    <!-- Main Workspace Layout -->
+    <main class="workspace" id="workspace">
+        
+        <!-- LEFT PANEL: Sources -->
+        <section class="panel left-panel" id="leftPanel">
+            <div class="panel-header">
+                <h3>Sources</h3>
+                <div class="header-actions">
+                    <span class="badge" id="sourceCount">2</span>
+                    <button class="icon-btn-small" onclick="toggleLeftPanel()"><i class="fa-solid fa-angles-left"></i></button>
+                </div>
+            </div>
+            
+            <div class="sources-list" id="sourcesList">
+                <div class="source-item active" onclick="toggleSource(this)">
+                    <i class="fa-regular fa-file-pdf source-icon pdf"></i>
+                    <div class="source-info">
+                        <span class="source-name">Corporate_Finance_Assignment.pdf</span>
+                        <span class="source-meta">Parsed • 1.2 MB</span>
+                    </div>
+                    <div class="selection-indicator"><i class="fa-solid fa-check"></i></div>
+                </div>
+                
+                <div class="source-item" onclick="toggleSource(this)">
+                    <i class="fa-regular fa-file-powerpoint source-icon ppt"></i>
+                    <div class="source-info">
+                        <span class="source-name">Market_Sizing_Deck.pptx</span>
+                        <span class="source-meta">Parsed • 850 KB</span>
+                    </div>
+                    <div class="selection-indicator"><i class="fa-solid fa-check"></i></div>
+                </div>
+            </div>
+
+            <button class="add-source-btn">
+                <i class="fa-solid fa-plus"></i> Add source
+            </button>
+        </section>
+
+        <!-- Collapsed Left Button -->
+        <div class="collapsed-sidebar-btn left" id="leftCollapsedBtn" onclick="toggleLeftPanel()" style="display: none;">
+            <i class="fa-solid fa-folder-open"></i>
+        </div>
+
+        <!-- MIDDLE PANEL: Chat -->
+        <section class="panel middle-panel">
+            <div class="chat-header">
+                <h3>Chat</h3>
+                <div class="chat-controls">
+                    <button class="icon-btn-small"><i class="fa-solid fa-eraser"></i></button>
+                </div>
+            </div>
+
+            <div class="chat-area" id="chatArea">
+                <div class="empty-state">
+                    <div class="sparkle-icon">✨</div>
+                    <h2>Ask anything about your documents</h2>
+                    <p>Select a source to get started.</p>
+                </div>
+                <!-- Chat messages will go here -->
+            </div>
+
+            <div class="chat-input-area">
+                <input type="text" placeholder="Type your question here..." id="chatInput">
+                <button class="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </section>
+
+        <!-- RIGHT PANEL: Studio (Actions) -->
+        <section class="panel right-panel" id="rightPanel">
+            <div class="panel-header">
+                <h3>Studio</h3>
+                <button class="icon-btn-small" onclick="toggleRightPanel()"><i class="fa-solid fa-angles-right"></i></button>
+            </div>
+
+            <div class="action-cards-grid">
+                <!-- Summary Card -->
+                <div class="action-card" onclick="openModal('summary')">
+                    <div class="card-icon summary-icon"><i class="fa-regular fa-file-lines"></i></div>
+                    <h4>Summary</h4>
+                    <p>Get a comprehensive overview</p>
+                </div>
+
+                <!-- Q&A Card -->
+                <div class="action-card" onclick="openModal('qna')">
+                    <div class="card-icon qna-icon"><i class="fa-solid fa-clipboard-question"></i></div>
+                    <h4>Q&A</h4>
+                    <p>Generate practice questions</p>
+                </div>
+
+                <!-- Interview Tips Card -->
+                <div class="action-card" onclick="openModal('tips')">
+                    <div class="card-icon tips-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <h4>Interview Tips</h4>
+                    <p>Key talking points & advice</p>
+                </div>
+
+                <!-- Slide Deck Card -->
+                <div class="action-card" onclick="openModal('slides')">
+                    <div class="card-icon slides-icon"><i class="fa-solid fa-presentation-screen"></i></div>
+                    <h4>Slide Deck</h4>
+                    <p>Create presentation outline</p>
+                </div>
+            </div>
+
+            <!-- History Section -->
+            <div class="history-section">
+                <div class="section-title">Saved Insights</div>
+                <div class="history-list" id="historyList">
+                    <!-- History items will be added here via JS -->
+                    <div class="history-item completed">
+                        <div class="history-icon"><i class="fa-regular fa-file-lines"></i></div>
+                        <div class="history-content">
+                            <span class="history-title">Summary: Corp Finance</span>
+                            <span class="history-date">Just now</span>
+                        </div>
+                        <div class="history-action"><i class="fa-solid fa-chevron-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collapsed Right Button -->
+        <div class="collapsed-sidebar-btn right" id="rightCollapsedBtn" onclick="toggleRightPanel()" style="display: none;">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </div>
+
+    </main>
+
+    <!-- GENERIC MODAL -->
+    <div class="modal-overlay" id="actionModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Customize Action</h3>
+                <button class="close-btn" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="option-group">
+                    <label>Instructions (Optional)</label>
+                    <textarea id="modalInstructions" placeholder="E.g., Focus on the financial metrics and ignore the legal section..."></textarea>
+                    <p class="hint">Add specific instructions to guide the AI generation.</p>
+                </div>
+
+                <!-- Dynamic options can be injected here -->
+                <div id="dynamicOptions"></div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="secondary-btn" onclick="closeModal()">Cancel</button>
+                <button class="primary-btn" onclick="startGeneration()">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Generate
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check authentication on page load
+        if (!localStorage.getItem('user_id')) {
+            window.location.href = 'auth.html';
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+

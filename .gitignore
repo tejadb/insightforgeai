@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+*.egg-info/
+dist/
+build/
+
+# Logs
+*.log
+api.log
+worker.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Large test files (if any)
+tests/results/
+tests/Assignments/
+tests/*.pdf
+tests/*.docx
+tests/*.pptx
+tests/*.xlsx
+tests/*.xls
+
+# Analysis files (optional - uncomment if you don't want to commit these)
+# ANALYSIS_*.md
+# COMPREHENSIVE_*.md
+# *_REPORT.md
+# *_REPORT.csv
+
+# Commands file (optional)
+# commands.txt

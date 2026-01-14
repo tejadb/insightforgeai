@@ -1,0 +1,57 @@
+# Files to ignore when deploying to Render
+# Similar to .gitignore but specific to Render builds
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# Documentation
+*.md
+!README.md
+docs/
+
+# Test files
+tests/
+test_*.py
+*_test.py
+
+# Sample screens (frontend - deploy separately)
+sample screens/
+
+# Analysis files
+ANALYSIS_*.md
+COMPREHENSIVE_*.md
+*_REPORT.md
+*_REPORT.csv
+
+# Commands
+commands.txt
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db

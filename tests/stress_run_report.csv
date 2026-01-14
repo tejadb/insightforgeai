@@ -1,0 +1,17 @@
+doc_index,doc_title,doc_id,final_status,stage_failed,attempts,chunks,download_s,parse_s,chunking_s,embedding_s,store_chunks_s,store_document_s,attempt1_total_s,attempt2_total_s,total_attempts_s,error_summary
+1,CapX Assignment.pdf,3a22922b-be6d-4d24-8d7d-0568a9b5466e,completed,,1,7,0.83,46.56,0.00,225.41,0.44,0.14,274.13,,274.13,
+2,CB Assignment.pdf,6dd1de1c-d7d9-4e50-831e-4b130479e470,completed,,1,1,0.68,24.48,0.00,198.57,0.14,0.12,224.75,,224.75,
+3,BE ADITI.pdf,ffdd4fd7-732c-40cc-b875-a558e89d89bb,completed,,1,10,0.91,25.33,0.00,170.63,0.80,0.17,198.56,,198.56,
+4,Micro Economics Assignment.pdf,33e64e43-533d-4c1f-8837-4ea18fc50b88,completed,,1,3,1.07,23.46,0.00,144.31,0.71,0.19,170.61,,170.61,
+5,Aditi_SCM.pdf,c68234e4-c45c-4942-9db2-1cc191aa4a89,completed,,1,59,0.88,140.45,0.01,4.57,2.22,0.76,150.13,,150.13,
+6,Market_Sizing_Assessment_Final.pdf,e07b4b23-0af6-4066-a0c7-2bdcf8b2dccb,completed,,1,7,1.15,20.07,0.00,293.99,0.31,0.14,316.28,,316.28,
+7,Corporate Finance Assignment ss.pdf,5f6a2497-a999-49f8-858e-9d1e8fd6ec78,completed,,1,34,0.95,129.09,0.01,160.85,1.24,0.66,293.98,,293.98,
+8,MOS Assignment 2 ppt.pdf,7cbeee30-6413-4601-abd9-dbeb75606c4d,completed,,1,5,0.92,29.07,0.00,127.62,0.48,0.19,158.68,,158.68,
+9,Assignment 1.pdf,1167bda6-6c67-479d-a9cc-c6943a09d946,completed,,1,14,1.11,58.45,0.00,68.31,0.74,0.40,129.41,,129.41,
+10,Assignment 1 (1).pdf,ad007cd9-7433-4051-acee-09285ce7d68c,completed,,1,14,0.99,64.81,0.00,2.51,0.65,0.35,70.46,,70.46,
+11,ABHISHEK SIP_merged.pdf,3f0e2b08-f451-4297-b8a9-e64936509060,error,embed_chunks,1,83,0.99,278.66,0.01,,,,932.52,,932.52,"WorkerJobTimeout during embedding batch for 83 chunks"
+12,DESCRIPTIVE& EFA& REGRESSION.pdf,bfb07aa7-0999-4d1c-9ed6-412fcb7d5dba,completed,,2,50,0.85,160.39,0.01,5.15,0.97,0.42,978.85,168.76,1147.61,"First attempt very slow (total≈978.85s, embedding≈781.41s), second attempt fast (≈168.76s)"
+13,Eco assignment2.pdf,5597e2e6-ba16-4765-8042-aab602dadbbd,error,embed_chunks,1,9,1.57,75.47,0.00,,,,618.27,,618.27,"WorkerJobTimeout during embedding batch for 9 chunks"
+14,2385100018_Sachin Kumar Sharma_8287565735.pdf,34861734-6a43-4557-a92a-21c4bc9e28c4,error,embed_chunks,1,142,1.79,376.38,0.04,,,,703.13,,703.13,"WorkerJobTimeout during embedding batch for 142 chunks"
+15,MR _Assignemnt.pdf,931c9222-e46c-426a-aeba-82b1ae442bfb,completed,,1,48,8.18,150.94,0.01,166.14,1.22,0.40,328.05,,328.05,
+
