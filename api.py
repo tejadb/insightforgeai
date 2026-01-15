@@ -16,7 +16,6 @@ import json
 from typing import Any, List, Optional
 
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 from repo import InsightRepo
@@ -27,16 +26,6 @@ from prompt_builder import PromptBuilder
 
 
 app = FastAPI(title="InsightForge AI (New)")
-
-# Enable CORS for frontend
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # Allow all origins for demo (restrict in production)
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
 repo = InsightRepo()
 llm = LLMClient()
 
@@ -62,47 +51,6 @@ class ChatMessageRequest(BaseModel):
 @app.get("/health")
 def health() -> dict[str, str]:
     return {"status": "ok"}
-
-
-# ---- AUTH (Simple Fake Auth for Demo) ------------------------------------
-
-@app.post("/auth/register")
-async def register(username: str = Form(...), password: str = Form(...)) -> dict[str, Any]:
-    """
-    Register a new user (simple fake auth for demo).
-    
-    No email verification, no security - just username + password.
-    """
-    try:
-        user_id = repo.create_user(username, password)
-        return {
-            "user_id": user_id,
-            "username": username,
-            "message": "User created successfully"
-        }
-    except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to create user: {str(e)}")
-
-
-@app.post("/auth/login")
-async def login(username: str = Form(...), password: str = Form(...)) -> dict[str, Any]:
-    """
-    Login user (simple fake auth for demo).
-    
-    Returns user_id if credentials are valid.
-    """
-    user_id = repo.verify_user(username, password)
-    if not user_id:
-        raise HTTPException(status_code=401, detail="Invalid username or password")
-    
-    user = repo.get_user(user_id)
-    return {
-        "user_id": user_id,
-        "username": user.get("username") if user else username,
-        "message": "Login successful"
-    }
 
 
 @app.get("/worker/health")
@@ -217,25 +165,6 @@ def get_document(doc_id: str) -> dict[str, Any]:
     return repo.get_document(doc_id)
 
 
-@app.get("/documents")
-def list_documents(user_id: str) -> dict[str, Any]:
-    """
-    List all documents for a user.
-    """
-    try:
-        response = repo.supabase.table("if_documents")\
-            .select("id, title, status, created_at, updated_at, error_message")\
-            .eq("user_id", user_id)\
-            .order("created_at", desc=True)\
-            .execute()
-        return {
-            "documents": response.data or [],
-            "count": len(response.data or [])
-        }
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to list documents: {str(e)}")
-
-
 @app.post("/insights")
 async def create_insight(req: CreateInsightRequest) -> dict[str, Any]:
     # Validate action_type
@@ -261,25 +190,6 @@ async def create_insight(req: CreateInsightRequest) -> dict[str, Any]:
 @app.get("/insights/{insight_id}")
 def get_insight(insight_id: str) -> dict[str, Any]:
     return repo.get_insight(insight_id)
-
-
-@app.get("/insights")
-def list_insights(user_id: str) -> dict[str, Any]:
-    """
-    List all insights for a user.
-    """
-    try:
-        response = repo.supabase.table("if_insights")\
-            .select("id, user_id, action_type, document_ids, status, title, created_at, updated_at, error_message")\
-            .eq("user_id", user_id)\
-            .order("created_at", desc=True)\
-            .execute()
-        return {
-            "insights": response.data or [],
-            "count": len(response.data or [])
-        }
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to list insights: {str(e)}")
 
 
 # ---- CHAT (single chat per user) ------------------------------------
