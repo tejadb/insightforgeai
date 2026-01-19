@@ -38,52 +38,53 @@ llm = LLMClient()
 # Thread pool executor for CPU-bound parsing tasks
 # This prevents blocking the event loop while allowing parallel parsing across CPUs
 # Pool size defaults to CPU count, but can be overridden via IF_PARSE_THREAD_POOL_SIZE env var
-_parse_pool_size = int(os.getenv("IF_PARSE_THREAD_POOL_SIZE", str(os.cpu_count() or 1)))
+# _parse_pool_size = int(os.getenv("IF_PARSE_THREAD_POOL_SIZE", str(os.cpu_count() or 1)))
 _parse_executor: concurrent.futures.ThreadPoolExecutor = concurrent.futures.ThreadPoolExecutor(
-    max_workers=_parse_pool_size,
+    # max_workers=_parse_pool_size,
     thread_name_prefix="parse-worker"
 )
-print(f"📦 [Pipeline] Initialized parse thread pool with {_parse_pool_size} workers (CPU count: {os.cpu_count()})")
+# print(f"📦 [Pipeline] Initialized parse thread pool with {_parse_pool_size} workers (CPU count: {os.cpu_count()})")
 
 
 def _get_thread_pool_stats() -> dict[str, Any]:
     """Get current thread pool statistics for monitoring."""
-    stats = {
-        "active_threads": threading.active_count(),
-        "pool_max_workers": _parse_pool_size,
-        "pool_workers": len(_parse_executor._threads) if hasattr(_parse_executor, '_threads') else 0,
-    }
+    return {}
+    # stats = {
+    #     "active_threads": threading.active_count(),
+    #     "pool_max_workers": _parse_pool_size,
+    #     "pool_workers": len(_parse_executor._threads) if hasattr(_parse_executor, '_threads') else 0,
+    # }
     
-    # Try to get queue size
-    if hasattr(_parse_executor, '_work_queue'):
-        try:
-            stats["queue_size"] = _parse_executor._work_queue.qsize()
-        except:
-            stats["queue_size"] = "N/A"
-    else:
-        stats["queue_size"] = "N/A"
+    # # Try to get queue size
+    # if hasattr(_parse_executor, '_work_queue'):
+    #     try:
+    #         stats["queue_size"] = _parse_executor._work_queue.qsize()
+    #     except:
+    #         stats["queue_size"] = "N/A"
+    # else:
+    #     stats["queue_size"] = "N/A"
     
-    # Get CPU usage (if psutil is available)
-    if PSUTIL_AVAILABLE:
-        try:
-            process = psutil.Process(os.getpid())
-            stats["cpu_percent"] = process.cpu_percent(interval=0.1)
-            stats["cpu_count_logical"] = psutil.cpu_count(logical=True)
-            stats["cpu_count_physical"] = psutil.cpu_count(logical=False)
-            # Get per-CPU usage
-            stats["cpu_per_cpu"] = psutil.cpu_percent(interval=0.1, percpu=True)
-        except Exception as e:
-            stats["cpu_percent"] = f"Error: {e}"
-            stats["cpu_count_logical"] = "N/A"
-            stats["cpu_count_physical"] = "N/A"
-            stats["cpu_per_cpu"] = "N/A"
-    else:
-        stats["cpu_percent"] = "psutil not available"
-        stats["cpu_count_logical"] = os.cpu_count() or "N/A"
-        stats["cpu_count_physical"] = "N/A"
-        stats["cpu_per_cpu"] = "N/A"
+    # # Get CPU usage (if psutil is available)
+    # if PSUTIL_AVAILABLE:
+    #     try:
+    #         process = psutil.Process(os.getpid())
+    #         stats["cpu_percent"] = process.cpu_percent(interval=0.1)
+    #         stats["cpu_count_logical"] = psutil.cpu_count(logical=True)
+    #         stats["cpu_count_physical"] = psutil.cpu_count(logical=False)
+    #         # Get per-CPU usage
+    #         stats["cpu_per_cpu"] = psutil.cpu_percent(interval=0.1, percpu=True)
+    #     except Exception as e:
+    #         stats["cpu_percent"] = f"Error: {e}"
+    #         stats["cpu_count_logical"] = "N/A"
+    #         stats["cpu_count_physical"] = "N/A"
+    #         stats["cpu_per_cpu"] = "N/A"
+    # else:
+    #     stats["cpu_percent"] = "psutil not available"
+    #     stats["cpu_count_logical"] = os.cpu_count() or "N/A"
+    #     stats["cpu_count_physical"] = "N/A"
+    #     stats["cpu_per_cpu"] = "N/A"
     
-    return stats
+    # return stats
 
 
 def _format_thread_pool_stats(stats: dict[str, Any], prefix: str = "🔍") -> str:
@@ -173,8 +174,8 @@ async def process_document(doc_id: str):
         # This allows I/O operations (embeddings) to run concurrently with CPU-bound parsing
         
         # Monitor thread pool before parsing
-        stats_before = _get_thread_pool_stats()
-        print(_format_thread_pool_stats(stats_before, prefix="🔍 [Before Parse]"))
+        # stats_before = _get_thread_pool_stats()
+        # print(_format_thread_pool_stats(stats_before, prefix="🔍 [Before Parse]"))
         
         t0 = time.perf_counter()
         loop = asyncio.get_event_loop()
@@ -182,33 +183,33 @@ async def process_document(doc_id: str):
         parse_func = partial(parser.parse_bytes, file_bytes, filename=storage_path)
         
         # Submit to thread pool
-        print(f"🚀 [Pipeline] Submitting parse task to thread pool (doc_id={doc_id[:8]}...)")
+        # print(f"🚀 [Pipeline] Submitting parse task to thread pool (doc_id={doc_id[:8]}...)")
         future = loop.run_in_executor(_parse_executor, parse_func)
         
         # Start a background task to monitor during parsing (non-blocking)
-        async def monitor_during_parse():
-            await asyncio.sleep(2.0)  # Wait 2 seconds after start
-            if not future.done():
-                stats_during = _get_thread_pool_stats()
-                print(_format_thread_pool_stats(stats_during, prefix="⚡ [During Parse @2s]"))
+        # async def monitor_during_parse():
+        #     await asyncio.sleep(2.0)  # Wait 2 seconds after start
+        #     if not future.done():
+        #         stats_during = _get_thread_pool_stats()
+        #         print(_format_thread_pool_stats(stats_during, prefix="⚡ [During Parse @2s]"))
         
-        monitor_task = asyncio.create_task(monitor_during_parse())
+        # monitor_task = asyncio.create_task(monitor_during_parse())
         
         # Wait for completion
         elements = await future
         timings["parse_s"] = time.perf_counter() - t0
         
         # Cancel monitor task if still running
-        if not monitor_task.done():
-            monitor_task.cancel()
-            try:
-                await monitor_task
-            except asyncio.CancelledError:
-                pass
+        # if not monitor_task.done():
+        #     monitor_task.cancel()
+        #     try:
+        #         await monitor_task
+        #     except asyncio.CancelledError:
+        #         pass
         
         # Monitor thread pool after parsing
-        stats_after = _get_thread_pool_stats()
-        print(_format_thread_pool_stats(stats_after, prefix="✅ [After Parse]"))
+        # stats_after = _get_thread_pool_stats()
+        # print(_format_thread_pool_stats(stats_after, prefix="✅ [After Parse]"))
         print(f"⏱️  [Pipeline] Parse completed in {timings['parse_s']:.2f}s for {title!r}")
         
         # 5. Check if elements are empty

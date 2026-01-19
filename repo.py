@@ -114,6 +114,29 @@ class InsightRepo:
             
         return contexts
 
+    def get_document_titles(self, doc_ids: List[str]) -> Dict[str, str]:
+        """
+        Fetch {document_id: title} for the provided doc_ids.
+
+        Used to generate user-friendly citations (title + page range) without exposing UUIDs.
+        """
+        if not doc_ids:
+            return {}
+        resp = (
+            self.supabase.table("if_documents")
+            .select("id, title")
+            .in_("id", doc_ids)
+            .execute()
+        )
+        rows = resp.data or []
+        out: Dict[str, str] = {}
+        for r in rows:
+            did = str(r.get("id"))
+            title = (r.get("title") or "").strip()
+            if did:
+                out[did] = title or did
+        return out
+
     # ---- CHAT (single chat per user) ---------------------------------
 
     def create_chat_message(

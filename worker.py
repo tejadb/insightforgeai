@@ -8,6 +8,7 @@ Run:
 from __future__ import annotations
 
 import asyncio
+import contextlib
 import json
 import os
 import socket
@@ -37,7 +38,11 @@ async def _heartbeat_loop(*, redis: Any, key: str, payload_base: dict[str, Any],
         except Exception as e:
             # Best effort only; never crash worker because heartbeat failed.
             print(f"⚠️ [Worker] Heartbeat update failed: {e}")
-        await asyncio.sleep(interval_s)
+        try:
+            await asyncio.sleep(interval_s)
+        except asyncio.CancelledError:
+            # Expected on shutdown (Ctrl+C). Exit quietly.
+            return
 
 
 async def _on_startup(ctx: dict[str, Any]) -> None:
@@ -50,13 +55,18 @@ async def _on_startup(ctx: dict[str, Any]) -> None:
 
     # Log system information on startup
     cpu_count = os.cpu_count() or 1
-    max_jobs = int(os.getenv("IF_MAX_JOBS", "5"))
-    parse_pool_size = int(os.getenv("IF_PARSE_THREAD_POOL_SIZE", str(cpu_count)))
+    # Default to 1 for debugging; override via IF_MAX_JOBS env var.
+    # max_jobs = int(os.getenv("IF_MAX_JOBS", "1"))
+    # parse_pool_size = int(os.getenv("IF_PARSE_THREAD_POOL_SIZE", str(cpu_count)))
     
+    # Reverting to default behavior (or comment out explicit overrides for now)
+    max_jobs = int(os.getenv("IF_MAX_JOBS", str(cpu_count))) # Default to CPU count if not set
+    # parse_pool_size = ... (let pipeline handle its own default)
+
     print(f"🖥️  [Worker] System Info:")
     print(f"   CPU Count: {cpu_count} (logical)")
     print(f"   Max Jobs: {max_jobs}")
-    print(f"   Parse Thread Pool Size: {parse_pool_size}")
+    # print(f"   Parse Thread Pool Size: {parse_pool_size}")
     print(f"   PID: {os.getpid()}")
     print(f"   Host: {socket.gethostname()}")
     
@@ -91,10 +101,8 @@ async def _on_shutdown(ctx: dict[str, Any]) -> None:
     task = ctx.get("if_heartbeat_task")
     if task:
         task.cancel()
-        try:
+        with contextlib.suppress(asyncio.CancelledError):
             await task
-        except Exception:
-            pass
 
 
 class WorkerSettings:
@@ -112,7 +120,8 @@ class WorkerSettings:
     # Concurrency control:
     # - `max_jobs` is the maximum number of jobs this worker process will run concurrently.
     # - With thread pool executor for parsing, multiple jobs can run without blocking the event loop.
-    max_jobs = int(os.getenv("IF_MAX_JOBS", "5"))
+    # Default to 1 for debugging; override via IF_MAX_JOBS env var.
+    max_jobs = int(os.getenv("IF_MAX_JOBS", "1"))
 
     # Timeouts/retries tuned for OCR + LLM calls (can adjust later)
     # Increased to 30 min to handle very large documents with many chunks

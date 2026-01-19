@@ -39,12 +39,12 @@ class PromptBuilder:
         user_instructions: str = "",
     ) -> List[Dict[str, str]]:
         """
-        Prompt for generating a concise structured summary.
+        Prompt for generating a full summary as plain text (wrapped in JSON for reliability).
 
         JSON output schema:
         {
-          "overview": "2–3 sentence overview",
-          "key_points": ["short bullet 1", "short bullet 2", ...]
+          "type": "summary",
+          "text": "full summary as plain text"
         }
         """
         context_snippet = doc_context[:CONTEXT_TRUNCATION_LIMIT]
@@ -53,7 +53,8 @@ class PromptBuilder:
 
         user_content = f"""
 You will receive content from one or more documents.
-Create a concise summary as JSON with very short, high-signal text.
+Write a high-quality summary as plain text.
+The summary can be multi-paragraph if needed. Avoid markdown tables.
 
 USER_INSTRUCTIONS (optional, may be empty):
 {user_instructions.strip() or "None"}
@@ -63,18 +64,14 @@ DOCUMENT_CONTEXT:
 
 RESPONSE FORMAT (valid JSON only):
 {{
-  "overview": "2-3 sentence plain-language overview of the document(s).",
-  "key_points": [
-    "short key point 1 (max 2 lines)",
-    "short key point 2",
-    "short key point 3"
-  ]
+  "type": "summary",
+  "text": "Write the final summary here as plain text. Use short paragraphs and/or bullet points. Focus on what it is, what it covers, the main arguments/findings, and conclusions. If multiple documents are provided, summarize each briefly and then provide a combined synthesis."
 }}
 
 Rules:
-- Keep each string short (max 2-3 lines).
-- Do NOT add fields other than overview and key_points.
+- Do NOT add top-level fields other than type and text.
 - Do NOT wrap the JSON in markdown fences.
+- If the context is insufficient, say what is missing instead of guessing.
 """
         return [
             {"role": "system", "content": PromptBuilder._system_prompt()},
@@ -94,6 +91,7 @@ Rules:
 
         JSON output schema:
         {
+          "type": "qna",
           "qna": [
             {"question": "...", "answer": "..."}
           ]
@@ -114,6 +112,7 @@ DOCUMENT_CONTEXT:
 
 RESPONSE FORMAT (valid JSON only):
 {{
+  "type": "qna",
   "qna": [
     {{
       "question": "short question text (1 line)",
@@ -125,7 +124,7 @@ RESPONSE FORMAT (valid JSON only):
 Rules:
 - Return EXACTLY {num_questions} items in the qna array where possible.
 - Each string must be short (max 2-3 lines).
-- Do NOT add extra top-level fields.
+- Do NOT add top-level fields other than type and qna.
 - Do NOT wrap the JSON in markdown fences.
 """
         return [
@@ -145,6 +144,7 @@ Rules:
 
         JSON output schema:
         {
+          "type": "interview_tips",
           "tips": ["short tip 1", "short tip 2", ...]
         }
         """
@@ -164,6 +164,7 @@ DOCUMENT_CONTEXT:
 
 RESPONSE FORMAT (valid JSON only):
 {{
+  "type": "interview_tips",
   "tips": [
     "short, actionable tip 1 (max 2 lines)",
     "short, actionable tip 2",
@@ -174,7 +175,7 @@ RESPONSE FORMAT (valid JSON only):
 Rules:
 - Each tip should be concrete and specific to the document.
 - 3–7 tips is ideal.
-- Do NOT add extra fields.
+- Do NOT add top-level fields other than type and tips.
 - Do NOT wrap the JSON in markdown fences.
 """
         return [
@@ -195,6 +196,7 @@ Rules:
 
         JSON output schema:
         {
+          "type": "slides",
           "slides": [
             {"title": "...", "bullets": ["...", "..."]}
           ]
@@ -216,6 +218,7 @@ DOCUMENT_CONTEXT:
 
 RESPONSE FORMAT (valid JSON only):
 {{
+  "type": "slides",
   "slides": [
     {{
       "title": "very short slide title (max 1 line)",
@@ -231,7 +234,7 @@ RESPONSE FORMAT (valid JSON only):
 Rules:
 - Aim for {num_slides} slides if there is enough content.
 - Keep titles and bullets very short and presentation-ready.
-- Do NOT add extra top-level fields.
+- Do NOT add top-level fields other than type and slides.
 - Do NOT wrap the JSON in markdown fences.
 """
         return [
@@ -287,6 +290,8 @@ Rules:
 You are a document Q&A chat assistant.
 You must answer using ONLY the provided DOCUMENT CONTEXT.
 If the answer is not in the context, say you don't have enough information.
+Do NOT reveal internal IDs.
+If you cite sources, cite ONLY using the provided refs exactly as written (they already include user-friendly identifiers).
 
 CONVERSATION HISTORY (most recent 30 messages max; may be empty):
 {history_block}

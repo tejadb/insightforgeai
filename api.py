@@ -23,6 +23,7 @@ from if_queue import enqueue_process_document, enqueue_run_insight, get_pool as 
 from embeddings import get_embedding
 from llm_client import LLMClient
 from prompt_builder import PromptBuilder
+from agent import run_agent_chat
 
 
 app = FastAPI(title="InsightForge AI (New)")
@@ -43,6 +44,11 @@ class CreateInsightRequest(BaseModel):
 
 
 class ChatMessageRequest(BaseModel):
+    user_id: str
+    message: str
+    document_ids: List[str]
+
+class AgentChatRequest(BaseModel):
     user_id: str
     message: str
     document_ids: List[str]
@@ -264,6 +270,12 @@ async def chat_message(req: ChatMessageRequest) -> dict[str, Any]:
 
     # Retrieve relevant chunks (vector search)
     started = time.time()
+    # Preload doc titles to build user-friendly refs in the prompt/citations
+    doc_titles_by_id: dict[str, str] = {}
+    try:
+        doc_titles_by_id = repo.get_document_titles(document_ids)
+    except Exception:
+        doc_titles_by_id = {}
     try:
         query_embedding = await get_embedding(user_message)
         similar_chunks = repo.query_similar_chunks(
@@ -292,7 +304,11 @@ async def chat_message(req: ChatMessageRequest) -> dict[str, Any]:
         page_part = ""
         if page_start is not None and page_end is not None:
             page_part = f" p{page_start}-{page_end}"
-        ref = f"[doc {doc_id} chunk {chunk_index}{page_part}]"
+
+        doc_id_str = str(doc_id) if doc_id is not None else ""
+        doc_title = (doc_titles_by_id.get(doc_id_str) or doc_id_str or "Document").strip()
+        # User-facing citations should be stable and friendly (no UUIDs/chunk indices)
+        ref = f"[{doc_title}{page_part}]"
 
         retrieved_chunks_for_prompt.append({"ref": ref, "content": content_for_prompt})
         retrieved_chunks_for_metadata.append(
@@ -304,6 +320,7 @@ async def chat_message(req: ChatMessageRequest) -> dict[str, Any]:
                 "page_start": page_start,
                 "page_end": page_end,
                 "section_heading": section_heading,
+                "doc_title": doc_title,
             }
         )
 
@@ -354,6 +371,102 @@ async def chat_message(req: ChatMessageRequest) -> dict[str, Any]:
             "history_messages_used": len(conversation_history),
             "history_limit": CHAT_HISTORY_LIMIT,
             "response_time_ms": response_time_ms,
+        },
+    }
+
+
+@app.post("/agent/chat")
+async def agent_chat(req: AgentChatRequest) -> dict[str, Any]:
+    """
+    Agent-style chat endpoint with tools:
+    - retrieve_chunks (RAG)
+    - get_full_context (only if necessary)
+    - create_insight_job (summary/qna/interview_tips/slides)
+    """
+    user_id = (req.user_id or "").strip()
+    user_message = (req.message or "").strip()
+    document_ids = req.document_ids or []
+
+    if not user_id:
+        raise HTTPException(status_code=400, detail="user_id is required")
+    if not user_message:
+        raise HTTPException(status_code=400, detail="message is required")
+    if not document_ids:
+        raise HTTPException(status_code=400, detail="document_ids is required")
+
+    # Validate documents belong to user and are processed (completed)
+    try:
+        repo.validate_documents_for_user(
+            user_id=user_id,
+            document_ids=document_ids,
+            require_completed=True,
+        )
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+    # Store user message
+    try:
+        user_msg_id = repo.create_chat_message(
+            user_id=user_id,
+            role="user",
+            content=user_message,
+            document_ids=document_ids,
+            metadata={"message_length": len(user_message), "agent_mode": True},
+        )
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to store chat message: {str(e)}")
+
+    # Build conversation history (exclude current user msg)
+    history_rows = repo.get_chat_history(user_id=user_id, limit=CHAT_HISTORY_LIMIT + 1)
+    history_rows_excluding_current = history_rows[1:] if len(history_rows) > 0 else []
+    history_rows_excluding_current.reverse()
+    conversation_history = [
+        {"role": r.get("role", "user"), "content": r.get("content", "")}
+        for r in history_rows_excluding_current
+        if (r.get("content") or "").strip()
+    ]
+
+    # Run agent loop
+    try:
+        assistant_text, agent_metadata = await run_agent_chat(
+            llm=llm,
+            repo=repo,
+            user_id=user_id,
+            user_message=user_message,
+            document_ids=document_ids,
+            conversation_history=conversation_history,
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Agent chat failed: {str(e)}")
+
+    # Store assistant message
+    try:
+        assistant_msg_id = repo.create_chat_message(
+            user_id=user_id,
+            role="assistant",
+            content=assistant_text,
+            document_ids=document_ids,
+            metadata={
+                "agent_mode": True,
+                "history_messages_used": len(conversation_history),
+                "history_limit": CHAT_HISTORY_LIMIT,
+                **(agent_metadata or {}),
+            },
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to store assistant message: {str(e)}")
+
+    return {
+        "user_message_id": user_msg_id,
+        "assistant_message_id": assistant_msg_id,
+        "content": assistant_text,
+        "metadata": {
+            "agent_mode": True,
+            "history_messages_used": len(conversation_history),
+            "history_limit": CHAT_HISTORY_LIMIT,
+            **(agent_metadata or {}),
         },
     }
 

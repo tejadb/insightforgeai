@@ -15,14 +15,35 @@ import argparse
 import os
 import uuid
 import time
+import datetime
 import httpx
 from pathlib import Path
 from dataclasses import dataclass
-from typing import List, Dict, Optional, Any
+from typing import List, Dict, Optional, Any, Tuple
 
 # Configuration
 API_BASE_URL = os.getenv("IF_API_URL", "http://127.0.0.1:8008")
 POLL_INTERVAL = 3.0  # Matches 'sleep 3' from bash script
+
+# Fixed manifest for repeatable stress tests (15 docs, deterministic order).
+# These filenames must exist in the folder passed via --dir.
+STRESS_DOC_MANIFEST: List[str] = [
+    "BE ADITI.pdf",
+    "CapX Assignment.pdf",
+    "Micro Economics Assignment.pdf",
+    "CB Assignment.pdf",
+    "Aditi_SCM.pdf",
+    "Corporate Finance  Assignment ss.pdf",
+    "Market_Sizing_Assessment_Final.pdf",
+    "MOS Assignment 2 ppt.pdf",
+    "Assignment 1 (1).pdf",
+    "ABHISHEK SIP_merged.pdf",
+    "Assignment 1.pdf",
+    "DESCRIPTIVE& EFA& REGRESSION.pdf",
+    "Eco assignment2.pdf",
+    "2385100018_Sachin Kumar Sharma_8287565735.pdf",
+    "MR _Assignemnt.pdf",
+]
 
 class TestLogger:
     @staticmethod
@@ -146,146 +167,224 @@ class StressTestRunner:
         self.doc_map: Dict[str, str] = {} # id -> filename
 
     # ============================================================================
-    # STRESS TEST (COMMENTED OUT - Use --stress flag to enable)
+    # STRESS TEST (fixed 15-doc manifest + accurate wall-clock timings)
     # ============================================================================
-    # async def run_stress_test(self, folder_path: str, max_files: int = 15):
-    #     TestLogger.section(f"🚀 STARTING STRESS TEST (Max {max_files} files)")
-    #     
-    #     # 1. Gather files
-    #     p = Path(folder_path)
-    #     files = sorted(list(p.glob("*.pdf")))
-    #     if not files:
-    #         TestLogger.error(f"No PDF files found in {folder_path}")
-    #         return
-    #     target_files = files[:max_files]
-    #     TestLogger.info(f"Found {len(files)} files, selecting top {len(target_files)}")
-    #
-    #     # 2. Parallel Uploads
-    #     TestLogger.section("📤 Step 1: Parallel Uploads (15 concurrent)")
-    #     
-    #     async def upload_wrapper(fp: Path):
-    #         try:
-    #             doc_id = await self.api.upload_document(self.user_id, fp)
-    #             print(f"   ⬆️  Uploaded {fp.name} -> {doc_id}")
-    #             return (doc_id, fp.name)
-    #         except Exception as e:
-    #             TestLogger.error(f"Failed to upload {fp.name}: {e}")
-    #             return None
-    #
-    #     results = await asyncio.gather(*[upload_wrapper(f) for f in target_files])
-    #     
-    #     for res in results:
-    #         if res:
-    #             did, name = res
-    #             self.doc_ids.append(did)
-    #             self.doc_map[did] = name
-    #
-    #     TestLogger.success(f"Uploaded {len(self.doc_ids)}/{len(target_files)} documents.")
-    #     if not self.doc_ids:
-    #         return
-    #
-    #     # 3. Sequential Polling Loop (Matches bash script)
-    #     TestLogger.section("⏳ Step 2: Polling Documents (Sequential Check Loop)")
-    #     
-    #     completed_ids = set()
-    #     failed_ids = set()
-    #     
-    #     while len(completed_ids) + len(failed_ids) < len(self.doc_ids):
-    #         # Check all pending docs
-    #         current_completed = 0
-    #         
-    #         # We iterate through ALL ids just like the bash script
-    #         for doc_id in self.doc_ids:
-    #             if doc_id in completed_ids or doc_id in failed_ids:
-    #                 if doc_id in completed_ids: current_completed += 1
-    #                 continue
-    #
-    #             try:
-    #                 doc = await self.api.get_document(doc_id)
-    #                 status = doc["status"]
-    #                 
-    #                 if status == "completed":
-    #                     print(f"   ✅ {self.doc_map[doc_id]} -> completed")
-    #                     completed_ids.add(doc_id)
-    #                     current_completed += 1
-    #                 elif status == "error":
-    #                     print(f"   ❌ {self.doc_map[doc_id]} -> error: {doc.get('error_message')}")
-    #                     failed_ids.add(doc_id)
-    #                 else:
-    #                     # Only log pending/processing occasionally or just rely on summary
-    #                     pass
-    #             except Exception as e:
-    #                 print(f"   ⚠️ Error polling {doc_id}: {e}")
-    #
-    #         print(f"   --- Status: {len(completed_ids)} completed, {len(failed_ids)} failed, {len(self.doc_ids) - len(completed_ids) - len(failed_ids)} pending ---")
-    #         
-    #         if len(completed_ids) + len(failed_ids) == len(self.doc_ids):
-    #             break
-    #             
-    #         await asyncio.sleep(POLL_INTERVAL)
-    #
-    #     # 4. Parallel Insights
-    #     if not completed_ids:
-    #         TestLogger.warning("No completed documents for insights.")
-    #         return
-    #
-    #     valid_docs = list(completed_ids)
-    #     # Take first 10 like the bash script
-    #     docs_for_insights = valid_docs[:10]
-    #     
-    #     TestLogger.section(f"🧠 Step 3: Parallel Insights (10 concurrent)")
-    #     
-    #     insight_ids = []
-    #     
-    #     async def insight_wrapper(doc_id):
-    #         try:
-    #             iid = await self.api.create_insight(
-    #                 self.user_id, [doc_id], "summary", "Parallel Summary"
-    #             )
-    #             print(f"   🚀 Created insight for {self.doc_map[doc_id]} -> {iid}")
-    #             return iid
-    #         except Exception as e:
-    #             TestLogger.error(f"Failed to create insight: {e}")
-    #             return None
-    #
-    #     # Bash script uses xargs -P 10 for insights. We replicate that.
-    #     i_results = await asyncio.gather(*[insight_wrapper(did) for did in docs_for_insights])
-    #     insight_ids = [i for i in i_results if i]
-    #     
-    #     TestLogger.success(f"Created {len(insight_ids)} insights.")
-    #
-    #     # 5. Sequential Polling Loop for Insights
-    #     TestLogger.section("⏳ Step 4: Polling Insights (Sequential Check Loop)")
-    #     
-    #     completed_insights = set()
-    #     failed_insights = set()
-    #     
-    #     while len(completed_insights) + len(failed_insights) < len(insight_ids):
-    #         for iid in insight_ids:
-    #             if iid in completed_insights or iid in failed_insights:
-    #                 continue
-    #             
-    #             try:
-    #                 data = await self.api.get_insight(iid)
-    #                 status = data["status"]
-    #                 
-    #                 if status == "completed":
-    #                     print(f"   ✅ Insight {iid} -> completed")
-    #                     completed_insights.add(iid)
-    #                 elif status == "error":
-    #                     print(f"   ❌ Insight {iid} -> error: {data.get('error_message')}")
-    #                     failed_insights.add(iid)
-    #             except Exception as e:
-    #                 print(f"   ⚠️ Error polling insight {iid}: {e}")
-    #         
-    #         print(f"   --- Insights: {len(completed_insights)} completed, {len(failed_insights)} failed ---")
-    #         
-    #         if len(completed_insights) + len(failed_insights) == len(insight_ids):
-    #             break
-    #             
-    #         await asyncio.sleep(POLL_INTERVAL)
-    #
-    #     TestLogger.section("🎉 TEST COMPLETE")
+    async def run_stress_test(self, folder_path: str, max_files: int = 15):
+        """
+        Repeatable stress test:
+        - Uses a fixed 15-PDF manifest (deterministic order) so runs are comparable.
+        - Captures wall-clock timings for uploads/docs/insights plus per-item completion times.
+
+        Note: Per-item completion times are based on polling, so resolution is POLL_INTERVAL.
+        """
+        _ = max_files  # keep arg for backward compatibility
+        t0 = time.perf_counter()
+
+        TestLogger.section("🚀 STARTING STRESS TEST (Fixed 15-file manifest)")
+
+        # 1. Resolve manifest to paths
+        p = Path(folder_path)
+        if not p.exists():
+            TestLogger.error(f"Folder not found: {folder_path}")
+            return
+
+        available = {fp.name: fp for fp in p.glob("*.pdf")}
+        missing = [name for name in STRESS_DOC_MANIFEST if name not in available]
+        if missing:
+            TestLogger.error("Stress test manifest files missing from folder.")
+            for name in missing:
+                TestLogger.error(f"Missing: {name}")
+            TestLogger.error("Fix: copy the missing PDFs into the --dir folder, or update STRESS_DOC_MANIFEST in test_pipeline.py")
+            return
+
+        target_files: List[Path] = [available[name] for name in STRESS_DOC_MANIFEST]
+        TestLogger.info(f"Using fixed manifest: {len(target_files)} files")
+
+        # 2. Parallel Uploads
+        TestLogger.section("📤 Step 1: Parallel Uploads (15 concurrent)")
+
+        upload_started_at = time.perf_counter()
+        upload_durations_by_name: Dict[str, float] = {}
+
+        async def upload_wrapper(fp: Path) -> Optional[Tuple[str, str, float]]:
+            t_up0 = time.perf_counter()
+            try:
+                doc_id = await self.api.upload_document(self.user_id, fp)
+                dur = time.perf_counter() - t_up0
+                print(f"   ⬆️  Uploaded {fp.name} -> {doc_id} (upload_s={dur:.2f})")
+                return (doc_id, fp.name, dur)
+            except Exception as e:
+                TestLogger.error(f"Failed to upload {fp.name}: {e}")
+                return None
+
+        results = await asyncio.gather(*[upload_wrapper(f) for f in target_files])
+        for res in results:
+            if res:
+                did, name, dur = res
+                self.doc_ids.append(did)
+                self.doc_map[did] = name
+                upload_durations_by_name[name] = dur
+
+        TestLogger.success(f"Uploaded {len(self.doc_ids)}/{len(target_files)} documents.")
+        if not self.doc_ids:
+            return
+
+        upload_done_at = time.perf_counter()
+        TestLogger.info(f"⏱️ Upload phase wall-clock: {(upload_done_at - upload_started_at):.2f}s")
+
+        # 3. Poll documents until all terminal
+        TestLogger.section("⏳ Step 2: Polling Documents (Sequential Check Loop)")
+
+        completed_ids = set()
+        failed_ids = set()
+        doc_done_times: Dict[str, float] = {}  # doc_id -> seconds since t0 when terminal observed
+        doc_terminal_status: Dict[str, str] = {}  # doc_id -> completed|error
+
+        while len(completed_ids) + len(failed_ids) < len(self.doc_ids):
+            for doc_id in self.doc_ids:
+                if doc_id in completed_ids or doc_id in failed_ids:
+                    continue
+
+                try:
+                    doc = await self.api.get_document(doc_id)
+                    status = doc["status"]
+
+                    if status == "completed":
+                        print(f"   ✅ {self.doc_map[doc_id]} -> completed")
+                        completed_ids.add(doc_id)
+                        if doc_id not in doc_done_times:
+                            doc_done_times[doc_id] = time.perf_counter() - t0
+                            doc_terminal_status[doc_id] = "completed"
+                    elif status == "error":
+                        print(f"   ❌ {self.doc_map[doc_id]} -> error: {doc.get('error_message')}")
+                        failed_ids.add(doc_id)
+                        if doc_id not in doc_done_times:
+                            doc_done_times[doc_id] = time.perf_counter() - t0
+                            doc_terminal_status[doc_id] = "error"
+                except Exception as e:
+                    print(f"   ⚠️ Error polling {doc_id}: {e}")
+
+            print(
+                f"   --- Status: {len(completed_ids)} completed, {len(failed_ids)} failed, "
+                f"{len(self.doc_ids) - len(completed_ids) - len(failed_ids)} pending ---"
+            )
+
+            if len(completed_ids) + len(failed_ids) == len(self.doc_ids):
+                break
+
+            await asyncio.sleep(POLL_INTERVAL)
+
+        # 4. Parallel Insights (10)
+        if not completed_ids:
+            TestLogger.warning("No completed documents for insights.")
+            return
+
+        valid_docs = list(completed_ids)
+        docs_for_insights = valid_docs[:10]
+
+        TestLogger.section("🧠 Step 3: Parallel Insights (10 concurrent)")
+        insights_started_at = time.perf_counter()
+
+        async def insight_wrapper(doc_id: str) -> Optional[str]:
+            try:
+                iid = await self.api.create_insight(self.user_id, [doc_id], "summary", "Parallel Summary")
+                print(f"   🚀 Created insight for {self.doc_map[doc_id]} -> {iid}")
+                return iid
+            except Exception as e:
+                TestLogger.error(f"Failed to create insight: {e}")
+                return None
+
+        i_results = await asyncio.gather(*[insight_wrapper(did) for did in docs_for_insights])
+        insight_ids = [i for i in i_results if i]
+        TestLogger.success(f"Created {len(insight_ids)} insights.")
+
+        # 5. Poll insights until terminal
+        TestLogger.section("⏳ Step 4: Polling Insights (Sequential Check Loop)")
+        completed_insights = set()
+        failed_insights = set()
+        insight_done_times: Dict[str, float] = {}
+        insight_terminal_status: Dict[str, str] = {}
+
+        while len(completed_insights) + len(failed_insights) < len(insight_ids):
+            for iid in insight_ids:
+                if iid in completed_insights or iid in failed_insights:
+                    continue
+
+                try:
+                    data = await self.api.get_insight(iid)
+                    status = data["status"]
+
+                    if status == "completed":
+                        print(f"   ✅ Insight {iid} -> completed")
+                        completed_insights.add(iid)
+                        if iid not in insight_done_times:
+                            insight_done_times[iid] = time.perf_counter() - t0
+                            insight_terminal_status[iid] = "completed"
+                    elif status == "error":
+                        print(f"   ❌ Insight {iid} -> error: {data.get('error_message')}")
+                        failed_insights.add(iid)
+                        if iid not in insight_done_times:
+                            insight_done_times[iid] = time.perf_counter() - t0
+                            insight_terminal_status[iid] = "error"
+                except Exception as e:
+                    print(f"   ⚠️ Error polling insight {iid}: {e}")
+
+            print(f"   --- Insights: {len(completed_insights)} completed, {len(failed_insights)} failed ---")
+
+            if len(completed_insights) + len(failed_insights) == len(insight_ids):
+                break
+
+            await asyncio.sleep(POLL_INTERVAL)
+
+        insights_done_at = time.perf_counter()
+
+        # ---- Summary ----
+        TestLogger.section("🎉 TEST COMPLETE")
+
+        # Wall-clock
+        t_end = time.perf_counter()
+        TestLogger.section("📊 TIMING SUMMARY (Wall-clock)")
+        print(f"   Total wall-clock: {(t_end - t0):.2f}s")
+        print(f"   Upload phase:     {(upload_done_at - upload_started_at):.2f}s")
+        if doc_done_times:
+            last_doc_terminal_seen_s = max(doc_done_times.values())
+            docs_phase_s = max(0.0, last_doc_terminal_seen_s - (upload_done_at - t0))
+            print(f"   Docs phase:       {docs_phase_s:.2f}s (end-of-uploads → last terminal doc observation)")
+        else:
+            print("   Docs phase:       N/A")
+        print(f"   Insights phase:   {(insights_done_at - insights_started_at):.2f}s")
+
+        # Per-doc
+        TestLogger.section("📄 DOCUMENTS (per-doc timings)")
+        print("   Note: completion times are when the poll loop first observed terminal status.")
+        for name in STRESS_DOC_MANIFEST:
+            doc_id = next((did for did, fname in self.doc_map.items() if fname == name), None)
+            up_s = upload_durations_by_name.get(name)
+            status = "unknown"
+            done_s = None
+            if doc_id:
+                status = doc_terminal_status.get(doc_id, "unknown")
+                done_s = doc_done_times.get(doc_id)
+
+            if up_s is None:
+                up_str = "upload_s=?"
+            else:
+                up_str = f"upload_s={up_s:.2f}"
+
+            if done_s is None:
+                print(f"   - {name}: {up_str}, status={status}")
+            else:
+                print(f"   - {name}: {up_str}, status={status}, observed_terminal_at_s={done_s:.2f}")
+
+        # Per-insight
+        TestLogger.section("🧠 INSIGHTS (per-insight timings)")
+        for iid in insight_ids:
+            status = insight_terminal_status.get(iid, "unknown")
+            done_s = insight_done_times.get(iid)
+            if done_s is None:
+                print(f"   - {iid}: status={status}")
+            else:
+                print(f"   - {iid}: status={status}, observed_terminal_at_s={done_s:.2f}")
 
     async def run_simple_test(self, folder_path: str):
         """Simple test: 3 docs, 3 insights, 3 chats"""
@@ -492,13 +591,741 @@ class StressTestRunner:
         print(f"   ✅ Chat Messages: {len(chat_responses)}/{len(chat_messages) if 'chat_messages' in locals() else 'N/A'} sent")
         print(f"   👤 User ID: {self.user_id}")
 
+    async def run_one_doc_test(self, file_path: str):
+        """
+        Single document test (for profiling/concurrency experiments):
+        - Upload 1 PDF
+        - Poll until terminal (completed/error)
+        - Print wall-clock timings (client-side) + final status/error
+        """
+        fp = Path(file_path)
+        if not fp.exists():
+            TestLogger.error(f"File not found: {file_path}")
+            return
+        if fp.suffix.lower() != ".pdf":
+            TestLogger.error(f"Expected a PDF file, got: {fp.name}")
+            return
+
+        t0 = time.perf_counter()
+        TestLogger.section("🚀 STARTING ONE-DOC TEST (1 doc)")
+        TestLogger.info(f"File: {fp}")
+
+        # Upload
+        TestLogger.section("📤 Step 1: Upload 1 Document")
+        t_up0 = time.perf_counter()
+        doc_id = await self.api.upload_document(self.user_id, fp)
+        t_up1 = time.perf_counter()
+        self.doc_ids = [doc_id]
+        self.doc_map = {doc_id: fp.name}
+        print(f"   ⬆️  Uploaded {fp.name} -> {doc_id} (upload_s={t_up1 - t_up0:.2f})")
+
+        # Poll
+        TestLogger.section("⏳ Step 2: Poll Document Until Terminal")
+        last_status = "unknown"
+        last_error = None
+        while True:
+            doc = await self.api.get_document(doc_id)
+            status = doc.get("status")
+            last_status = status
+            if status == "completed":
+                print(f"   ✅ {fp.name} -> completed")
+                break
+            if status == "error":
+                last_error = doc.get("error_message")
+                print(f"   ❌ {fp.name} -> error: {last_error}")
+                break
+
+            print(f"   ⏳ {fp.name} -> {status}")
+            await asyncio.sleep(POLL_INTERVAL)
+
+        # Summary
+        t_end = time.perf_counter()
+        TestLogger.section("📊 ONE-DOC SUMMARY")
+        print(f"   Status: {last_status}")
+        if last_error:
+            print(f"   Error: {last_error}")
+        print(f"   Upload wall-clock: {(t_up1 - t_up0):.2f}s")
+        print(f"   Total wall-clock:  {(t_end - t0):.2f}s")
+        print(f"   👤 User ID: {self.user_id}")
+
+    async def run_four_doc_test(self, folder_path: str):
+        """
+        4-doc mini stress (repeatable):
+        - Uses the first 4 filenames from STRESS_DOC_MANIFEST (deterministic order)
+        - Uploads in parallel
+        - Polls until all terminal
+        - Prints wall-clock + per-doc observed completion times
+        """
+        subset = STRESS_DOC_MANIFEST[:4]
+        t0 = time.perf_counter()
+
+        TestLogger.section("🚀 STARTING 4-DOC TEST (Fixed subset of manifest)")
+
+        p = Path(folder_path)
+        if not p.exists():
+            TestLogger.error(f"Folder not found: {folder_path}")
+            return
+
+        available = {fp.name: fp for fp in p.glob("*.pdf")}
+        missing = [name for name in subset if name not in available]
+        if missing:
+            TestLogger.error("4-doc test subset files missing from folder.")
+            for name in missing:
+                TestLogger.error(f"Missing: {name}")
+            return
+
+        target_files: List[Path] = [available[name] for name in subset]
+        TestLogger.info(f"Using fixed subset: {len(target_files)} files")
+
+        # Parallel uploads
+        TestLogger.section("📤 Step 1: Parallel Uploads (4 concurrent)")
+        upload_started_at = time.perf_counter()
+        upload_durations_by_name: Dict[str, float] = {}
+
+        async def upload_wrapper(fp: Path) -> Optional[Tuple[str, str, float]]:
+            t_up0 = time.perf_counter()
+            try:
+                doc_id = await self.api.upload_document(self.user_id, fp)
+                dur = time.perf_counter() - t_up0
+                print(f"   ⬆️  Uploaded {fp.name} -> {doc_id} (upload_s={dur:.2f})")
+                return (doc_id, fp.name, dur)
+            except Exception as e:
+                TestLogger.error(f"Failed to upload {fp.name}: {e}")
+                return None
+
+        results = await asyncio.gather(*[upload_wrapper(f) for f in target_files])
+        self.doc_ids = []
+        self.doc_map = {}
+        for res in results:
+            if res:
+                did, name, dur = res
+                self.doc_ids.append(did)
+                self.doc_map[did] = name
+                upload_durations_by_name[name] = dur
+
+        TestLogger.success(f"Uploaded {len(self.doc_ids)}/{len(target_files)} documents.")
+        if not self.doc_ids:
+            return
+
+        upload_done_at = time.perf_counter()
+        TestLogger.info(f"⏱️ Upload phase wall-clock: {(upload_done_at - upload_started_at):.2f}s")
+
+        # Poll until all terminal
+        TestLogger.section("⏳ Step 2: Polling Documents Until Terminal")
+        completed_ids = set()
+        failed_ids = set()
+        doc_done_times: Dict[str, float] = {}
+        doc_terminal_status: Dict[str, str] = {}
+
+        while len(completed_ids) + len(failed_ids) < len(self.doc_ids):
+            for doc_id in self.doc_ids:
+                if doc_id in completed_ids or doc_id in failed_ids:
+                    continue
+
+                try:
+                    doc = await self.api.get_document(doc_id)
+                    status = doc.get("status")
+
+                    if status == "completed":
+                        print(f"   ✅ {self.doc_map[doc_id]} -> completed")
+                        completed_ids.add(doc_id)
+                        if doc_id not in doc_done_times:
+                            doc_done_times[doc_id] = time.perf_counter() - t0
+                            doc_terminal_status[doc_id] = "completed"
+                    elif status == "error":
+                        print(f"   ❌ {self.doc_map[doc_id]} -> error: {doc.get('error_message')}")
+                        failed_ids.add(doc_id)
+                        if doc_id not in doc_done_times:
+                            doc_done_times[doc_id] = time.perf_counter() - t0
+                            doc_terminal_status[doc_id] = "error"
+                except Exception as e:
+                    print(f"   ⚠️ Error polling {doc_id}: {e}")
+
+            print(
+                f"   --- Status: {len(completed_ids)} completed, {len(failed_ids)} failed, "
+                f"{len(self.doc_ids) - len(completed_ids) - len(failed_ids)} pending ---"
+            )
+
+            if len(completed_ids) + len(failed_ids) == len(self.doc_ids):
+                break
+
+            await asyncio.sleep(POLL_INTERVAL)
+
+        # Summary
+        t_end = time.perf_counter()
+        TestLogger.section("📊 4-DOC SUMMARY (Wall-clock)")
+        print(f"   Total wall-clock: {(t_end - t0):.2f}s")
+        print(f"   Upload phase:     {(upload_done_at - upload_started_at):.2f}s")
+        if doc_done_times:
+            last_doc_terminal_seen_s = max(doc_done_times.values())
+            docs_phase_s = max(0.0, last_doc_terminal_seen_s - (upload_done_at - t0))
+            print(f"   Docs phase:       {docs_phase_s:.2f}s (end-of-uploads → last terminal doc observation)")
+        print(f"   👤 User ID:       {self.user_id}")
+
+        TestLogger.section("📄 DOCUMENTS (per-doc timings)")
+        for name in subset:
+            doc_id = next((did for did, fname in self.doc_map.items() if fname == name), None)
+            up_s = upload_durations_by_name.get(name)
+            status = "unknown"
+            done_s = None
+            if doc_id:
+                status = doc_terminal_status.get(doc_id, "unknown")
+                done_s = doc_done_times.get(doc_id)
+
+            up_str = f"{up_s:.2f}" if up_s is not None else "?"
+            if done_s is None:
+                print(f"   - {name}: upload_s={up_str}, status={status}")
+            else:
+                print(f"   - {name}: upload_s={up_str}, status={status}, observed_terminal_at_s={done_s:.2f}")
+
+    async def run_eight_doc_test(self, folder_path: str):
+        """
+        8-doc mini stress (repeatable):
+        - Uses the first 8 filenames from STRESS_DOC_MANIFEST (deterministic order)
+        - Uploads in parallel
+        - Polls until all terminal
+        - Prints wall-clock + per-doc observed completion times
+        """
+        subset = STRESS_DOC_MANIFEST[:8]
+        t0 = time.perf_counter()
+
+        TestLogger.section("🚀 STARTING 8-DOC TEST (Fixed subset of manifest)")
+
+        p = Path(folder_path)
+        if not p.exists():
+            TestLogger.error(f"Folder not found: {folder_path}")
+            return
+
+        available = {fp.name: fp for fp in p.glob("*.pdf")}
+        missing = [name for name in subset if name not in available]
+        if missing:
+            TestLogger.error("8-doc test subset files missing from folder.")
+            for name in missing:
+                TestLogger.error(f"Missing: {name}")
+            return
+
+        target_files: List[Path] = [available[name] for name in subset]
+        TestLogger.info(f"Using fixed subset: {len(target_files)} files")
+
+        # Parallel uploads
+        TestLogger.section("📤 Step 1: Parallel Uploads (8 concurrent)")
+        upload_started_at = time.perf_counter()
+        upload_durations_by_name: Dict[str, float] = {}
+
+        async def upload_wrapper(fp: Path) -> Optional[Tuple[str, str, float]]:
+            t_up0 = time.perf_counter()
+            try:
+                doc_id = await self.api.upload_document(self.user_id, fp)
+                dur = time.perf_counter() - t_up0
+                print(f"   ⬆️  Uploaded {fp.name} -> {doc_id} (upload_s={dur:.2f})")
+                return (doc_id, fp.name, dur)
+            except Exception as e:
+                TestLogger.error(f"Failed to upload {fp.name}: {e}")
+                return None
+
+        results = await asyncio.gather(*[upload_wrapper(f) for f in target_files])
+        self.doc_ids = []
+        self.doc_map = {}
+        for res in results:
+            if res:
+                did, name, dur = res
+                self.doc_ids.append(did)
+                self.doc_map[did] = name
+                upload_durations_by_name[name] = dur
+
+        TestLogger.success(f"Uploaded {len(self.doc_ids)}/{len(target_files)} documents.")
+        if not self.doc_ids:
+            return
+
+        upload_done_at = time.perf_counter()
+        TestLogger.info(f"⏱️ Upload phase wall-clock: {(upload_done_at - upload_started_at):.2f}s")
+
+        # Poll until all terminal
+        TestLogger.section("⏳ Step 2: Polling Documents Until Terminal")
+        completed_ids = set()
+        failed_ids = set()
+        doc_done_times: Dict[str, float] = {}
+        doc_terminal_status: Dict[str, str] = {}
+
+        while len(completed_ids) + len(failed_ids) < len(self.doc_ids):
+            for doc_id in self.doc_ids:
+                if doc_id in completed_ids or doc_id in failed_ids:
+                    continue
+
+                try:
+                    doc = await self.api.get_document(doc_id)
+                    status = doc.get("status")
+
+                    if status == "completed":
+                        print(f"   ✅ {self.doc_map[doc_id]} -> completed")
+                        completed_ids.add(doc_id)
+                        if doc_id not in doc_done_times:
+                            doc_done_times[doc_id] = time.perf_counter() - t0
+                            doc_terminal_status[doc_id] = "completed"
+                    elif status == "error":
+                        print(f"   ❌ {self.doc_map[doc_id]} -> error: {doc.get('error_message')}")
+                        failed_ids.add(doc_id)
+                        if doc_id not in doc_done_times:
+                            doc_done_times[doc_id] = time.perf_counter() - t0
+                            doc_terminal_status[doc_id] = "error"
+                except Exception as e:
+                    print(f"   ⚠️ Error polling {doc_id}: {e}")
+
+            print(
+                f"   --- Status: {len(completed_ids)} completed, {len(failed_ids)} failed, "
+                f"{len(self.doc_ids) - len(completed_ids) - len(failed_ids)} pending ---"
+            )
+
+            if len(completed_ids) + len(failed_ids) == len(self.doc_ids):
+                break
+
+            await asyncio.sleep(POLL_INTERVAL)
+
+        # Summary
+        t_end = time.perf_counter()
+        TestLogger.section("📊 8-DOC SUMMARY (Wall-clock)")
+        print(f"   Total wall-clock: {(t_end - t0):.2f}s")
+        print(f"   Upload phase:     {(upload_done_at - upload_started_at):.2f}s")
+        if doc_done_times:
+            last_doc_terminal_seen_s = max(doc_done_times.values())
+            docs_phase_s = max(0.0, last_doc_terminal_seen_s - (upload_done_at - t0))
+            print(f"   Docs phase:       {docs_phase_s:.2f}s (end-of-uploads → last terminal doc observation)")
+        print(f"   👤 User ID:       {self.user_id}")
+
+        TestLogger.section("📄 DOCUMENTS (per-doc timings)")
+        for name in subset:
+            doc_id = next((did for did, fname in self.doc_map.items() if fname == name), None)
+            up_s = upload_durations_by_name.get(name)
+            status = "unknown"
+            done_s = None
+            if doc_id:
+                status = doc_terminal_status.get(doc_id, "unknown")
+                done_s = doc_done_times.get(doc_id)
+
+            up_str = f"{up_s:.2f}" if up_s is not None else "?"
+            if done_s is None:
+                print(f"   - {name}: upload_s={up_str}, status={status}")
+            else:
+                print(f"   - {name}: upload_s={up_str}, status={status}, observed_terminal_at_s={done_s:.2f}")
+
     async def close(self):
         await self.api.close()
 
+    # ============================================================================
+    # AGENT E2E TEST (quiet terminal, full output saved to tests/)
+    # ============================================================================
+    async def run_agent_e2e_test(self, *, folder_path: str, out_path: str, pdf_name: str = "") -> None:
+        """
+        End-to-end agent test:
+        - health check
+        - upload 1 document
+        - poll until completed
+        - call /agent/chat (normal question)
+        - call /agent/chat (request slides -> should create insight job)
+        - poll insight until terminal (if created)
+
+        Output is written to out_path (in tests/). Terminal stays minimal.
+        """
+        p = Path(folder_path)
+        if not p.exists():
+            raise FileNotFoundError(f"Folder not found: {folder_path}")
+
+        out_fp = Path(out_path)
+        out_fp.parent.mkdir(parents=True, exist_ok=True)
+
+        subset = STRESS_DOC_MANIFEST[:1]
+        if pdf_name:
+            subset = [pdf_name]
+
+        available = {fp.name: fp for fp in p.glob("*.pdf")}
+        missing = [name for name in subset if name not in available]
+        if missing:
+            raise FileNotFoundError(f"Missing PDFs in folder: {missing}")
+
+        target_pdf = available[subset[0]]
+
+        def log(line: str = "") -> None:
+            with open(out_fp, "a", encoding="utf-8") as f:
+                f.write(line + "\n")
+
+        def _doc_summary_for_log(doc: Dict[str, Any]) -> Dict[str, Any]:
+            """
+            Return a compact document payload for logs.
+            Important: do NOT include raw `elements` (too large/noisy).
+            """
+            d = doc or {}
+            elements = d.get("elements") or []
+            ctx = d.get("context") or ""
+            if not isinstance(elements, list):
+                elements = []
+            if not isinstance(ctx, str):
+                ctx = str(ctx)
+            preview = ctx[:2000]
+            return {
+                "id": d.get("id"),
+                "user_id": d.get("user_id"),
+                "title": d.get("title"),
+                "storage_path": d.get("storage_path"),
+                "status": d.get("status"),
+                "error_message": d.get("error_message"),
+                "created_at": d.get("created_at"),
+                "updated_at": d.get("updated_at"),
+                "elements_count": len(elements),
+                "context_chars": len(ctx),
+                "context_preview_first_2000_chars": preview,
+            }
+
+        # Header
+        log("=" * 80)
+        log("AGENT E2E TEST RUN")
+        log(f"timestamp_utc: {datetime.datetime.utcnow().isoformat()}Z")
+        log(f"api_base_url: {self.api.base_url}")
+        log(f"user_id: {self.user_id}")
+        log(f"pdf: {str(target_pdf)}")
+        log("=" * 80)
+
+        # 1) Health
+        log("\n== 1) /health ==")
+        ok = await self.api.health_check()
+        log(f"health_ok: {ok}")
+        if not ok:
+            raise RuntimeError("API is not reachable at start. Aborting.")
+
+        # 2) Upload
+        log("\n== 2) Upload document ==")
+        t0 = time.perf_counter()
+        doc_id = await self.api.upload_document(self.user_id, target_pdf)
+        upload_s = time.perf_counter() - t0
+        self.doc_ids = [doc_id]
+        self.doc_map = {doc_id: target_pdf.name}
+        log(f"uploaded: {target_pdf.name}")
+        log(f"doc_id: {doc_id}")
+        log(f"upload_s: {upload_s:.2f}")
+
+        # 3) Poll doc
+        log("\n== 3) Poll document until terminal ==")
+        started_poll = time.perf_counter()
+        last_doc = None
+        while True:
+            last_doc = await self.api.get_document(doc_id)
+            status = (last_doc.get("status") or "").strip()
+            log(f"doc_status: {status}")
+            if status in {"completed", "error"}:
+                break
+            await asyncio.sleep(POLL_INTERVAL)
+
+        poll_s = time.perf_counter() - started_poll
+        log(f"doc_poll_s: {poll_s:.2f}")
+        log("doc_final_summary_json:")
+        log(_safe_json(_doc_summary_for_log(last_doc), max_chars=30000))
+
+        if (last_doc or {}).get("status") != "completed":
+            raise RuntimeError("Document did not complete successfully; see log for details.")
+
+        # 4) Agent chat - normal question
+        log("\n== 4) POST /agent/chat (question) ==")
+        payload1 = {
+            "user_id": self.user_id,
+            "message": "Give me a concise summary and cite which chunk ref you used.",
+            "document_ids": [doc_id],
+        }
+        log("agent_chat_1_user_message:")
+        log(payload1["message"])
+        resp1 = await self.api._request("POST", "/agent/chat", json=payload1, timeout=120.0)
+        data1 = resp1.json()
+        log("agent_chat_1_assistant_message:")
+        log((data1 or {}).get("content") or "")
+        log("agent_chat_1_json:")
+        log(_safe_json(data1, max_chars=80000))
+
+        # 5) Agent chat - slides request
+        log("\n== 5) POST /agent/chat (slides request) ==")
+        payload2 = {
+            "user_id": self.user_id,
+            "message": "Create a PPT outline (slides) for this document. Keep it interview-ready.",
+            "document_ids": [doc_id],
+        }
+        log("agent_chat_2_user_message:")
+        log(payload2["message"])
+        resp2 = await self.api._request("POST", "/agent/chat", json=payload2, timeout=120.0)
+        data2 = resp2.json()
+        log("agent_chat_2_assistant_message:")
+        log((data2 or {}).get("content") or "")
+        log("agent_chat_2_json:")
+        log(_safe_json(data2, max_chars=80000))
+
+        # Extract insight_id if present
+        insight_id = None
+        try:
+            created = (((data2 or {}).get("metadata") or {}).get("agent") or {}).get("created_insights") or []
+            if created and isinstance(created, list):
+                insight_id = created[0].get("insight_id")
+        except Exception:
+            insight_id = None
+
+        log(f"insight_id_from_agent: {insight_id}")
+
+        # 6) Poll insight (if created)
+        if insight_id:
+            log("\n== 6) Poll insight until terminal ==")
+            started_insight_poll = time.perf_counter()
+            last_ins = None
+            while True:
+                last_ins = await self.api.get_insight(insight_id)
+                st = (last_ins.get("status") or "").strip()
+                log(f"insight_status: {st}")
+                if st in {"completed", "error"}:
+                    break
+                await asyncio.sleep(2.0)
+            ins_poll_s = time.perf_counter() - started_insight_poll
+            log(f"insight_poll_s: {ins_poll_s:.2f}")
+            log("insight_final_json:")
+            log(_safe_json(last_ins))
+        else:
+            log("\n== 6) Poll insight until terminal ==")
+            log("No insight_id returned by agent; model likely answered directly without creating a job.")
+
+        log("\n== DONE ==")
+        log(f"log_path: {str(out_fp)}")
+
+    # ============================================================================
+    # CHAT + INSIGHTS E2E TEST (non-agent, multi-doc, quiet terminal, logs to tests/)
+    # ============================================================================
+    async def run_chat_insights_e2e_test(
+        self,
+        *,
+        folder_path: str,
+        out_path: str,
+        num_docs: int = 2,
+    ) -> None:
+        """
+        End-to-end non-agent test for:
+        - upload N docs (N=2 or 3 recommended)
+        - poll docs until completed
+        - run /chat/message a few times using ALL docs (RAG chunks)
+        - create insights for ALL docs: summary, qna, interview_tips, slides
+        - poll insights until terminal
+
+        Output is written to out_path (in tests/). Terminal stays minimal.
+        """
+        if num_docs not in {2, 3}:
+            raise ValueError("num_docs must be 2 or 3")
+
+        p = Path(folder_path)
+        if not p.exists():
+            raise FileNotFoundError(f"Folder not found: {folder_path}")
+
+        out_fp = Path(out_path)
+        out_fp.parent.mkdir(parents=True, exist_ok=True)
+
+        def log(line: str = "") -> None:
+            with open(out_fp, "a", encoding="utf-8") as f:
+                f.write(line + "\n")
+
+        subset = STRESS_DOC_MANIFEST[:num_docs]
+        available = {fp.name: fp for fp in p.glob("*.pdf")}
+        missing = [name for name in subset if name not in available]
+        if missing:
+            raise FileNotFoundError(f"Missing PDFs in folder: {missing}")
+
+        target_files: List[Path] = [available[name] for name in subset]
+
+        # Header
+        log("=" * 80)
+        log("CHAT + INSIGHTS E2E TEST RUN (non-agent)")
+        log(f"timestamp_utc: {datetime.datetime.utcnow().isoformat()}Z")
+        log(f"api_base_url: {self.api.base_url}")
+        log(f"user_id: {self.user_id}")
+        log(f"num_docs: {num_docs}")
+        log("pdfs:")
+        for fp in target_files:
+            log(f"- {str(fp)}")
+        log("=" * 80)
+
+        # 1) Health
+        log("\n== 1) /health ==")
+        ok = await self.api.health_check()
+        log(f"health_ok: {ok}")
+        if not ok:
+            raise RuntimeError("API is not reachable at start. Aborting.")
+
+        # 2) Worker health (optional, best-effort)
+        log("\n== 2) /worker/health (best-effort) ==")
+        try:
+            resp = await self.api._request("GET", "/worker/health", timeout=10.0)
+            log(f"worker_health_status_code: {resp.status_code}")
+            try:
+                log(_safe_json(resp.json(), max_chars=20000))
+            except Exception:
+                log(resp.text[:20000])
+        except Exception as e:
+            log(f"worker_health_error: {str(e)}")
+
+        # 3) Upload docs (parallel)
+        log("\n== 3) Upload documents ==")
+        upload_t0 = time.perf_counter()
+        uploads: List[Dict[str, Any]] = []
+
+        async def upload_one(fp: Path) -> Dict[str, Any]:
+            t0 = time.perf_counter()
+            doc_id = await self.api.upload_document(self.user_id, fp)
+            return {"filename": fp.name, "doc_id": doc_id, "upload_s": time.perf_counter() - t0}
+
+        results = await asyncio.gather(*[upload_one(fp) for fp in target_files])
+        upload_s = time.perf_counter() - upload_t0
+        uploads.extend(results)
+        for u in uploads:
+            log(f"uploaded: {u['filename']} doc_id={u['doc_id']} upload_s={u['upload_s']:.2f}")
+        log(f"upload_phase_wall_clock_s: {upload_s:.2f}")
+
+        self.doc_ids = [u["doc_id"] for u in uploads]
+        self.doc_map = {u["doc_id"]: u["filename"] for u in uploads}
+
+        # 4) Poll docs until terminal
+        log("\n== 4) Poll documents until terminal ==")
+        started_poll = time.perf_counter()
+        last_docs: Dict[str, Dict[str, Any]] = {}
+
+        while True:
+            done = 0
+            for doc_id in self.doc_ids:
+                d = await self.api.get_document(doc_id)
+                last_docs[doc_id] = d
+                st = (d.get("status") or "").strip()
+                log(f"doc_status: {doc_id} {self.doc_map.get(doc_id,'?')} {st}")
+                if st in {"completed", "error"}:
+                    done += 1
+            if done == len(self.doc_ids):
+                break
+            await asyncio.sleep(POLL_INTERVAL)
+
+        doc_poll_s = time.perf_counter() - started_poll
+        log(f"doc_poll_s: {doc_poll_s:.2f}")
+
+        completed = [d for d in self.doc_ids if (last_docs.get(d) or {}).get("status") == "completed"]
+        errored = [d for d in self.doc_ids if (last_docs.get(d) or {}).get("status") == "error"]
+        log(f"docs_completed: {len(completed)} docs_error: {len(errored)}")
+        if errored:
+            for did in errored:
+                log(f"doc_error: {did} error_message={(last_docs.get(did) or {}).get('error_message')}")
+            raise RuntimeError("One or more documents failed; aborting chat/insights.")
+
+        # 5) Chat messages (RAG) using all docs
+        log("\n== 5) POST /chat/message (RAG chat) ==")
+        chat_inputs = [
+            "Give me a 5-bullet combined summary across these documents. Cite chunk refs like [doc ... chunk ...].",
+            "List the key themes that appear in more than one document. Cite chunk refs for each theme.",
+            "What are the most important differences between these documents? Cite chunk refs.",
+        ]
+        chat_results: List[Dict[str, Any]] = []
+        for i, msg in enumerate(chat_inputs, 1):
+            t0 = time.perf_counter()
+            data = await self.api.chat_message(self.user_id, msg, completed)
+            elapsed = time.perf_counter() - t0
+            chat_results.append(data)
+            log(f"\n-- chat_{i} --")
+            log(f"message: {msg}")
+            log(f"chat_elapsed_s: {elapsed:.2f}")
+            log("chat_response_json:")
+            log(_safe_json(data, max_chars=80000))
+
+        # 6) Create all insight types for ALL docs
+        log("\n== 6) POST /insights (all action types, multi-doc) ==")
+        insight_jobs = [
+            ("summary", "Multi-doc Summary", "Summarize across all provided documents."),
+            ("qna", "Multi-doc Q&A", "Generate Q&A based on all provided documents."),
+            ("interview_tips", "Multi-doc Interview Tips", "Generate interview tips based on all provided documents."),
+            ("slides", "Multi-doc Slides Outline", "Create an interview-ready slide outline based on all provided documents."),
+        ]
+        insight_ids: List[Dict[str, str]] = []
+        for action_type, title, instructions in insight_jobs:
+            payload = {
+                "user_id": self.user_id,
+                "action_type": action_type,
+                "document_ids": completed,
+                "title": title,
+                "instructions": instructions,
+            }
+            resp = await self.api._request("POST", "/insights", json=payload, timeout=60.0)
+            data = resp.json()
+            iid = data.get("insight_id")
+            log(f"created_insight: action_type={action_type} insight_id={iid} status_code={resp.status_code}")
+            log("create_insight_response_json:")
+            log(_safe_json(data, max_chars=20000))
+            if iid:
+                insight_ids.append({"action_type": action_type, "insight_id": iid})
+
+        if not insight_ids:
+            raise RuntimeError("No insights were created; aborting.")
+
+        # 7) Poll insights until terminal
+        log("\n== 7) Poll insights until terminal ==")
+        started_insight_poll = time.perf_counter()
+        last_insights: Dict[str, Dict[str, Any]] = {}
+        terminal = set()
+
+        while True:
+            for row in insight_ids:
+                iid = row["insight_id"]
+                if iid in terminal:
+                    continue
+                ins = await self.api.get_insight(iid)
+                last_insights[iid] = ins
+                st = (ins.get("status") or "").strip()
+                log(f"insight_status: {iid} action_type={row['action_type']} {st}")
+                if st in {"completed", "error"}:
+                    terminal.add(iid)
+            if len(terminal) == len(insight_ids):
+                break
+            await asyncio.sleep(2.0)
+
+        insight_poll_s = time.perf_counter() - started_insight_poll
+        log(f"insight_poll_s: {insight_poll_s:.2f}")
+
+        # Final dump (truncated)
+        log("\n== 8) Final insight payloads (truncated) ==")
+        for row in insight_ids:
+            iid = row["insight_id"]
+            log(f"\n-- insight_final -- action_type={row['action_type']} insight_id={iid}")
+            log(_safe_json(last_insights.get(iid), max_chars=120000))
+
+        # Chat history quick check
+        log("\n== 9) GET /chat/history (sanity) ==")
+        try:
+            hist = await self.api.get_chat_history(self.user_id)
+            log(_safe_json(hist, max_chars=60000))
+        except Exception as e:
+            log(f"chat_history_error: {str(e)}")
+
+        log("\n== DONE ==")
+        log(f"log_path: {str(out_fp)}")
+
+
+def _safe_json(obj: Any, max_chars: int = 200000) -> str:
+    import json as _json
+    try:
+        s = _json.dumps(obj, ensure_ascii=False, indent=2)
+    except Exception:
+        s = str(obj)
+    if len(s) > max_chars:
+        return s[:max_chars] + "\n...(truncated)"
+    return s
+
+
 async def main():
     parser = argparse.ArgumentParser(description="InsightForge Pipeline Test Runner")
-    parser.add_argument("--stress", action="store_true", help="Run full stress test (commented out)")
+    parser.add_argument("--stress", action="store_true", help="Run full stress test (fixed 15-doc manifest)")
+    parser.add_argument("--four", action="store_true", help="Run 4-doc mini stress (fixed subset of manifest)")
+    parser.add_argument("--eight", action="store_true", help="Run 8-doc mini stress (fixed subset of manifest)")
+    parser.add_argument("--one", action="store_true", help="Run single-document test")
+    parser.add_argument("--agent", action="store_true", help="Run agent E2E test (writes full output to tests/ log file)")
+    parser.add_argument("--chat-e2e", action="store_true", help="Run chat + insights E2E test (non-agent, multi-doc, logs to tests/)")
+    parser.add_argument("--file", default="", help="PDF file path for --one (absolute or relative)")
     parser.add_argument("--dir", default="tests/Assignments", help="Directory containing PDFs")
+    parser.add_argument("--agent-out", default="", help="Output log file path for --agent (default: tests/agent_e2e_<ts>.log)")
+    parser.add_argument("--agent-pdf", default="", help="PDF filename to use for --agent (default: first item in STRESS_DOC_MANIFEST)")
+    parser.add_argument("--chat-e2e-out", default="", help="Output log file path for --chat-e2e (default: tests/chat_e2e_<ts>_<N>docs.log)")
+    parser.add_argument("--chat-e2e-docs", type=int, default=2, help="Number of docs for --chat-e2e (2 or 3)")
     
     args = parser.parse_args()
     
@@ -509,9 +1336,33 @@ async def main():
             TestLogger.error("API is not reachable at start. Aborting.")
             return
 
-        if args.stress:
-            TestLogger.error("Stress test is currently commented out. Use default simple test instead.")
-            # await runner.run_stress_test(args.dir)  # Commented out
+        if args.agent:
+            ts = datetime.datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+            out_path = args.agent_out.strip() or f"tests/agent_e2e_{ts}.log"
+            try:
+                await runner.run_agent_e2e_test(folder_path=args.dir, out_path=out_path, pdf_name=args.agent_pdf.strip())
+            finally:
+                # Keep terminal quiet: print only the file location
+                print(f"✅ Agent E2E log saved to: {out_path}")
+        elif args.chat_e2e:
+            ts = datetime.datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+            n = int(args.chat_e2e_docs)
+            out_path = args.chat_e2e_out.strip() or f"tests/chat_e2e_{ts}_{n}docs.log"
+            try:
+                await runner.run_chat_insights_e2e_test(folder_path=args.dir, out_path=out_path, num_docs=n)
+            finally:
+                print(f"✅ Chat+Insights E2E log saved to: {out_path}")
+        elif args.one:
+            if not args.file:
+                TestLogger.error("--one requires --file '/path/to/file.pdf'")
+                return
+            await runner.run_one_doc_test(args.file)
+        elif args.eight:
+            await runner.run_eight_doc_test(args.dir)
+        elif args.four:
+            await runner.run_four_doc_test(args.dir)
+        elif args.stress:
+            await runner.run_stress_test(args.dir)
         else:
             # Run simple test by default
             await runner.run_simple_test(args.dir)
