@@ -1,0 +1,27 @@
+.env
+.venv
+venv
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local artifacts / logs
+*.log
+tests/*.log
+tests/**/*.log
+
+# Big test data (keep image lean; the app doesn't need these at runtime)
+tests/
+sample screens/
+
+# VCS/editor noise
+.git/
+.github/
+.DS_Store
+.idea/
+.vscode/
+
