@@ -38,5 +38,5 @@ EXPOSE 8000
 
 # Default command is the API; on Render, set the worker service to override this to:
 #   python -m arq worker.WorkerSettings
-CMD ["bash", "-lc", "uvicorn api:app --host 0.0.0.0 --port ${PORT:-8000}"]
+CMD ["bash", "-lc", "python -m uvicorn api:app --host 0.0.0.0 --port ${PORT:-8000}"]
 
